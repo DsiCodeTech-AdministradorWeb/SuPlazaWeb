@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DsiCodetech.Administrador.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DsiCodetech.Administrador.Web.Tests", "..\DsiCodetech.Administrador.Web.Tests\DsiCodetech.Administrador.Web.Tests.csproj", "{EECFDC35-6D1A-46EE-99BF-DB4E8A1F9100}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DsiCodetech.Administrador.Business", "..\DsiCodetech.Administrador.Business\DsiCodetech.Administrador.Business.csproj", "{E37E0E09-0746-42DA-957F-522FF7CC461F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EECFDC35-6D1A-46EE-99BF-DB4E8A1F9100}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EECFDC35-6D1A-46EE-99BF-DB4E8A1F9100}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EECFDC35-6D1A-46EE-99BF-DB4E8A1F9100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E37E0E09-0746-42DA-957F-522FF7CC461F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E37E0E09-0746-42DA-957F-522FF7CC461F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E37E0E09-0746-42DA-957F-522FF7CC461F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E37E0E09-0746-42DA-957F-522FF7CC461F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
