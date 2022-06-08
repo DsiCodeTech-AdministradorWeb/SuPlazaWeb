@@ -54,6 +54,7 @@
     <Compile Include="Infraestructure\BaseRepository.cs" />
     <Compile Include="Infraestructure\Contract\IBaseRepository.cs" />
     <Compile Include="Infraestructure\Contract\IUnitOfWork.cs" />
+    <Compile Include="Infraestructure\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
