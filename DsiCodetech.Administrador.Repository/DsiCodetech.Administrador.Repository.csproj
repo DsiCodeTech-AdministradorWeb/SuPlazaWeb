@@ -79,6 +79,7 @@
     <Compile Include="forma_pago.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forma_Pago_Repository.cs" />
     <Compile Include="Infraestructure\BaseRepository.cs" />
     <Compile Include="Infraestructure\Contract\IBaseRepository.cs" />
     <Compile Include="Infraestructure\Contract\IUnitOfWork.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="metodo_pago.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Metodo_Pago_Repository.cs" />
     <Compile Include="moneda.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
