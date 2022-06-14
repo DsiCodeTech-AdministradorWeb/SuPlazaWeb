@@ -75,6 +75,7 @@
     <Compile Include="exportacion.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Expotarcion_Repository.cs" />
     <Compile Include="forma_pago.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
