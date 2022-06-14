@@ -93,6 +93,7 @@
     <Compile Include="moneda.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Moneda_Repository.cs" />
     <Compile Include="pais.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
@@ -106,6 +107,7 @@
     <Compile Include="tipo_comprobante.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Tipo_Comprobante_Repository.cs" />
     <Compile Include="tipo_relacion.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
