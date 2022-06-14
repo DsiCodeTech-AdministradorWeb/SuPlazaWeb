@@ -1,4 +1,5 @@
-﻿using DsiCodetech.Administrador.Repository;
+﻿using DsiCodetech.Administrador.Domain;
+using DsiCodetech.Administrador.Repository;
 using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,26 @@ namespace DsiCodetech.Administrador.Business
         {
             unitOfWork = _unitOfWork;
             repository = new Moneda_Repository(unitOfWork);
+        }
+
+        /// <summary>
+        /// Este metodo se encarga de consultar las monedas
+        /// </summary>
+        /// <returns>una coleccion de monedas domain model</returns>
+        public List<MonedaDM> GetMonedas()
+        {
+            List<MonedaDM> monedas = null;
+            return monedas = repository.GetAll().Select(p => new MonedaDM
+            {
+                Id = p.id,
+                Decimales = p.decimales,
+                Fecha_Fin = p.fecha_fin.Value,
+                Fecha_Inicio = p.fecha_inicio.Value,
+                Porcentaje =p.porcentaje,
+                Descripcion= p.porcentaje
+                
+
+            }).ToList();
         }
     }
 }
