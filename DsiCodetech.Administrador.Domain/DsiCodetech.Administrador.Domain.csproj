@@ -45,6 +45,7 @@
     <Compile Include="ExportacionDM.cs" />
     <Compile Include="FormaPagoDM.cs" />
     <Compile Include="MesDM.cs" />
+    <Compile Include="MetodoPagoDM.cs" />
     <Compile Include="MonedaDM.cs" />
     <Compile Include="PaisDM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
