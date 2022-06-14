@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="ClaveProductoServicioDM.cs" />
     <Compile Include="ExportacionDM.cs" />
+    <Compile Include="MesDM.cs" />
+    <Compile Include="MonedaDM.cs" />
     <Compile Include="PaisDM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
