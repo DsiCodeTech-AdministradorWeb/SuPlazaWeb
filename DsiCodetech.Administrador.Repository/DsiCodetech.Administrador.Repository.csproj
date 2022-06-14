@@ -86,6 +86,7 @@
     <Compile Include="mes.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Mes_Repository.cs" />
     <Compile Include="metodo_pago.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
