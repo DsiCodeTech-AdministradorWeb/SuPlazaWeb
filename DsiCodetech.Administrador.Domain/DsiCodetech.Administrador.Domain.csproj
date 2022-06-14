@@ -50,8 +50,10 @@
     <Compile Include="PaisDM.cs" />
     <Compile Include="PeriocidadDM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegimenFiscalDM.cs" />
     <Compile Include="TipoComprobanteDM.cs" />
     <Compile Include="TipoRelacionDM.cs" />
+    <Compile Include="UsoCfdiDM.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
