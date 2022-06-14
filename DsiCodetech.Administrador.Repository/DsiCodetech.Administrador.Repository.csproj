@@ -120,6 +120,7 @@
     <Compile Include="uso_cfdi.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Uso_Cfdi_Repository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
