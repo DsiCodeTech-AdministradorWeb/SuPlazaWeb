@@ -10,11 +10,11 @@ namespace DsiCodetech.Administrador.Repository.Infraestructure
 {
     public class UnitOfWork : IUnitOfWork
     {
-        //private readonly IncubadoraDataBaseEntities _dbContext;
+        private readonly pos_adminEntities _dbContext;
         
         public UnitOfWork()
         {
-          //  _dbContext = new IncubadoraDataBaseEntities();
+           _dbContext = new pos_adminEntities();
         }
 
         public DbContext Db
