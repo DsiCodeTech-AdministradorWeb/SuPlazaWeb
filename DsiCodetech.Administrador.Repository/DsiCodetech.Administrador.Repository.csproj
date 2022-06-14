@@ -53,304 +53,88 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
+    <Compile Include="clave_producto_serv.cs">
+      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
-    <Compile Include="articulos.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="clasificacion.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="cliente.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="colector_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="colector_compra.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="colector_inventario_fisico.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="colector_orden.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="colector_orden_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="colector_proveedor.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="colector_unidad_medida.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="colector_usuario.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="colector_usuario_permiso.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="compra.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="compra_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="comprobante.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="condicion_pago.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="control_errores.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ctrl_errores.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DcGeneral.Context.cs">
+    <Compile Include="Db_General_Facturacion.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DcGeneral.Context.tt</DependentUpon>
+      <DependentUpon>Db_General_Facturacion.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DcGeneral.cs">
+    <Compile Include="Db_General_Facturacion.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DcGeneral.tt</DependentUpon>
+      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
-    <Compile Include="DcGeneral.Designer.cs">
+    <Compile Include="Db_General_Facturacion.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DcGeneral.edmx</DependentUpon>
+      <DependentUpon>Db_General_Facturacion.edmx</DependentUpon>
     </Compile>
-    <Compile Include="direccion_proveedor.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
+    <Compile Include="exportacion.cs">
+      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
-    <Compile Include="empleado.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="empresa.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="entidad.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="entrada.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="entrada_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="estadistica.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="factura.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="factura_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="factura_venta.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="generacion_codigos.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
+    <Compile Include="forma_pago.cs">
+      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
     <Compile Include="Infraestructure\BaseRepository.cs" />
     <Compile Include="Infraestructure\Contract\IBaseRepository.cs" />
     <Compile Include="Infraestructure\Contract\IUnitOfWork.cs" />
     <Compile Include="Infraestructure\UnitOfWork.cs" />
-    <Compile Include="inventario_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="inventario_captura.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="inventario_fisico.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="inventario_fisico_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="kit_articulos.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
+    <Compile Include="mes.cs">
+      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
     <Compile Include="metodo_pago.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
+      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
-    <Compile Include="movimiento_almacen.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
+    <Compile Include="moneda.cs">
+      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
-    <Compile Include="municipio.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
+    <Compile Include="pais.cs">
+      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
-    <Compile Include="oferta.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="oferta_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="orden.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="orden_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pedido.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pedido_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="permiso.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pos.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pos_admin_settings.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pos_control.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="precio_temporal.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="productos_sin_iva.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="promocion.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="promocion_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
+    <Compile Include="periodicidad.cs">
+      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="proveedor.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
+    <Compile Include="regimen_fiscal.cs">
+      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
-    <Compile Include="salida.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
+    <Compile Include="tipo_comprobante.cs">
+      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
-    <Compile Include="salida_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_corte_caja_Result.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_exportToDAT_Result.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_exportToXLS_Result.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_pedido_anio_Result.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_pedido_captura_pendiente_Result.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_pedido_promedio_Result.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_pedido_suspendido_promedio_Result.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_pedido_suspendido_Result.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_reporte_entrada_almacen_Result.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_reporte_formato_Result.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_reporte_inventario_actual_Result.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_reporte_inventario_fisico_Result.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="unidad_medida.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
+    <Compile Include="tipo_relacion.cs">
+      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
     <Compile Include="uso_cfdi.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="usuario.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="usuario_permiso.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="venta.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="venta_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="venta_cancelada.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="venta_cancelada_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="venta_devolucion.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="venta_devolucion_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vw_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vw_articulos_principales.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vw_cajas.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vw_clasificacion.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vw_items.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vw_oferta_articulo.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
-    </Compile>
-    <Compile Include="vw_offers.cs">
-      <DependentUpon>DcGeneral.tt</DependentUpon>
+      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="DcGeneral.edmx">
+    <EntityDeploy Include="Db_General_Facturacion.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DcGeneral.Designer.cs</LastGenOutput>
+      <LastGenOutput>Db_General_Facturacion.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DcGeneral.edmx.diagram">
-      <DependentUpon>DcGeneral.edmx</DependentUpon>
+    <None Include="Db_General_Facturacion.edmx.diagram">
+      <DependentUpon>Db_General_Facturacion.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DcGeneral.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DcGeneral.edmx</DependentUpon>
-      <LastGenOutput>DcGeneral.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DcGeneral.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DcGeneral.edmx</DependentUpon>
-      <LastGenOutput>DcGeneral.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Db_General_Facturacion.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Db_General_Facturacion.edmx</DependentUpon>
+      <LastGenOutput>Db_General_Facturacion.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Db_General_Facturacion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Db_General_Facturacion.edmx</DependentUpon>
+      <LastGenOutput>Db_General_Facturacion.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

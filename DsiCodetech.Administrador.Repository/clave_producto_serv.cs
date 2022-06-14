@@ -12,13 +12,14 @@ namespace DsiCodetech.Administrador.Repository
     using System;
     using System.Collections.Generic;
     
-    public partial class uso_cfdi
+    public partial class clave_producto_serv
     {
         public string id { get; set; }
         public string descripcion { get; set; }
-        public string persona_fisica { get; set; }
-        public string persona_moral { get; set; }
-        public string regimen_fiscal_receptor { get; set; }
+        public string trasladado { get; set; }
+        public string ieps_trasladado { get; set; }
+        public short franja_fronteriza { get; set; }
+        public string palabras_similares { get; set; }
         public Nullable<System.DateTime> fecha_inicio { get; set; }
         public Nullable<System.DateTime> fecha_fin { get; set; }
     }

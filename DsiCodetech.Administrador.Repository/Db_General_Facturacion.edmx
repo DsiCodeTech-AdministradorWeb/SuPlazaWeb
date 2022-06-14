@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="db_cfdi_facturasModelo.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="clave_producto_serv">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="trasladado" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ieps_trasladado" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="franja_fronteriza" Type="smallint" Nullable="false" />
+          <Property Name="palabras_similares" Type="varchar" MaxLength="252" />
+          <Property Name="fecha_inicio" Type="date" />
+          <Property Name="fecha_fin" Type="date" />
+        </EntityType>
+        <EntityType Name="exportacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="fecha_inicio" Type="date" />
+          <Property Name="fecha_fin" Type="date" />
+        </EntityType>
+        <EntityType Name="forma_pago">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="bancarizado" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="num_operacion" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="rfc_ordenante" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="cuenta_ordenante" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="rfc_beneficiario" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="cuenta_beneficiario" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="tipo_pago" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="fecha_inicio" Type="date" />
+          <Property Name="fecha_fin" Type="date" />
+        </EntityType>
+        <EntityType Name="mes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="fecha_inicio" Type="date" />
+          <Property Name="fecha_fin" Type="date" />
+        </EntityType>
+        <EntityType Name="metodo_pago">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="fecha_inicio" Type="date" />
+          <Property Name="fecha_fin" Type="date" />
+        </EntityType>
+        <EntityType Name="moneda">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="decimales" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="porcentaje" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="fecha_inicio" Type="date" />
+          <Property Name="fecha_fin" Type="date" />
+        </EntityType>
+        <EntityType Name="pais">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="agrupacion" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="periodicidad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="fecha_inicio" Type="date" />
+          <Property Name="fecha_fin" Type="date" />
+        </EntityType>
+        <EntityType Name="regimen_fiscal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="persona_fisica" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="persona_moral" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="fecha_inicio" Type="date" />
+          <Property Name="fecha_fin" Type="date" />
+        </EntityType>
+        <EntityType Name="tipo_comprobante">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="fecha_inicio" Type="date" />
+          <Property Name="fecha_fin" Type="date" />
+        </EntityType>
+        <EntityType Name="tipo_relacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="fecha_inicio" Type="date" />
+          <Property Name="fecha_fin" Type="date" />
+        </EntityType>
+        <EntityType Name="uso_cfdi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="persona_fisica" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="persona_moral" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="regimen_fiscal_receptor" Type="varchar" MaxLength="252" />
+          <Property Name="fecha_inicio" Type="date" />
+          <Property Name="fecha_fin" Type="date" />
+        </EntityType>
+        <EntityContainer Name="db_cfdi_facturasModeloStoreContainer">
+          <EntitySet Name="clave_producto_serv" EntityType="Self.clave_producto_serv" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="exportacion" EntityType="Self.exportacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="forma_pago" EntityType="Self.forma_pago" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mes" EntityType="Self.mes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="metodo_pago" EntityType="Self.metodo_pago" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="moneda" EntityType="Self.moneda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pais" EntityType="Self.pais" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="periodicidad" EntityType="Self.periodicidad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="regimen_fiscal" EntityType="Self.regimen_fiscal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_comprobante" EntityType="Self.tipo_comprobante" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_relacion" EntityType="Self.tipo_relacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="uso_cfdi" EntityType="Self.uso_cfdi" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_cfdi_facturasModelo" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="clave_producto_serv">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="trasladado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ieps_trasladado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="franja_fronteriza" Type="Int16" Nullable="false" />
+          <Property Name="palabras_similares" Type="String" MaxLength="252" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+          <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="exportacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+          <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="forma_pago">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="bancarizado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="num_operacion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="rfc_ordenante" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cuenta_ordenante" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="rfc_beneficiario" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cuenta_beneficiario" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tipo_pago" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+          <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="mes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+          <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="metodo_pago">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+          <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="moneda">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="decimales" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="porcentaje" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+          <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="pais">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="agrupacion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="periodicidad">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+          <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="regimen_fiscal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="persona_fisica" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="persona_moral" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+          <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="tipo_comprobante">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+          <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="tipo_relacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+          <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="uso_cfdi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="persona_fisica" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="persona_moral" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="regimen_fiscal_receptor" Type="String" MaxLength="252" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+          <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="Db_cfdi_facturas_entidades" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="clave_producto_serv" EntityType="Self.clave_producto_serv" />
+          <EntitySet Name="exportacion" EntityType="Self.exportacion" />
+          <EntitySet Name="forma_pago" EntityType="Self.forma_pago" />
+          <EntitySet Name="mes" EntityType="Self.mes" />
+          <EntitySet Name="metodo_pago" EntityType="Self.metodo_pago" />
+          <EntitySet Name="moneda" EntityType="Self.moneda" />
+          <EntitySet Name="pais" EntityType="Self.pais" />
+          <EntitySet Name="periodicidad" EntityType="Self.periodicidad" />
+          <EntitySet Name="regimen_fiscal" EntityType="Self.regimen_fiscal" />
+          <EntitySet Name="tipo_comprobante" EntityType="Self.tipo_comprobante" />
+          <EntitySet Name="tipo_relacion" EntityType="Self.tipo_relacion" />
+          <EntitySet Name="uso_cfdi" EntityType="Self.uso_cfdi" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_cfdi_facturasModeloStoreContainer" CdmEntityContainer="Db_cfdi_facturas_entidades">
+          <EntitySetMapping Name="clave_producto_serv">
+            <EntityTypeMapping TypeName="db_cfdi_facturasModelo.clave_producto_serv">
+              <MappingFragment StoreEntitySet="clave_producto_serv">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="trasladado" ColumnName="trasladado" />
+                <ScalarProperty Name="ieps_trasladado" ColumnName="ieps_trasladado" />
+                <ScalarProperty Name="franja_fronteriza" ColumnName="franja_fronteriza" />
+                <ScalarProperty Name="palabras_similares" ColumnName="palabras_similares" />
+                <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+                <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="exportacion">
+            <EntityTypeMapping TypeName="db_cfdi_facturasModelo.exportacion">
+              <MappingFragment StoreEntitySet="exportacion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+                <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="forma_pago">
+            <EntityTypeMapping TypeName="db_cfdi_facturasModelo.forma_pago">
+              <MappingFragment StoreEntitySet="forma_pago">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="bancarizado" ColumnName="bancarizado" />
+                <ScalarProperty Name="num_operacion" ColumnName="num_operacion" />
+                <ScalarProperty Name="rfc_ordenante" ColumnName="rfc_ordenante" />
+                <ScalarProperty Name="cuenta_ordenante" ColumnName="cuenta_ordenante" />
+                <ScalarProperty Name="rfc_beneficiario" ColumnName="rfc_beneficiario" />
+                <ScalarProperty Name="cuenta_beneficiario" ColumnName="cuenta_beneficiario" />
+                <ScalarProperty Name="tipo_pago" ColumnName="tipo_pago" />
+                <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+                <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mes">
+            <EntityTypeMapping TypeName="db_cfdi_facturasModelo.mes">
+              <MappingFragment StoreEntitySet="mes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+                <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="metodo_pago">
+            <EntityTypeMapping TypeName="db_cfdi_facturasModelo.metodo_pago">
+              <MappingFragment StoreEntitySet="metodo_pago">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+                <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="moneda">
+            <EntityTypeMapping TypeName="db_cfdi_facturasModelo.moneda">
+              <MappingFragment StoreEntitySet="moneda">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="decimales" ColumnName="decimales" />
+                <ScalarProperty Name="porcentaje" ColumnName="porcentaje" />
+                <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+                <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pais">
+            <EntityTypeMapping TypeName="db_cfdi_facturasModelo.pais">
+              <MappingFragment StoreEntitySet="pais">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="agrupacion" ColumnName="agrupacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="periodicidad">
+            <EntityTypeMapping TypeName="db_cfdi_facturasModelo.periodicidad">
+              <MappingFragment StoreEntitySet="periodicidad">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+                <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="regimen_fiscal">
+            <EntityTypeMapping TypeName="db_cfdi_facturasModelo.regimen_fiscal">
+              <MappingFragment StoreEntitySet="regimen_fiscal">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="persona_fisica" ColumnName="persona_fisica" />
+                <ScalarProperty Name="persona_moral" ColumnName="persona_moral" />
+                <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+                <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_comprobante">
+            <EntityTypeMapping TypeName="db_cfdi_facturasModelo.tipo_comprobante">
+              <MappingFragment StoreEntitySet="tipo_comprobante">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+                <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_relacion">
+            <EntityTypeMapping TypeName="db_cfdi_facturasModelo.tipo_relacion">
+              <MappingFragment StoreEntitySet="tipo_relacion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+                <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="uso_cfdi">
+            <EntityTypeMapping TypeName="db_cfdi_facturasModelo.uso_cfdi">
+              <MappingFragment StoreEntitySet="uso_cfdi">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="persona_fisica" ColumnName="persona_fisica" />
+                <ScalarProperty Name="persona_moral" ColumnName="persona_moral" />
+                <ScalarProperty Name="regimen_fiscal_receptor" ColumnName="regimen_fiscal_receptor" />
+                <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+                <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
