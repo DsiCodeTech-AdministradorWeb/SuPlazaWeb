@@ -103,6 +103,7 @@
     <Compile Include="periodicidad.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Periodicidad_Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="regimen_fiscal.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
