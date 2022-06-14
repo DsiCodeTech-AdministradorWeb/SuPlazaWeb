@@ -1,4 +1,5 @@
-﻿using DsiCodetech.Administrador.Domain;
+﻿using DsiCodetech.Administrador.Business.Interface;
+using DsiCodetech.Administrador.Domain;
 using DsiCodetech.Administrador.Repository;
 using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DsiCodetech.Administrador.Business
 {
-    public class MonedaBusiness
+    public class MonedaBusiness: IMonedaBusiness
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly Moneda_Repository repository;
