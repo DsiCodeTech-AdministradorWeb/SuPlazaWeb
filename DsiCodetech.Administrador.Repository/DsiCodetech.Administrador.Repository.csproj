@@ -99,6 +99,7 @@
     <Compile Include="pais.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Pais_Repository.cs" />
     <Compile Include="periodicidad.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
@@ -113,6 +114,7 @@
     <Compile Include="tipo_relacion.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Tipo_Relacion_Repository.cs" />
     <Compile Include="uso_cfdi.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
