@@ -108,6 +108,7 @@
     <Compile Include="regimen_fiscal.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Regimen_Fiscal_Repository.cs" />
     <Compile Include="tipo_comprobante.cs">
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
