@@ -5,17 +5,17 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="d149f6a6553d40c386bba7e3132d7f5c" Name="Diagram1">
-        <EntityTypeShape EntityType="db_cfdi_facturasModelo.clave_producto_serv" Width="1.875" PointX="0.5" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_cfdi_facturasModelo.exportacion" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_cfdi_facturasModelo.forma_pago" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_cfdi_facturasModelo.clave_producto_serv" Width="1.875" PointX="0.875" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_cfdi_facturasModelo.exportacion" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_cfdi_facturasModelo.forma_pago" Width="1.5" PointX="2.875" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.mes" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_cfdi_facturasModelo.metodo_pago" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_cfdi_facturasModelo.metodo_pago" Width="1.5" PointX="4.875" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.moneda" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_cfdi_facturasModelo.pais" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_cfdi_facturasModelo.pais" Width="1.5" PointX="6.75" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.periodicidad" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.regimen_fiscal" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.tipo_comprobante" Width="1.75" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_cfdi_facturasModelo.tipo_relacion" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_cfdi_facturasModelo.tipo_relacion" Width="1.5" PointX="8.625" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.uso_cfdi" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
