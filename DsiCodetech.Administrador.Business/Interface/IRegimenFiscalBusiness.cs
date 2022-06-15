@@ -14,5 +14,11 @@ namespace DsiCodetech.Administrador.Business.Interface
         /// </summary>
         /// <returns>una lista de regimen fiscal</returns>
         List<RegimenFiscalDM> GetAllRegimenFiscal();
+        /// <summary>
+        /// Este metodo se encargad e hacer una consulta por Id
+        /// </summary>
+        /// <param name="id">el identificador de la entidad</param>
+        /// <returns>regresa una sola entidad</returns>
+        RegimenFiscalDM GetRegimenFiscalById(string id);
     }
 }
