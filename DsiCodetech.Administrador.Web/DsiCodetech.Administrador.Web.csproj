@@ -167,9 +167,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegimenFiscalController.cs" />
+    <Compile Include="Dto\RegimenFiscalDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infraestructure\AutomaperWebProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -234,6 +236,10 @@
     <ProjectReference Include="..\DsiCodetech.Administrador.Business\DsiCodetech.Administrador.Business.csproj">
       <Project>{E37E0E09-0746-42DA-957F-522FF7CC461F}</Project>
       <Name>DsiCodetech.Administrador.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DsiCodetech.Administrador.Domain\DsiCodetech.Administrador.Domain.csproj">
+      <Project>{E4C5DE7C-77AD-4CCF-BC41-EE4A49E095F1}</Project>
+      <Name>DsiCodetech.Administrador.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
