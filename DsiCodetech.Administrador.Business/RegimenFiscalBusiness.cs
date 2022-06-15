@@ -24,15 +24,18 @@ namespace DsiCodetech.Administrador.Business
         /// </summary>
         /// <returns>una lista de regimen fiscal</returns>
         public List<RegimenFiscalDM> GetAllRegimenFiscal() {
-            return repository.GetAll().Select(p => new RegimenFiscalDM
+            List<RegimenFiscalDM> regimenes = null;
+
+            regimenes= repository.GetAll().Select(p => new RegimenFiscalDM
             {
-                Id = p.id,
+                Id = p.id ==null ? p.id :"",
                 Descripcion = p.descripcion,
-                Fecha_Inicio = p.fecha_inicio.Value,
-                Fecha_Fin = p.fecha_fin.Value,
+                Fecha_Inicio = p.fecha_inicio.Value !=null ? p.fecha_inicio.Value : DateTime.Now,
+                Fecha_Fin = p.fecha_fin ==null ? DateTime.Now : p.fecha_fin.Value,
                 Persona_Fisica = p.persona_fisica,
                 Persona_Moral = p.persona_moral
             }).ToList();
+            return regimenes;
         }
 
         /// <summary>

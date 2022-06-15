@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_cfdi_facturasModeloStoreContainer" CdmEntityContainer="Db_cfdi_facturas_entidades">
+    <EntitySetMapping Name="clave_producto_serv">
+      <EntityTypeMapping TypeName="db_cfdi_facturasModelo.clave_producto_serv">
+        <MappingFragment StoreEntitySet="clave_producto_serv">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="trasladado" ColumnName="trasladado" />
+          <ScalarProperty Name="ieps_trasladado" ColumnName="ieps_trasladado" />
+          <ScalarProperty Name="franja_fronteriza" ColumnName="franja_fronteriza" />
+          <ScalarProperty Name="palabras_similares" ColumnName="palabras_similares" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="exportacion">
+      <EntityTypeMapping TypeName="db_cfdi_facturasModelo.exportacion">
+        <MappingFragment StoreEntitySet="exportacion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="forma_pago">
+      <EntityTypeMapping TypeName="db_cfdi_facturasModelo.forma_pago">
+        <MappingFragment StoreEntitySet="forma_pago">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="bancarizado" ColumnName="bancarizado" />
+          <ScalarProperty Name="num_operacion" ColumnName="num_operacion" />
+          <ScalarProperty Name="rfc_ordenante" ColumnName="rfc_ordenante" />
+          <ScalarProperty Name="cuenta_ordenante" ColumnName="cuenta_ordenante" />
+          <ScalarProperty Name="rfc_beneficiario" ColumnName="rfc_beneficiario" />
+          <ScalarProperty Name="cuenta_beneficiario" ColumnName="cuenta_beneficiario" />
+          <ScalarProperty Name="tipo_pago" ColumnName="tipo_pago" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mes">
+      <EntityTypeMapping TypeName="db_cfdi_facturasModelo.mes">
+        <MappingFragment StoreEntitySet="mes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="metodo_pago">
+      <EntityTypeMapping TypeName="db_cfdi_facturasModelo.metodo_pago">
+        <MappingFragment StoreEntitySet="metodo_pago">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="moneda">
+      <EntityTypeMapping TypeName="db_cfdi_facturasModelo.moneda">
+        <MappingFragment StoreEntitySet="moneda">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="decimales" ColumnName="decimales" />
+          <ScalarProperty Name="porcentaje" ColumnName="porcentaje" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pais">
+      <EntityTypeMapping TypeName="db_cfdi_facturasModelo.pais">
+        <MappingFragment StoreEntitySet="pais">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="agrupacion" ColumnName="agrupacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="periodicidad">
+      <EntityTypeMapping TypeName="db_cfdi_facturasModelo.periodicidad">
+        <MappingFragment StoreEntitySet="periodicidad">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="regimen_fiscal">
+      <EntityTypeMapping TypeName="db_cfdi_facturasModelo.regimen_fiscal">
+        <MappingFragment StoreEntitySet="regimen_fiscal">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="persona_fisica" ColumnName="persona_fisica" />
+          <ScalarProperty Name="persona_moral" ColumnName="persona_moral" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo_comprobante">
+      <EntityTypeMapping TypeName="db_cfdi_facturasModelo.tipo_comprobante">
+        <MappingFragment StoreEntitySet="tipo_comprobante">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo_relacion">
+      <EntityTypeMapping TypeName="db_cfdi_facturasModelo.tipo_relacion">
+        <MappingFragment StoreEntitySet="tipo_relacion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uso_cfdi">
+      <EntityTypeMapping TypeName="db_cfdi_facturasModelo.uso_cfdi">
+        <MappingFragment StoreEntitySet="uso_cfdi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="persona_fisica" ColumnName="persona_fisica" />
+          <ScalarProperty Name="persona_moral" ColumnName="persona_moral" />
+          <ScalarProperty Name="regimen_fiscal_receptor" ColumnName="regimen_fiscal_receptor" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -10,11 +10,11 @@ namespace DsiCodetech.Administrador.Repository.Infraestructure
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly pos_adminEntities _dbContext;
+        private readonly Db_cfdi_facturas_entidades _dbContext;
         
         public UnitOfWork()
         {
-           _dbContext = new pos_adminEntities();
+           _dbContext = new Db_cfdi_facturas_entidades();
         }
 
         public DbContext Db

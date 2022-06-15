@@ -1,5 +1,7 @@
 using DsiCodetech.Administrador.Business;
 using DsiCodetech.Administrador.Business.Interface;
+using DsiCodetech.Administrador.Repository.Infraestructure;
+using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
 using System.Web.Mvc;
 using Unity;
 using Unity.Mvc5;
@@ -11,7 +13,7 @@ namespace DsiCodetech.Administrador.Web
         public static void RegisterComponents()
         {
 			var container = new UnityContainer();
-
+            container.RegisterType<IUnitOfWork, UnitOfWork>();
             // register all your components with the container here
             // it is NOT necessary to register your controllers
 
