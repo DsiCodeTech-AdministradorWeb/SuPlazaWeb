@@ -10,7 +10,7 @@ namespace DsiCodetech.Administrador.Domain
     {
         public string Id { get; set; }
         public string Descripcion { get; set; }
-        public DateTime Fecha_Inicio { get; set; }
-        public DateTime Fecha_Fin { get; set; }
+        public string Fecha_Inicio { get; set; }
+        public string Fecha_Fin { get; set; }
     }
 }
