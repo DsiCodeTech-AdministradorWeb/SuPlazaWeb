@@ -19,6 +19,8 @@ namespace DsiCodetech.Administrador.Web
             // it is NOT necessary to register your controllers
             container.RegisterType<IUnitOfWork, UnitOfWork>();
             container.RegisterType<IRegimenFiscalBusiness, RegimenFiscalBusiness>();
+            container.RegisterType<IExportacionBusiness, ExportacionBusiness>();
+
             // e.g. container.RegisterType<ITestService, TestService>();
             DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
