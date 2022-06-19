@@ -1,4 +1,5 @@
 ﻿using DsiCodetech.Administrador.Business.Interface;
+using DsiCodetech.Administrador.Web.Dto;
 using DsiCodetech.Administrador.Web.Resources;
 using NLog;
 using System;
@@ -35,7 +36,8 @@ namespace DsiCodetech.Administrador.Web.Controllers
             try
             {
                 var regimenFiscal = regimenFiscalBusiness.GetAllRegimenFiscal();
-                return Ok(regimenFiscal);
+                var regimenes=AutoMapper.Mapper.Map<List<RegimenFiscalDto>>(regimenFiscal);
+                return Ok(regimenes);
             }
             catch (Exception ex)
             {

@@ -28,7 +28,7 @@ namespace DsiCodetech.Administrador.Business
 
             regimenes= repository.GetAll().Select(p => new RegimenFiscalDM
             {
-                Id = p.id ==null ? p.id :"",
+                Id = p.id,
                 Descripcion = p.descripcion,
                 Fecha_Inicio = p.fecha_inicio ==null ?  DateTime.Now.ToShortDateString(): p.fecha_inicio.Value.ToShortDateString(),
                 Fecha_Fin = p.fecha_fin ==null ? DateTime.Now.ToShortDateString() : p.fecha_fin.Value.ToShortDateString(),

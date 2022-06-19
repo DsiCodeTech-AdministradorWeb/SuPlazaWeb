@@ -127,3 +127,6 @@ C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web\bin\Unity.W
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Web.Cors.dll
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Web.Http.Cors.dll
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Web.Http.Cors.xml
+C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web\bin\NLog.config
+C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web\bin\NLog.Web.dll
+C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web\bin\NLog.Web.xml
