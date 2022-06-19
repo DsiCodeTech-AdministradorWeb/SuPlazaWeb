@@ -6,11 +6,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Results;
 using System.Web.Mvc;
 
 namespace DsiCodetech.Administrador.Web.Controllers
 {
+    
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class RegimenFiscalController : ApiController
     {
         private readonly IRegimenFiscalBusiness regimenFiscalBusiness;

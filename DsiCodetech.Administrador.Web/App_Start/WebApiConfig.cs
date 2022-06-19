@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace DsiCodetech.Administrador.Web
 {
@@ -13,7 +14,9 @@ namespace DsiCodetech.Administrador.Web
         {
             // Configuración y servicios de API web
             //habilitamos cors para nuestra web api
-            config.EnableCors();
+            //primer elemento debe ser el hosting donde se publica el proyecto: www.example.com
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
             // Rutas de API web
             config.MapHttpAttributeRoutes();
             
