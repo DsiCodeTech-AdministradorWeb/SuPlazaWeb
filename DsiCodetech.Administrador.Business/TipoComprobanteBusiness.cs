@@ -24,7 +24,7 @@ namespace DsiCodetech.Administrador.Business
         /// Este metodo se encarga de consultar todos los tipos de comprobantes
         /// </summary>
         /// <returns>una coleccion de tipos de comprobantes</returns>
-        public List<TipoComprobanteDM> GetAllRegimenFiscal()
+        public List<TipoComprobanteDM> GetAllTipoComprobante()
         {
             List<TipoComprobanteDM> comprobantes = null;
 
