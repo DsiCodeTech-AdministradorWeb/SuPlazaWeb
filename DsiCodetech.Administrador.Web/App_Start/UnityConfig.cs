@@ -20,6 +20,7 @@ namespace DsiCodetech.Administrador.Web
             container.RegisterType<IUnitOfWork, UnitOfWork>();
             container.RegisterType<IRegimenFiscalBusiness, RegimenFiscalBusiness>();
             container.RegisterType<IExportacionBusiness, ExportacionBusiness>();
+            container.RegisterType<ITipoComprobanteBusiness,TipoComprobanteBusiness> ();
 
             // e.g. container.RegisterType<ITestService, TestService>();
             DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));
