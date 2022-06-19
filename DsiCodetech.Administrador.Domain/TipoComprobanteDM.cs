@@ -10,8 +10,6 @@ namespace DsiCodetech.Administrador.Domain
     {
         public string Id { get; set; }
         public string Descripcion { get; set; }
-        public string Decimales { get; set; }
-        public string Porcentaje { get; set; }
         public string Fecha_Inicio { get; set; }
         public string Fecha_Fin { get; set; }
     }

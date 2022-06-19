@@ -1,4 +1,5 @@
-﻿using DsiCodetech.Administrador.Repository;
+﻿using DsiCodetech.Administrador.Domain;
+using DsiCodetech.Administrador.Repository;
 using DsiCodetech.Administrador.Repository.Infraestructure;
 using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
 using System;
@@ -19,20 +20,24 @@ namespace DsiCodetech.Administrador.Business
             unitOfWork = _unitOfWork;
             repository = new Tipo_Comprobante_Repository(unitOfWork);
         }
-        public List<RegimenFiscalDM> GetAllRegimenFiscal()
+        /// <summary>
+        /// Este metodo se encarga de consultar todos los tipos de comprobantes
+        /// </summary>
+        /// <returns>una coleccion de tipos de comprobantes</returns>
+        public List<TipoComprobanteDM> GetAllRegimenFiscal()
         {
-            List<RegimenFiscalDM> regimenes = null;
+            List<TipoComprobanteDM> comprobantes = null;
 
-            regimenes = repository.GetAll().Select(p => new RegimenFiscalDM
+            comprobantes = repository.GetAll().Select(p => new TipoComprobanteDM
             {
                 Id = p.id,
                 Descripcion = p.descripcion,
                 Fecha_Inicio = p.fecha_inicio == null ? DateTime.Now.ToShortDateString() : p.fecha_inicio.Value.ToShortDateString(),
                 Fecha_Fin = p.fecha_fin == null ? DateTime.Now.ToShortDateString() : p.fecha_fin.Value.ToShortDateString(),
-                Persona_Fisica = p.persona_fisica,
-                Persona_Moral = p.persona_moral
-            }).ToList();
-            return regimenes;
+                
+                
+            }).OrderBy(p=>p.Id).ToList();
+            return comprobantes;
         }
 
 
