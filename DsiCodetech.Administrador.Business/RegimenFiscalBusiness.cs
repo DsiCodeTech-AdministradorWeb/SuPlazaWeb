@@ -30,8 +30,8 @@ namespace DsiCodetech.Administrador.Business
             {
                 Id = p.id ==null ? p.id :"",
                 Descripcion = p.descripcion,
-                Fecha_Inicio = p.fecha_inicio.Value !=null ? p.fecha_inicio.Value : DateTime.Now,
-                Fecha_Fin = p.fecha_fin ==null ? DateTime.Now : p.fecha_fin.Value,
+                Fecha_Inicio = p.fecha_inicio ==null ?  DateTime.Now.ToShortDateString(): p.fecha_inicio.Value.ToShortDateString(),
+                Fecha_Fin = p.fecha_fin ==null ? DateTime.Now.ToShortDateString() : p.fecha_fin.Value.ToShortDateString(),
                 Persona_Fisica = p.persona_fisica,
                 Persona_Moral = p.persona_moral
             }).ToList();
@@ -49,8 +49,8 @@ namespace DsiCodetech.Administrador.Business
             RegimenFiscalDM regimenFiscal = new RegimenFiscalDM { 
                 Id=regimen.id,
                 Descripcion = regimen.descripcion,
-                Fecha_Inicio = regimen.fecha_inicio.Value,
-                Fecha_Fin = regimen.fecha_fin.Value,
+                Fecha_Inicio = regimen.fecha_inicio.Value.ToShortDateString(),
+                Fecha_Fin = regimen.fecha_fin.Value.ToShortDateString(),
                 Persona_Fisica = regimen.persona_fisica,
                 Persona_Moral = regimen.persona_moral
             };
