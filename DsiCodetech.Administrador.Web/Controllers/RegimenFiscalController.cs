@@ -1,4 +1,5 @@
 ﻿using DsiCodetech.Administrador.Business.Interface;
+using DsiCodetech.Administrador.Web.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Web.Mvc;
 
 namespace DsiCodetech.Administrador.Web.Controllers
 {
-    public class RegimenFiscalController : Controller
+    public class RegimenFiscalController : ApiController
     {
         private readonly IRegimenFiscalBusiness regimenFiscalBusiness;
         public RegimenFiscalController(IRegimenFiscalBusiness _regimenFiscalBusiness)
@@ -20,12 +21,27 @@ namespace DsiCodetech.Administrador.Web.Controllers
             
         }
 
-
-        //[HttpGet]
-        //[Route(Name ="regimenfiscal")]
-        public JsonResult GetRegimenFiscal()
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route(Name = "facturacion/regimenfiscal")]
+        public IHttpActionResult GetRegimenFiscal()
         {
-            return Json(regimenFiscalBusiness.GetAllRegimenFiscal(),JsonRequestBehavior.AllowGet);
+            try
+            {
+                var regimenFiscal = regimenFiscalBusiness.GetAllRegimenFiscal();
+                return Ok(regimenFiscal);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(Utilerias.BAD_REQUEST);
+                
+            }
         }
+
+        ////[HttpGet]
+        ////[Route(Name ="regimenfiscal")]
+        //public JsonResult GetRegimenFiscal()
+        //{
+        //    return Json(regimenFiscalBusiness.GetAllRegimenFiscal(),JsonRequestBehavior.AllowGet);
+        //}
     }
 }

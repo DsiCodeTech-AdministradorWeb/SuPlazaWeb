@@ -180,6 +180,11 @@
     </Compile>
     <Compile Include="Infraestructure\AutomaperWebProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Utilerias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Utilerias.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -252,6 +257,12 @@
       <Project>{18D22FC9-4BF8-44CC-936C-336085ABBC68}</Project>
       <Name>DsiCodetech.Administrador.Repository</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Utilerias.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Utilerias.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
