@@ -24,7 +24,8 @@ namespace DsiCodetech.Administrador.Web
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                defaults: new { controller="Facturacion", action= "GetExportacion", id = RouteParameter.Optional }
+                
             );
 
             JsonMediaTypeFormatter jsonFormatter = config.Formatters.JsonFormatter;

@@ -9,3 +9,4 @@ C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Repository\obj\
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Repository\obj\Debug\DsiCodetech.Administrador.Repository.csproj.CopyComplete
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Repository\obj\Debug\DsiCodetech.Administrador.Repository.dll
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Repository\obj\Debug\DsiCodetech.Administrador.Repository.pdb
+C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Repository\obj\Debug\DsiCodetech.Administrador.Repository.csproj.AssemblyReference.cache

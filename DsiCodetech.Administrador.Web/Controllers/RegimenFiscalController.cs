@@ -30,7 +30,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
         }
 
         [System.Web.Http.HttpGet]
-        [System.Web.Http.Route(Name = "facturacion/regimenfiscal")]
+        [System.Web.Http.Route(Name = "/regimenfiscal")]
         public IHttpActionResult GetRegimenFiscal()
         {
             try

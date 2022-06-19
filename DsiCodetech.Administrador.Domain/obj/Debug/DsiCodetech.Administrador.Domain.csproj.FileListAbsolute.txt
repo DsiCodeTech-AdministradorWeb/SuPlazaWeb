@@ -3,3 +3,4 @@ C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Domain\bin\Debu
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Domain\obj\Debug\DsiCodetech.Administrador.Domain.csproj.CoreCompileInputs.cache
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Domain\obj\Debug\DsiCodetech.Administrador.Domain.dll
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Domain\obj\Debug\DsiCodetech.Administrador.Domain.pdb
+C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Domain\obj\Debug\DsiCodetech.Administrador.Domain.csproj.AssemblyReference.cache

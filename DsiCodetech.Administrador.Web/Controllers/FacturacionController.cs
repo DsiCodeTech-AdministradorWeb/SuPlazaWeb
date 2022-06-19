@@ -1,4 +1,5 @@
 ﻿using DsiCodetech.Administrador.Business.Interface;
+using DsiCodetech.Administrador.Web.Resources;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -11,26 +12,27 @@ using System.Web.Http.Cors;
 namespace DsiCodetech.Administrador.Web.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
+    //[Route(Name ="facturacion")]
     public class FacturacionController : ApiController
     {
         private readonly IExportacionBusiness exportacionBusiness;
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
         private static readonly Logger loggerdb = LogManager.GetLogger("databaseLogger");
-        public FacturacionController()
+        public FacturacionController(IExportacionBusiness _exportacionBusiness)
         {
-
+            exportacionBusiness = _exportacionBusiness;
         }
 
 
         [System.Web.Http.HttpGet]
-        [System.Web.Http.Route(Name = "facturacion/exportacion")]
+        //[System.Web.Http.Route(Name = "exportacion")]
         public IHttpActionResult GetExportacion()
         {
             try
             {
-                var regimenFiscal = regimenFiscalBusiness.GetAllRegimenFiscal();
-                var regimenes = AutoMapper.Mapper.Map<List<RegimenFiscalDto>>(regimenFiscal);
-                return Ok(regimenes);
+                var exportacion = exportacionBusiness.GetAllExportacion();
+                //var regimenes = AutoMapper.Mapper.Map<List<RegimenFiscalDto>>(regimenFiscal);
+                return Ok(exportacion);
             }
             catch (Exception ex)
             {
