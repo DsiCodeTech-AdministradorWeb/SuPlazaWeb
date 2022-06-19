@@ -52,6 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegimenFiscalBusiness.cs" />
     <Compile Include="TipoComprobanteBusiness.cs" />
+    <Compile Include="TipoRelacionBusiness.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
