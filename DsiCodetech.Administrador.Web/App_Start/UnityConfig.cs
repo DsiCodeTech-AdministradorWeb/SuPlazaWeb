@@ -24,7 +24,7 @@ namespace DsiCodetech.Administrador.Web
             // e.g. container.RegisterType<ITestService, TestService>();
             DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
-            //GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
+            
         }
     }
 }
