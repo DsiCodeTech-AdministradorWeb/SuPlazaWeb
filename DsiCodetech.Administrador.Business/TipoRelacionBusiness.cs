@@ -37,5 +37,22 @@ namespace DsiCodetech.Administrador.Business
             }).OrderBy(p=>p.Id).ToList();
             return tipoRelaciones;
         }
+
+        public TipoRelacionDM GetTipoRelacionById(string id)
+        {
+
+            var relacion = repository.SingleOrDefault(p => p.id == id);
+            TipoRelacionDM relacionModel = new TipoRelacionDM
+            {
+                Id = relacion.id,
+                Descripcion = relacion.descripcion,
+                Fecha_Inicio = relacion.fecha_inicio.Value.ToShortDateString(),
+                Fecha_Fin = relacion.fecha_fin.Value.ToShortDateString(),
+              
+            };
+            return relacionModel;
+        }
+
+
     }
 }
