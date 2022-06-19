@@ -38,6 +38,11 @@ namespace DsiCodetech.Administrador.Business
             return tipoRelaciones;
         }
 
+        /// <summary>
+        /// este metodo se encarga de consultar  el tipo de relacion por identificador
+        /// </summary>
+        /// <param name="id">el identificador</param>
+        /// <returns>retorna una entidad del tipo tiporelacionDM</returns>
         public TipoRelacionDM GetTipoRelacionById(string id)
         {
 
