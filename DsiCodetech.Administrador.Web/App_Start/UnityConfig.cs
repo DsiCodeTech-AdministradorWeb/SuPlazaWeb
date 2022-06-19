@@ -1,10 +1,9 @@
 using DsiCodetech.Administrador.Business;
 using DsiCodetech.Administrador.Business.Interface;
-using DsiCodetech.Administrador.Repository.Infraestructure;
-using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
+using System.Web.Http;
 using System.Web.Mvc;
 using Unity;
-using Unity.Mvc5;
+using Unity.WebApi;
 
 namespace DsiCodetech.Administrador.Web
 {
@@ -13,13 +12,14 @@ namespace DsiCodetech.Administrador.Web
         public static void RegisterComponents()
         {
 			var container = new UnityContainer();
-            container.RegisterType<IUnitOfWork, UnitOfWork>();
+
             // register all your components with the container here
             // it is NOT necessary to register your controllers
-
-            // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<IRegimenFiscalBusiness, RegimenFiscalBusiness>();
-            DependencyResolver.SetResolver(new UnityDependencyResolver(container));
+            // e.g. container.RegisterType<ITestService, TestService>();
+            DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));
+            GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
+            //GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
     }
 }

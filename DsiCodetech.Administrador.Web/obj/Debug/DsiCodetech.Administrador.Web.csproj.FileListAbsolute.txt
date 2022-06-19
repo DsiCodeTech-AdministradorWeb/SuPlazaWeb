@@ -123,3 +123,4 @@ C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web\obj\Debug\D
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web\obj\Debug\DsiCodetech.Administrador.Web.pdb
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web\obj\Debug\DsiCodetech.Administrador.Web.Resources.Utilerias.resources
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web\obj\Debug\DsiCodetech.Administrador.Web.csproj.GenerateResource.cache
+C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web\bin\Unity.WebApi.dll
