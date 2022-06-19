@@ -40,7 +40,20 @@ namespace DsiCodetech.Administrador.Business
             return comprobantes;
         }
 
+        public TipoComprobanteDM GetTipoComprobanteById(string id)
+        {
 
+            var comprobante = repository.SingleOrDefault(p => p.id == id);
+            TipoComprobanteDM comprobanteModel = new TipoComprobanteDM
+            {
+                Id = comprobante.id,
+                Descripcion = comprobante.descripcion,
+                Fecha_Inicio = comprobante.fecha_inicio.Value.ToShortDateString(),
+                Fecha_Fin = comprobante.fecha_fin.Value.ToShortDateString(),
+                
+            };
+            return comprobanteModel;
+        }
 
 
     }
