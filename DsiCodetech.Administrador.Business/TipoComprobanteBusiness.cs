@@ -40,6 +40,11 @@ namespace DsiCodetech.Administrador.Business
             return comprobantes;
         }
 
+        /// <summary>
+        /// Este metodo se encarga de consultar por identificador un tipo de comprobante
+        /// </summary>
+        /// <param name="id">el identificador del comprobante</param>
+        /// <returns>la entidad  tipocomprobante</returns>
         public TipoComprobanteDM GetTipoComprobanteById(string id)
         {
 
