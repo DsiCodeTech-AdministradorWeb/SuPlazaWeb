@@ -46,11 +46,6 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
         }
 
-        ////[HttpGet]
-        ////[Route(Name ="regimenfiscal")]
-        //public JsonResult GetRegimenFiscal()
-        //{
-        //    return Json(regimenFiscalBusiness.GetAllRegimenFiscal(),JsonRequestBehavior.AllowGet);
-        //}
+        
     }
 }
