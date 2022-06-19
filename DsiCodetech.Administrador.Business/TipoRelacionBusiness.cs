@@ -19,7 +19,11 @@ namespace DsiCodetech.Administrador.Business
             repository = new Tipo_Relacion_Repository(unitOfWork);
         }
 
-        public List<TipoRelacionDM> GetAllRegimenFiscal()
+        /// <summary>
+        /// Este metodo se encarga de consultar todos los tipos de relaciones como entidad
+        /// </summary>
+        /// <returns>lista de entidades del tipo tiporelaciondm</returns>
+        public List<TipoRelacionDM> GetAllTipoRelaciones()
         {
             List<TipoRelacionDM> tipoRelaciones = null;
 
