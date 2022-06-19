@@ -12,7 +12,7 @@ namespace DsiCodetech.Administrador.Domain
         public string Descripcion { get; set; }
         public string Decimales { get; set; }
         public string Porcentaje { get; set; }
-        public DateTime Fecha_Inicio { get; set; }
-        public DateTime Fecha_Fin { get; set; }
+        public string Fecha_Inicio { get; set; }
+        public string Fecha_Fin { get; set; }
     }
 }
