@@ -38,5 +38,27 @@ namespace DsiCodetech.Administrador.Business
             }).ToList();
             return metodosPago;
         }
+
+        /// <summary>
+        /// Este metodo se encarga de consultar los metodos de pago por identificador
+        /// </summary>
+        /// <param name="id">el identificador de la entidad</param>
+        /// <returns>la entidad</returns>
+        public MetodoPagoDM GetMetodoPagoById(string id)
+        {
+
+            var metodoPago = repository.SingleOrDefault(p => p.id == id);
+            MetodoPagoDM metodoPagoModel = new MetodoPagoDM
+            {
+                Id = metodoPago.id,
+                Descripcion = metodoPago.descripcion,
+                Fecha_Inicio = metodoPago.fecha_inicio.Value.ToShortDateString(),
+                Fecha_Fin = metodoPago.fecha_fin.Value.ToShortDateString(),
+                
+            };
+            return metodoPagoModel;
+        }
+
+
     }
 }

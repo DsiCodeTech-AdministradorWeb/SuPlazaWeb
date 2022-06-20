@@ -14,5 +14,11 @@ namespace DsiCodetech.Administrador.Business.Interface
         /// </summary>
         /// <returns>regresa una coleccion de metodos de pago</returns>
         List<MetodoPagoDM> GetAllMetodoPago();
+        /// <summary>
+        /// Este metodo se encarga de consultar los metodos de pago por identificador
+        /// </summary>
+        /// <param name="id">el identificador de la entidad</param>
+        /// <returns>la entidad</returns>
+        MetodoPagoDM GetMetodoPagoById(string id);
     }
 }
