@@ -18,7 +18,11 @@ namespace DsiCodetech.Administrador.Business
             unitOfWork = _unitOfWork;
             repository = new Forma_Pago_Repository(unitOfWork);
         }
-        public List<FormaPagoDM> GetAllRegimenFiscal()
+        /// <summary>
+        /// este metodo se encarga de consultar todas las formas de pago
+        /// </summary>
+        /// <returns>regresa una coleccion de todas las formas de pago</returns>
+        public List<FormaPagoDM> GetAllFormasDePago()
         {
             List<FormaPagoDM> formasDePago = null;
 
