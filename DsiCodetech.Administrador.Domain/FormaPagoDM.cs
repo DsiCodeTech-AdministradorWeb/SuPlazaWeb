@@ -17,7 +17,7 @@ namespace DsiCodetech.Administrador.Domain
         public string Rfc_Beneficiario { get; set; }
         public string Cuenta_Beneficiario { get; set; }
         public string Tipo_Pago { get; set; }
-        public DateTime Fecha_Inicio { get; set; }
-        public DateTime Fecha_Fin { get; set; }
+        public string Fecha_Inicio { get; set; }
+        public string Fecha_Fin { get; set; }
     }
 }
