@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExportacionBusiness.cs" />
+    <Compile Include="FormaPagoBusiness.cs" />
     <Compile Include="Interface\IExportacionBusiness.cs" />
     <Compile Include="Interface\IMetodoPagoBusiness.cs" />
     <Compile Include="Interface\IMonedaBusiness.cs" />
