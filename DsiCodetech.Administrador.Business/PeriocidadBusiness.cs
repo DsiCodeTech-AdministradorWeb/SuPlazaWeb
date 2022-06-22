@@ -19,6 +19,10 @@ namespace DsiCodetech.Administrador.Business
             repository = new Periodicidad_Repository(unitOfWork);
         }
 
+        /// <summary>
+        /// Este metodo se encarga de consultar todas las periocidades
+        /// </summary>
+        /// <returns>una coleccion de periocidadesDM</returns>
         public List<PeriocidadDM> GetAllPeriocidades()
         {
             List<PeriocidadDM> periocidadModel = null;
