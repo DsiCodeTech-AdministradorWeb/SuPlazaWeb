@@ -1,4 +1,5 @@
-﻿using DsiCodetech.Administrador.Repository;
+﻿using DsiCodetech.Administrador.Domain;
+using DsiCodetech.Administrador.Repository;
 using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
 using System;
 using System.Collections.Generic;
@@ -18,21 +19,25 @@ namespace DsiCodetech.Administrador.Business
             repository = new Uso_Cfdi_Repository(unitOfWork);
         }
 
-
-        public List<RegimenFiscalDM> GetAllRegimenFiscal()
+        /// <summary>
+        /// Este metodo se encarga de consultar todos los UsoCfdi en la base de datos
+        /// </summary>
+        /// <returns>una coleccion de UsoCfdi</returns>
+        public List<UsoCfdiDM> GetAllUsoCfdi()
         {
-            List<RegimenFiscalDM> regimenes = null;
+            List<UsoCfdiDM> UsoCfdimodel = null;
 
-            regimenes = repository.GetAll().Select(p => new RegimenFiscalDM
+            UsoCfdimodel = repository.GetAll().Select(p => new UsoCfdiDM
             {
                 Id = p.id,
                 Descripcion = p.descripcion,
                 Fecha_Inicio = p.fecha_inicio == null ? DateTime.Now.ToShortDateString() : p.fecha_inicio.Value.ToShortDateString(),
                 Fecha_Fin = p.fecha_fin == null ? DateTime.Now.ToShortDateString() : p.fecha_fin.Value.ToShortDateString(),
                 Persona_Fisica = p.persona_fisica,
-                Persona_Moral = p.persona_moral
-            }).ToList();
-            return regimenes;
+                Persona_Moral = p.persona_moral,
+                Regimen_Fiscal_Receptor =p.regimen_fiscal_receptor
+            }).OrderBy(p=>p.Id).ToList();
+            return UsoCfdimodel;
         }
     }
 }

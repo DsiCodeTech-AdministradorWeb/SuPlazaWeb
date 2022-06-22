@@ -16,7 +16,7 @@
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.regimen_fiscal" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.tipo_comprobante" Width="1.75" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.tipo_relacion" Width="1.5" PointX="8.625" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_cfdi_facturasModelo.uso_cfdi" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_cfdi_facturasModelo.uso_cfdi" Width="2.125" PointX="8.75" PointY="6.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
