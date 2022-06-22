@@ -20,11 +20,13 @@ namespace DsiCodetech.Administrador.Web.Controllers
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
         private static readonly Logger loggerdb = LogManager.GetLogger("databaseLogger");
         private readonly IFormaPagoBusiness pagoBusiness;
+        private readonly IMesBusiness mesBusiness;
 
-        public FacturacionController(IExportacionBusiness _exportacionBusiness, IFormaPagoBusiness _pagoBusiness)
+        public FacturacionController(IExportacionBusiness _exportacionBusiness, IFormaPagoBusiness _pagoBusiness, IMesBusiness _mesBusiness)
         {
             exportacionBusiness = _exportacionBusiness;
             pagoBusiness = _pagoBusiness;
+            mesBusiness = _mesBusiness;
         }
 
 
@@ -64,6 +66,14 @@ namespace DsiCodetech.Administrador.Web.Controllers
 
 
             }
+        }
+
+        [HttpGet]
+        public IHttpActionResult GetMes()
+        {
+            var mesDM = mesBusiness.GetMes();
+            var mesDto = AutoMapper.Mapper.Map<List<MesDto>>(mesDM);
+            return Ok(mesDto);
         }
 
 
