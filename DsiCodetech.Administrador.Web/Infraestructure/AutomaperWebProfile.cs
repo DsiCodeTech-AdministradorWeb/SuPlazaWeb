@@ -12,6 +12,7 @@ namespace DsiCodetech.Administrador.Web.Infraestructure
         public AutomaperWebProfile()
         {
             CreateMap<RegimenFiscalDM, RegimenFiscalDto>().ReverseMap();
+            CreateMap<FormaPagoDto, FormaPagoDM>().ReverseMap();
         }
 
         public static void Run()
