@@ -13,6 +13,7 @@ namespace DsiCodetech.Administrador.Web.Infraestructure
         {
             CreateMap<RegimenFiscalDM, RegimenFiscalDto>().ReverseMap();
             CreateMap<FormaPagoDto, FormaPagoDM>().ReverseMap();
+            CreateMap<MesDto, MesDM>().ReverseMap();
         }
 
         public static void Run()

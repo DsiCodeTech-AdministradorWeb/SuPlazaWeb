@@ -188,6 +188,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegimenFiscalController.cs" />
     <Compile Include="Dto\FormaPagoDto.cs" />
+    <Compile Include="Dto\MesDto.cs" />
     <Compile Include="Dto\RegimenFiscalDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
