@@ -14,7 +14,7 @@ namespace DsiCodetech.Administrador.Domain
         public string Ieps_trasladado { get; set; }
         public short Franja_fronteriza { get; set; }
         public string Palabras_similares { get; set; }
-        public DateTime Fecha_inicio { get; set; }
-        public DateTime Fecha_fin { get; set; }
+        public string Fecha_inicio { get; set; }
+        public string Fecha_fin { get; set; }
     }
 }
