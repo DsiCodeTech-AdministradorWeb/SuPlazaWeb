@@ -1,4 +1,5 @@
-﻿using DsiCodetech.Administrador.Domain;
+﻿using DsiCodetech.Administrador.Business.Interface;
+using DsiCodetech.Administrador.Domain;
 using DsiCodetech.Administrador.Repository;
 using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DsiCodetech.Administrador.Business
 {
-    public class UsoCfdiBusiness
+    public class UsoCfdiBusiness: IUsoCfdiBusiness
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly Uso_Cfdi_Repository repository;
