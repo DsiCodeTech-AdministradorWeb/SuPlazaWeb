@@ -62,6 +62,7 @@
     <Compile Include="RegimenFiscalBusiness.cs" />
     <Compile Include="TipoComprobanteBusiness.cs" />
     <Compile Include="TipoRelacionBusiness.cs" />
+    <Compile Include="UsoCfdiBusiness.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
