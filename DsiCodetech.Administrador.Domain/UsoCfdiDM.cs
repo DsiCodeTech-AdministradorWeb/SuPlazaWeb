@@ -13,7 +13,7 @@ namespace DsiCodetech.Administrador.Domain
         public string Persona_Fisica { get; set; }
         public string Persona_Moral { get; set; }
         public string Regimen_Fiscal_Receptor { get; set; }
-        public DateTime Fecha_Inicio { get; set; }
-        public DateTime Fecha_Fin { get; set; }
+        public string Fecha_Inicio { get; set; }
+        public string Fecha_Fin { get; set; }
     }
 }
