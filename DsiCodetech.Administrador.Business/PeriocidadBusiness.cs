@@ -1,4 +1,5 @@
-﻿using DsiCodetech.Administrador.Repository;
+﻿using DsiCodetech.Administrador.Domain;
+using DsiCodetech.Administrador.Repository;
 using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,21 @@ namespace DsiCodetech.Administrador.Business
         {
             unitOfWork = _unitOfWork;
             repository = new Periodicidad_Repository(unitOfWork);
+        }
+
+        public List<PeriocidadDM> GetAllPeriocidades()
+        {
+            List<PeriocidadDM> periocidadModel = null;
+
+            periocidadModel = repository.GetAll().Select(p => new PeriocidadDM
+            {
+                Id = p.id,
+                Descripcion = p.descripcion,
+                Fecha_Inicio = p.fecha_inicio == null ? DateTime.Now.ToShortDateString() : p.fecha_inicio.Value.ToShortDateString(),
+                Fecha_Fin = p.fecha_fin == null ? DateTime.Now.ToShortDateString() : p.fecha_fin.Value.ToShortDateString(),
+               
+            }).OrderBy(p=>p.Id).ToList();
+            return periocidadModel;
         }
     }
 }

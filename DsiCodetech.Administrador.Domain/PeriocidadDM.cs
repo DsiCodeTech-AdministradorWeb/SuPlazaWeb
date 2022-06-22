@@ -16,11 +16,11 @@ namespace DsiCodetech.Administrador.Domain
         {
             get; set;
         }
-        public DateTime Fecha_Inicio
+        public string Fecha_Inicio
         {
             get; set;
         }
-        public DateTime Fecha_Fin
+        public string Fecha_Fin
         {
             get; set;
         }
