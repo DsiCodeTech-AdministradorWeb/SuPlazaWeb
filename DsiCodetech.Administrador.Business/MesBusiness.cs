@@ -1,4 +1,5 @@
-﻿using DsiCodetech.Administrador.Domain;
+﻿using DsiCodetech.Administrador.Business.Interface;
+using DsiCodetech.Administrador.Domain;
 using DsiCodetech.Administrador.Repository;
 using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DsiCodetech.Administrador.Business
 {
-    public class MesBusiness
+    public class MesBusiness : IMesBusiness
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly Mes_Repository repository;
@@ -19,6 +20,10 @@ namespace DsiCodetech.Administrador.Business
             repository = new Mes_Repository(unitOfWork);
         }
 
+        /// <summary>
+        /// /Este metodo se encraga de consultar el mes
+        /// </summary>
+        /// <returns> Lista de tipo mes </returns>
         public List<MesDM> GetMes()
         {
             List<MesDM> meses = null;
