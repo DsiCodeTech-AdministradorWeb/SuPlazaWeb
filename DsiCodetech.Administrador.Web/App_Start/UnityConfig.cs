@@ -26,6 +26,7 @@ namespace DsiCodetech.Administrador.Web
             container.RegisterType<IFormaPagoBusiness, FormaPagoBusiness>();
             container.RegisterType<IClaveProductoServiciosBusiness,ClaveProductoServiciosBusiness>();
             container.RegisterType<IPeriocidadBusiness,PeriocidadBusiness>();
+            container.RegisterType<IUsoCfdiBusiness, UsoCfdiBusiness>();
             // e.g. container.RegisterType<ITestService, TestService>();
             DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
