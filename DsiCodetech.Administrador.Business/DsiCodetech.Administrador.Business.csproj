@@ -44,6 +44,7 @@
     <Compile Include="ClaveProductoServiciosBusiness.cs" />
     <Compile Include="ExportacionBusiness.cs" />
     <Compile Include="FormaPagoBusiness.cs" />
+    <Compile Include="Interface\IClaveProductoServiciosBusiness.cs" />
     <Compile Include="Interface\IExportacionBusiness.cs" />
     <Compile Include="Interface\IFormaPagoBusiness.cs" />
     <Compile Include="Interface\IMetodoPagoBusiness.cs" />
