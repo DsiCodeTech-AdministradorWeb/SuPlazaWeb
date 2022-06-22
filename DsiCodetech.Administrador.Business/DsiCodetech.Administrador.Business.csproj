@@ -50,6 +50,7 @@
     <Compile Include="Interface\IMetodoPagoBusiness.cs" />
     <Compile Include="Interface\IMonedaBusiness.cs" />
     <Compile Include="Interface\IPaisBusiness.cs" />
+    <Compile Include="Interface\IPeriocidadBusiness.cs" />
     <Compile Include="Interface\IRegimenFiscalBusiness.cs" />
     <Compile Include="Interface\ITipoComprobanteBusiness.cs" />
     <Compile Include="Interface\ITipoRelacionBusiness.cs" />
