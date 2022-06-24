@@ -8,7 +8,7 @@ namespace DsiCodetech.Administrador.Domain
 {
     public class ClienteDM
     {
-        public string IdCliente { get; set; }
+        public Guid IdCliente { get; set; }
         public string Rfc { get; set; }
         public string Razon_Social { get; set; }
         public string Contacto { get; set; }

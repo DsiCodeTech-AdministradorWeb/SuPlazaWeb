@@ -17,27 +17,27 @@ namespace DsiCodetech.Administrador.Business
         public ClienteBusiness(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
-
+            repository = new ClienteRepository(unitOfWork);
         }
 
-        //public ClienteDM GetClientePorId(string id)
-        //{
+        public ClienteDM GetClientePorId(string id)
+        {
 
-        //    //var clienteModel = repository.SingleOrDefault(p => p.id == id);
-        //    ClienteDM metodoPagoModel = new ClienteDM
-        //    {
-        //        IdCliente = clienteModel.id_cliente,
-        //        Rfc = clienteModel.rfc,
-        //        Razon_Social = clienteModel.razon_social,
-        //        Contacto = clienteModel.contacto,
-        //        Email = clienteModel.e_mail,
-        //        Email2 = clienteModel.e_mail2,
-        //        IdMunicipio = clienteModel.id_municipio,
-        //        IdEntidad= clienteModel.id_entidad
-                
+            var clienteModel = repository.SingleOrDefault(p => p.id_cliente.Equals(id));
+            ClienteDM metodoPagoModel = new ClienteDM
+            {
+                IdCliente = clienteModel.id_cliente,
+                Rfc = clienteModel.rfc,
+                Razon_Social = clienteModel.razon_social,
+                Contacto = clienteModel.contacto,
+                Email = clienteModel.e_mail,
+                Email2 = clienteModel.e_mail2,
+                IdMunicipio = clienteModel.id_municipio,
+                IdEntidad = clienteModel.id_entidad
 
-        //    };
-        //    return metodoPagoModel;
-        //}
+
+            };
+            return metodoPagoModel;
+        }
     }
 }
