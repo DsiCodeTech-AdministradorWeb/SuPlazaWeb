@@ -1,5 +1,6 @@
 ﻿using DsiCodetech.Administrador.Business;
 using DsiCodetech.Administrador.Business.Interface;
+using DsiCodetech.Administrador.Domain;
 using DsiCodetech.Administrador.Web.Dto;
 using DsiCodetech.Administrador.Web.Resources;
 using NLog;
@@ -49,6 +50,24 @@ namespace DsiCodetech.Administrador.Web.Controllers
                 var cliente = clientesBusiness.GetClienteById(id_cliente);
                 var clienteDto = AutoMapper.Mapper.Map<ClientesDto>(cliente);
                 return Ok(clienteDto);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error en la peticion dentro de: Clientes, en la Acción : GetClientePoId");
+                loggerdb.Error(ex);
+                return BadRequest(Utilerias.BAD_REQUEST);
+            }
+        }
+
+
+        [HttpPost]
+        public IHttpActionResult Agregar(ClientesDto customer)
+        {
+            try
+            {
+                var cliente = AutoMapper.Mapper.Map<ClienteDM>(customer);
+                var result= clientesBusiness.Insert(cliente);
+                return Ok(result);
             }
             catch (Exception ex)
             {
