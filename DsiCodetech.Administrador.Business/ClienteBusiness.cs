@@ -22,6 +22,25 @@ namespace DsiCodetech.Administrador.Business
             repository = new ClienteRepository(unitOfWork);
         }
 
+
+        public List<ClienteDM> GetClientes()
+        {
+            List<ClienteDM> clientes = null;
+
+            clientes = repository.GetAll().Select(p => new ClienteDM
+            {
+                IdCliente = p.id_cliente,
+                Rfc = p.rfc,
+                RazonSocial = p.razon_social,
+                RegimenFiscal = p.regimen_fiscal
+
+            }).ToList();
+            return clientes;
+        }
+
+
+
+
         /// <summary>
         /// Este metodo se encarga de consultar un cliente por Identificador
         /// </summary>
@@ -40,5 +59,9 @@ namespace DsiCodetech.Administrador.Business
             };
             return metodoPagoModel;
         }
+
+
+
+
     }
 }
