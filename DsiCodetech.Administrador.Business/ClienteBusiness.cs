@@ -22,7 +22,10 @@ namespace DsiCodetech.Administrador.Business
             repository = new ClienteRepository(unitOfWork);
         }
 
-
+        /// <summary>
+        /// Este metodo se encarga de consultar todas las entidades del tipo clientes
+        /// </summary>
+        /// <returns>regresa una coleccion de clientes</returns>
         public List<ClienteDM> GetClientes()
         {
             List<ClienteDM> clientes = null;
