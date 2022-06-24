@@ -26,7 +26,7 @@ namespace DsiCodetech.Administrador.Business
         /// Este metodo se encarga de consultar todas las entidades del tipo clientes
         /// </summary>
         /// <returns>regresa una coleccion de clientes</returns>
-        public List<ClienteDM> GetClientes()
+        public List<ClienteDM> GetAllClientes()
         {
             List<ClienteDM> clientes = null;
 
@@ -45,7 +45,7 @@ namespace DsiCodetech.Administrador.Business
         /// </summary>
         /// <param name="id">identificador de la entidad</param>
         /// <returns>la entidad del tipo clienteDM</returns>
-        public ClienteDM GetClientePorId(string id)
+        public ClienteDM GetClienteById(string id)
         {
 
             var clienteModel = repository.SingleOrDefault(p => p.id_cliente.Equals(id));
@@ -59,8 +59,19 @@ namespace DsiCodetech.Administrador.Business
             return metodoPagoModel;
         }
 
-
-
+        public bool Insert(ClienteDM cliente)
+        {
+            bool respuesta = false;
+            var model = new cliente
+            {
+                razon_social= cliente.RazonSocial,
+                regimen_fiscal = cliente.RegimenFiscal,
+                rfc = cliente.Rfc
+            };
+            repository.Insert(model);
+            respuesta = true;
+            return respuesta;
+        }
 
     }
 }
