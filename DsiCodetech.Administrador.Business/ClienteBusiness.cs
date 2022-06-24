@@ -1,4 +1,5 @@
-﻿using DsiCodetech.Administrador.Domain;
+﻿using DsiCodetech.Administrador.Business.Interface;
+using DsiCodetech.Administrador.Domain;
 using DsiCodetech.Administrador.Repository;
 using DsiCodetech.Administrador.Repository.Infraestructure;
 using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DsiCodetech.Administrador.Business
 {
-    public class ClienteBusiness 
+    public class ClienteBusiness : IClienteBusiness
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly ClienteRepository repository;
