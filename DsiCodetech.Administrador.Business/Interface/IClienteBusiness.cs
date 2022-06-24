@@ -21,6 +21,12 @@ namespace DsiCodetech.Administrador.Business.Interface
         /// </summary>
         /// <param name="id">identificador de la entidad</param>
         /// <returns>la entidad del tipo clienteDM</returns>
-        ClienteDM GetClientePorId(string id);
+        ClienteDM GetClienteById(string id);
+        /// <summary>
+        /// Este metodo se encarga de insertar una entidad cliente
+        /// </summary>
+        /// <param name="cliente">la entidad cliente</param>
+        /// <returns>regresa un valor boolean</returns>
+        bool Insert(ClienteDM cliente);
     }
 }
