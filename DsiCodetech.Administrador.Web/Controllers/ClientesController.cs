@@ -1,5 +1,6 @@
 ﻿using DsiCodetech.Administrador.Business;
 using DsiCodetech.Administrador.Business.Interface;
+using DsiCodetech.Administrador.Web.Dto;
 using DsiCodetech.Administrador.Web.Resources;
 using NLog;
 using System;
@@ -28,7 +29,9 @@ namespace DsiCodetech.Administrador.Web.Controllers
         {
             try
             {
-
+                var clientes = clientesBusiness.GetAllClientes();
+                var clientesDto = AutoMapper.Mapper.Map<List<ClientesDto>>(clientes);
+                return Ok(clientesDto);
             }
             catch (Exception ex)
             {
