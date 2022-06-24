@@ -78,3 +78,10 @@ C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web.Tests\obj\D
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web.Tests\obj\Debug\DsiCodetech.Administrador.Web.Tests.csproj.CopyComplete
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web.Tests\obj\Debug\DsiCodetech.Administrador.Web.Tests.dll
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web.Tests\obj\Debug\DsiCodetech.Administrador.Web.Tests.pdb
+C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\NLog.config
+C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\System.Web.Http.Cors.dll
+C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\NLog.dll
+C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\Unity.WebApi.dll
+C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\System.Web.Cors.dll
+C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\System.Web.Http.Cors.xml
+C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\NLog.xml

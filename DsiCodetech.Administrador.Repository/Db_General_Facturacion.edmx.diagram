@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d149f6a6553d40c386bba7e3132d7f5c" Name="Diagram1">
+      <Diagram DiagramId="d149f6a6553d40c386bba7e3132d7f5c" Name="Diagram1" ZoomLevel="75">
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.clave_producto_serv" Width="1.875" PointX="0.875" PointY="2.125" IsExpanded="true" />
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.exportacion" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.forma_pago" Width="1.5" PointX="2.875" PointY="2.875" IsExpanded="true" />
@@ -17,6 +17,7 @@
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.tipo_comprobante" Width="1.75" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.tipo_relacion" Width="1.5" PointX="8.625" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="db_cfdi_facturasModelo.uso_cfdi" Width="2.125" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_cfdi_facturasModelo.cliente" Width="1.5" PointX="11.625" PointY="5.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

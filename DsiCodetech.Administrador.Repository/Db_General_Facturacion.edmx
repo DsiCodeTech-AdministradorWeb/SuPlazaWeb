@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="db_cfdi_facturasModelo.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="db_cfdi_facturasModelo.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="clave_producto_serv">
           <Key>
             <PropertyRef Name="id" />
@@ -17,6 +17,15 @@
           <Property Name="palabras_similares" Type="varchar" MaxLength="252" />
           <Property Name="fecha_inicio" Type="date" />
           <Property Name="fecha_fin" Type="date" />
+        </EntityType>
+        <EntityType Name="cliente">
+          <Key>
+            <PropertyRef Name="id_cliente" />
+          </Key>
+          <Property Name="id_cliente" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="rfc" Type="varchar" MaxLength="12" />
+          <Property Name="razon_social" Type="varchar" MaxLength="150" />
+          <Property Name="regimen_fiscal" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="exportacion">
           <Key>
@@ -132,6 +141,7 @@
         </EntityType>
         <EntityContainer Name="db_cfdi_facturasModeloStoreContainer">
           <EntitySet Name="clave_producto_serv" EntityType="Self.clave_producto_serv" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cliente" EntityType="Self.cliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="exportacion" EntityType="Self.exportacion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="forma_pago" EntityType="Self.forma_pago" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="mes" EntityType="Self.mes" Schema="dbo" store:Type="Tables" />
@@ -144,8 +154,7 @@
           <EntitySet Name="tipo_relacion" EntityType="Self.tipo_relacion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="uso_cfdi" EntityType="Self.uso_cfdi" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="db_cfdi_facturasModelo" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -287,7 +296,17 @@
           <EntitySet Name="tipo_comprobante" EntityType="Self.tipo_comprobante" />
           <EntitySet Name="tipo_relacion" EntityType="Self.tipo_relacion" />
           <EntitySet Name="uso_cfdi" EntityType="Self.uso_cfdi" />
+          <EntitySet Name="cliente" EntityType="db_cfdi_facturasModelo.cliente" />
         </EntityContainer>
+        <EntityType Name="cliente">
+          <Key>
+            <PropertyRef Name="id_cliente" />
+          </Key>
+          <Property Name="id_cliente" Type="Guid" Nullable="false" />
+          <Property Name="rfc" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="razon_social" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="regimen_fiscal" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -428,6 +447,16 @@
                 <ScalarProperty Name="regimen_fiscal_receptor" ColumnName="regimen_fiscal_receptor" />
                 <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
                 <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cliente">
+            <EntityTypeMapping TypeName="db_cfdi_facturasModelo.cliente">
+              <MappingFragment StoreEntitySet="cliente">
+                <ScalarProperty Name="regimen_fiscal" ColumnName="regimen_fiscal" />
+                <ScalarProperty Name="razon_social" ColumnName="razon_social" />
+                <ScalarProperty Name="rfc" ColumnName="rfc" />
+                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -37,5 +37,6 @@ namespace DsiCodetech.Administrador.Repository
         public virtual DbSet<tipo_comprobante> tipo_comprobante { get; set; }
         public virtual DbSet<tipo_relacion> tipo_relacion { get; set; }
         public virtual DbSet<uso_cfdi> uso_cfdi { get; set; }
+        public virtual DbSet<cliente> cliente { get; set; }
     }
 }
