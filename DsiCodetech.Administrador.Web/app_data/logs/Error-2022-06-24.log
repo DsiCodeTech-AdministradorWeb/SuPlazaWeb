@@ -1,0 +1,72 @@
+[ERROR] 10:39:28.340:
+- DsiCodetech.Administrador.Web.Controllers.RegimenFiscalController.GetRegimenFiscal (Line #0)
+- Error en la peticion dentro de: RegimenFiscal, en la Acción : GetRegimenFiscal
+ 
+[ERROR] 10:39:28.389:
+- DsiCodetech.Administrador.Web.Controllers.RegimenFiscalController.GetRegimenFiscal (Line #0)
+- System.Data.Entity.Core.EntityException: The underlying provider failed on Open.
+ 
+[ERROR] 10:40:40.638:
+- DsiCodetech.Administrador.Web.Controllers.FacturacionController.GetExportacion (Line #0)
+- Error en la peticion dentro de: RegimenFiscal, en la Acción : GetRegimenFiscal
+ 
+[ERROR] 10:40:40.639:
+- DsiCodetech.Administrador.Web.Controllers.FacturacionController.GetExportacion (Line #0)
+- System.Data.Entity.Core.EntityException: The underlying provider failed on Open.
+ 
+[ERROR] 10:47:50.343:
+- DsiCodetech.Administrador.Web.Controllers.RegimenFiscalController.GetRegimenFiscal (Line #0)
+- Error en la peticion dentro de: RegimenFiscal, en la Acción : GetRegimenFiscal
+ 
+[ERROR] 10:47:50.391:
+- DsiCodetech.Administrador.Web.Controllers.RegimenFiscalController.GetRegimenFiscal (Line #0)
+- System.Data.Entity.Core.EntityException: The underlying provider failed on Open.
+ 
+[ERROR] 10:48:33.048:
+- DsiCodetech.Administrador.Web.Controllers.RegimenFiscalController.GetRegimenFiscal (Line #0)
+- Error en la peticion dentro de: RegimenFiscal, en la Acción : GetRegimenFiscal
+ 
+[ERROR] 10:48:33.079:
+- DsiCodetech.Administrador.Web.Controllers.RegimenFiscalController.GetRegimenFiscal (Line #0)
+- System.Data.Entity.Core.EntityException: The underlying provider failed on Open.
+ 
+[ERROR] 10:49:16.612:
+- DsiCodetech.Administrador.Web.Controllers.RegimenFiscalController.GetRegimenFiscal (Line #0)
+- Error en la peticion dentro de: RegimenFiscal, en la Acción : GetRegimenFiscal
+ 
+[ERROR] 10:49:16.664:
+- DsiCodetech.Administrador.Web.Controllers.RegimenFiscalController.GetRegimenFiscal (Line #0)
+- System.Data.Entity.Core.EntityException: The underlying provider failed on Open.
+ 
+[ERROR] 10:49:43.528:
+- DsiCodetech.Administrador.Web.Controllers.FacturacionController.GetExportacion (Line #0)
+- Error en la peticion dentro de: RegimenFiscal, en la Acción : GetRegimenFiscal
+ 
+[ERROR] 10:49:43.528:
+- DsiCodetech.Administrador.Web.Controllers.FacturacionController.GetExportacion (Line #0)
+- System.Data.Entity.Core.EntityException: The underlying provider failed on Open.
+ 
+[ERROR] 10:50:12.563:
+- DsiCodetech.Administrador.Web.Controllers.FacturacionController.GetExportacion (Line #0)
+- Error en la peticion dentro de: RegimenFiscal, en la Acción : GetRegimenFiscal
+ 
+[ERROR] 10:50:12.563:
+- DsiCodetech.Administrador.Web.Controllers.FacturacionController.GetExportacion (Line #0)
+- System.Data.Entity.Core.EntityException: The underlying provider failed on Open.
+ 
+[ERROR] 10:50:27.465:
+- DsiCodetech.Administrador.Web.Controllers.FacturacionController.GetExportacion (Line #0)
+- Error en la peticion dentro de: RegimenFiscal, en la Acción : GetRegimenFiscal
+ 
+[ERROR] 10:50:27.465:
+- DsiCodetech.Administrador.Web.Controllers.FacturacionController.GetExportacion (Line #0)
+- System.Data.Entity.Core.EntityException: The underlying provider failed on Open.
+ 
+[ERROR] 10:51:25.000:
+- DsiCodetech.Administrador.Web.Controllers.FacturacionController.GetExportacion (Line #0)
+- Error en la peticion dentro de: RegimenFiscal, en la Acción : GetRegimenFiscal
+ 
+[ERROR] 10:51:25.000:
+- DsiCodetech.Administrador.Web.Controllers.FacturacionController.GetExportacion (Line #0)
+- System.Data.Entity.Core.EntityException: The underlying provider failed on Open.
+ 
