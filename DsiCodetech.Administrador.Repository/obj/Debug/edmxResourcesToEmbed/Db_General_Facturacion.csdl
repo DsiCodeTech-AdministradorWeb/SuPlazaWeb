@@ -138,5 +138,15 @@
     <EntitySet Name="tipo_comprobante" EntityType="Self.tipo_comprobante" />
     <EntitySet Name="tipo_relacion" EntityType="Self.tipo_relacion" />
     <EntitySet Name="uso_cfdi" EntityType="Self.uso_cfdi" />
+    <EntitySet Name="cliente" EntityType="db_cfdi_facturasModelo.cliente" />
   </EntityContainer>
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="Guid" Nullable="false" />
+    <Property Name="rfc" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="razon_social" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="regimen_fiscal" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

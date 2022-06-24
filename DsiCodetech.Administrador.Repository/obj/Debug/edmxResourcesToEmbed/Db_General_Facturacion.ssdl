@@ -13,14 +13,15 @@
     <Property Name="fecha_inicio" Type="date" />
     <Property Name="fecha_fin" Type="date" />
   </EntityType>
-  <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'db_cfdi_facturas.dbo.cliente' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="cliente">
-          <Property Name="id_cliente" Type="uniqueidentifier" />
-          <Property Name="rfc" Type="varchar" MaxLength="12" />
-          <Property Name="razon_social" Type="varchar" MaxLength="150" />
-          <Property Name="regimen_fiscal" Type="varchar" MaxLength="100" />
-        </EntityType>-->
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="rfc" Type="varchar" MaxLength="12" />
+    <Property Name="razon_social" Type="varchar" MaxLength="150" />
+    <Property Name="regimen_fiscal" Type="varchar" MaxLength="100" />
+  </EntityType>
   <EntityType Name="exportacion">
     <Key>
       <PropertyRef Name="id" />
@@ -135,6 +136,7 @@ advertencia 6013: La tabla o vista 'db_cfdi_facturas.dbo.cliente' no tiene defin
   </EntityType>
   <EntityContainer Name="db_cfdi_facturasModeloStoreContainer">
     <EntitySet Name="clave_producto_serv" EntityType="Self.clave_producto_serv" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cliente" EntityType="Self.cliente" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="exportacion" EntityType="Self.exportacion" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="forma_pago" EntityType="Self.forma_pago" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="mes" EntityType="Self.mes" Schema="dbo" store:Type="Tables" />
