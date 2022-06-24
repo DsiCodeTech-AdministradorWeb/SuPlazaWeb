@@ -14,7 +14,7 @@ namespace DsiCodetech.Administrador.Business.Interface
         /// Este metodo se encarga de consultar todas las entidades del tipo clientes
         /// </summary>
         /// <returns>regresa una coleccion de clientes</returns>
-        List<ClienteDM> GetClientes();
+        List<ClienteDM> GetAllClientes();
 
         /// <summary>
         /// Este metodo se encarga de consultar un cliente por Identificador

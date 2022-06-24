@@ -184,9 +184,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\FacturacionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegimenFiscalController.cs" />
+    <Compile Include="Dto\ClientesDto.cs" />
     <Compile Include="Dto\FormaPagoDto.cs" />
     <Compile Include="Dto\MesDto.cs" />
     <Compile Include="Dto\RegimenFiscalDto.cs" />
