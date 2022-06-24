@@ -11,6 +11,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using System.Web.Http.Description;
 
 namespace DsiCodetech.Administrador.Web.Controllers
 {
@@ -43,6 +44,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
         }
 
         [HttpGet]
+        [ResponseType(typeof(ClientesDto))]
         public IHttpActionResult GetClientePorId(string id_cliente)
         {
             try
