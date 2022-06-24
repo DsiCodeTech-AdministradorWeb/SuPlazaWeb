@@ -13,7 +13,7 @@ using System.Web.Http.Cors;
 namespace DsiCodetech.Administrador.Web.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    //[Route(Name ="facturacion")]
+    [Route("api/facturacion")]
     public class FacturacionController : ApiController
     {
         private readonly IExportacionBusiness exportacionBusiness;
@@ -30,8 +30,8 @@ namespace DsiCodetech.Administrador.Web.Controllers
         }
 
 
+        [Route("api/facturacion/exportacion")]
         [System.Web.Http.HttpGet]
-        //[System.Web.Http.Route(Name = "exportacion")]
         public IHttpActionResult GetExportacion()
         {
             try
@@ -49,6 +49,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
         }
 
+        [Route("api/facturacion/formaspago")]
         [HttpGet]
         public IHttpActionResult GetFormasDePago()
         {
@@ -56,7 +57,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
             {
                 var formasPago = pagoBusiness.GetAllFormasDePago();
                 var formasPagoDto = AutoMapper.Mapper.Map <List<FormaPagoDto>>(formasPago);
-                return Ok();
+                return Ok(formasPagoDto);
             }
             catch (Exception ex)
             {
@@ -68,6 +69,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
         }
 
+        [Route("api/facturacion/mes")]
         [HttpGet]
         public IHttpActionResult GetMes()
         {
