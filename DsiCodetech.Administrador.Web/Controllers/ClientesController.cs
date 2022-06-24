@@ -40,5 +40,25 @@ namespace DsiCodetech.Administrador.Web.Controllers
                 return BadRequest(Utilerias.BAD_REQUEST);
             }
         }
+
+        [HttpGet]
+        public IHttpActionResult GetClientePorId(string id_cliente)
+        {
+            try
+            {
+                var cliente = clientesBusiness.GetClienteById(id_cliente);
+                var clienteDto = AutoMapper.Mapper.Map<ClientesDto>(cliente);
+                return Ok(clienteDto);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error en la peticion dentro de: Clientes, en la Acción : GetClientePoId");
+                loggerdb.Error(ex);
+                return BadRequest(Utilerias.BAD_REQUEST);
+            }
+        }
+
+
+
     }
 }
