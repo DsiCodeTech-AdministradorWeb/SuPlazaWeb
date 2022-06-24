@@ -37,13 +37,9 @@ namespace DsiCodetech.Administrador.Business
                 RazonSocial = p.razon_social,
                 RegimenFiscal = p.regimen_fiscal
 
-            }).ToList();
+            }).OrderBy(p=>p.IdCliente).ToList();
             return clientes;
         }
-
-
-
-
         /// <summary>
         /// Este metodo se encarga de consultar un cliente por Identificador
         /// </summary>
