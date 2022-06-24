@@ -58,7 +58,11 @@ namespace DsiCodetech.Administrador.Business
             };
             return metodoPagoModel;
         }
-
+        /// <summary>
+        /// Este metodo se encarga de insertar una entidad cliente
+        /// </summary>
+        /// <param name="cliente">la entidad cliente</param>
+        /// <returns>regresa un valor boolean</returns>
         public bool Insert(ClienteDM cliente)
         {
             bool respuesta = false;
