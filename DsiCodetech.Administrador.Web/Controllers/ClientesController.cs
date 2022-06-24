@@ -63,7 +63,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
 
 
         [HttpPost]
-        public IHttpActionResult Agregar(ClientesDto customer)
+        public IHttpActionResult Agregar([FromBody] ClientesDto customer)
         {
             try
             {
