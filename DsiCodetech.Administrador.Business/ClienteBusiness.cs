@@ -28,14 +28,8 @@ namespace DsiCodetech.Administrador.Business
             {
                 IdCliente = clienteModel.id_cliente,
                 Rfc = clienteModel.rfc,
-                Razon_Social = clienteModel.razon_social,
-                Contacto = clienteModel.contacto,
-                Email = clienteModel.e_mail,
-                Email2 = clienteModel.e_mail2,
-                IdMunicipio = clienteModel.id_municipio,
-                IdEntidad = clienteModel.id_entidad
-
-
+                RazonSocial = clienteModel.razon_social,
+                RegimenFiscal = clienteModel.regimen_fiscal
             };
             return metodoPagoModel;
         }
