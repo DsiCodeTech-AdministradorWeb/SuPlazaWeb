@@ -57,6 +57,7 @@
       <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
     </Compile>
     <Compile Include="Clave_Producto_Serv_Repository.cs" />
+    <Compile Include="ClienteRepository.cs" />
     <Compile Include="Db_General_Facturacion.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
