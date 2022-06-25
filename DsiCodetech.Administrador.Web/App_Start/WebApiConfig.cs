@@ -20,12 +20,12 @@ namespace DsiCodetech.Administrador.Web
             config.EnableCors(cors);
             // Rutas de API web
             config.MapHttpAttributeRoutes();
-            
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { controller="Facturacion", action= "GetExportacion", id = RouteParameter.Optional }
-                
+                defaults: new { id = RouteParameter.Optional }
+
             );
 
             JsonMediaTypeFormatter jsonFormatter = config.Formatters.JsonFormatter;

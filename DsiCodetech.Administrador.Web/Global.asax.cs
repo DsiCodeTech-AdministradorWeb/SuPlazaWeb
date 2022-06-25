@@ -8,6 +8,8 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
+using Newtonsoft.Json.Serialization;
+
 namespace DsiCodetech.Administrador.Web
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -21,6 +23,20 @@ namespace DsiCodetech.Administrador.Web
             AutomaperWebProfile.Run();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            GlobalConfiguration.Configuration
+                .Formatters
+                .JsonFormatter
+                .SerializerSettings
+                .ContractResolver = new JsonLowerCaseResolver();
+        }
+    }
+
+    public class JsonLowerCaseResolver : DefaultContractResolver
+    {
+        protected override string ResolvePropertyName(string propertyName)
+        {
+            return propertyName.ToLower();
         }
     }
 }

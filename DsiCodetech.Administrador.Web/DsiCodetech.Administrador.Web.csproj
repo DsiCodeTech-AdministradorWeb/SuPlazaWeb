@@ -77,6 +77,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Json, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
@@ -189,9 +190,14 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegimenFiscalController.cs" />
     <Compile Include="Dto\ClientesDto.cs" />
+    <Compile Include="Dto\ExportacionDto.cs" />
     <Compile Include="Dto\FormaPagoDto.cs" />
     <Compile Include="Dto\MesDto.cs" />
+    <Compile Include="Dto\MetodoPagoDto.cs" />
+    <Compile Include="Dto\PeriodicidadDto.cs" />
     <Compile Include="Dto\RegimenFiscalDto.cs" />
+    <Compile Include="Dto\TipoComprobanteDto.cs" />
+    <Compile Include="Dto\UsoCfdiDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

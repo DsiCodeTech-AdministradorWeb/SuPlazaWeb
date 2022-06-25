@@ -7,14 +7,21 @@ using System.Web;
 
 namespace DsiCodetech.Administrador.Web.Infraestructure
 {
-    public class AutomaperWebProfile: AutoMapper.Profile
+    public class AutomaperWebProfile : AutoMapper.Profile
     {
         public AutomaperWebProfile()
         {
+            CreateMap<ClientesDto, ClienteDM>().ReverseMap();
+
+            /* Módulo del SAT para la facturación */
+            CreateMap<PeriocidadDM, PeriodicidadDto>().ReverseMap();
+            CreateMap<MesDto, MesDM>().ReverseMap();
+            CreateMap<ExportacionDM, ExportacionDto>().ReverseMap();
+            CreateMap<UsoCfdiDM, UsoCfdiDto>().ReverseMap();
             CreateMap<RegimenFiscalDM, RegimenFiscalDto>().ReverseMap();
             CreateMap<FormaPagoDto, FormaPagoDM>().ReverseMap();
-            CreateMap<MesDto, MesDM>().ReverseMap();
-            CreateMap<ClientesDto, ClienteDM>().ReverseMap();
+            CreateMap<MetodoPagoDM, MetodoPagoDto>().ReverseMap();
+            CreateMap<TipoComprobanteDM, TipoComprobanteDto>().ReverseMap();
         }
 
         public static void Run()

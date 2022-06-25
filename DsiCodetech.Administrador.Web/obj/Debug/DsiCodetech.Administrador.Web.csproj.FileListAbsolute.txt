@@ -262,3 +262,8 @@ C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\es\S
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\es\System.Web.WebPages.Razor.resources.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\es\System.Web.Http.WebHost.resources.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\obj\Debug\DsiCodetech.Administrador.Web.csproj.CopyComplete
+C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Text.Json.dll
+C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Memory.dll
+C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Text.Encodings.Web.dll
+C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Buffers.dll

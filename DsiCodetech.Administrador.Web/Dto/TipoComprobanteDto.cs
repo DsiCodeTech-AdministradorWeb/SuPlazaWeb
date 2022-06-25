@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 
 namespace DsiCodetech.Administrador.Web.Dto
 {
-    public class MesDto
+    public class TipoComprobanteDto
     {
         [JsonPropertyName("id")]
         public string Id { get; set; }
