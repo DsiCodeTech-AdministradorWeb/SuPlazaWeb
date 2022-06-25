@@ -16,6 +16,7 @@ using System.Web.Http.Description;
 namespace DsiCodetech.Administrador.Web.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
+    [Route("api/clientes")]
     public class ClientesController : ApiController
     {
         private readonly IClienteBusiness clientesBusiness;
@@ -26,6 +27,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
             clientesBusiness = _clientesBusiness;
         }
 
+        [Route("api/clientes/GetClientes")]
         [HttpGet]
         public IHttpActionResult GetClientes()
         {
@@ -43,6 +45,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
         }
 
+        [Route("api/clientes/GetClientePorId/{id_cliente}")]
         [HttpGet]
         [ResponseType(typeof(ClientesDto))]
         public IHttpActionResult GetClientePorId(string id_cliente)
@@ -61,7 +64,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
         }
 
-
+        [Route("api/clientes/Agregar")]
         [HttpPost]
         public IHttpActionResult Agregar([FromBody] ClientesDto customer)
         {
@@ -73,7 +76,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Error en la peticion dentro de: Clientes, en la Acción : GetClientePoId");
+                Log.Error(ex, "Error en la peticion dentro de: Clientes, en la Acción : Agregar");
                 loggerdb.Error(ex);
                 return BadRequest(Utilerias.BAD_REQUEST);
             }

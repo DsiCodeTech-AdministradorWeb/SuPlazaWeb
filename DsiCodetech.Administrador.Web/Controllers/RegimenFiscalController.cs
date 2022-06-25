@@ -11,11 +11,14 @@ using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Results;
 using System.Web.Mvc;
+using HttpGetAttribute = System.Web.Http.HttpGetAttribute;
+using RouteAttribute = System.Web.Http.RouteAttribute;
 
 namespace DsiCodetech.Administrador.Web.Controllers
 {
     
     [EnableCors(origins: "*", headers: "*", methods: "*")]
+    [Route("api/regimenfiscal")]
     public class RegimenFiscalController : ApiController
     {
         private readonly IRegimenFiscalBusiness regimenFiscalBusiness;
@@ -29,8 +32,8 @@ namespace DsiCodetech.Administrador.Web.Controllers
             
         }
 
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.Route(Name = "/regimenfiscal")]
+        [HttpGet]
+        [Route("api/regimenfiscal/GetRegimenFiscal")]
         public IHttpActionResult GetRegimenFiscal()
         {
             try
