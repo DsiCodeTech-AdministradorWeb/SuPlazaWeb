@@ -14,7 +14,9 @@ namespace DsiCodetech.Administrador.Business
         private readonly Forma_Pago_Repository repository;
         public FormaPagoBusiness(IUnitOfWork _unitOfWork)
         {
+            //unidad de trabajo
             unitOfWork = _unitOfWork;
+            //entidad de conexion con la base de datos.
             repository = new Forma_Pago_Repository(unitOfWork);
         }
         /// <summary>
