@@ -17,7 +17,6 @@ using RouteAttribute = System.Web.Http.RouteAttribute;
 namespace DsiCodetech.Administrador.Web.Controllers
 {
     
-
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     [Route("api/regimenfiscal")]
     public class RegimenFiscalController : ApiController
