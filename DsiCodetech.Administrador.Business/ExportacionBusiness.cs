@@ -13,11 +13,11 @@ namespace DsiCodetech.Administrador.Business
     public class ExportacionBusiness: IExportacionBusiness
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly Expotarcion_Repository repository;
+        private readonly ExpotarcionRepository repository;
         public ExportacionBusiness(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
-            repository = new Expotarcion_Repository(unitOfWork);
+            repository = new ExpotarcionRepository(unitOfWork);
         }
 
         /// <summary>

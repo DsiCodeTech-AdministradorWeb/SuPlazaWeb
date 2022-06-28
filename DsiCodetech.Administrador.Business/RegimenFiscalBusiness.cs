@@ -13,11 +13,11 @@ namespace DsiCodetech.Administrador.Business
     public class RegimenFiscalBusiness : IRegimenFiscalBusiness
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly Regimen_Fiscal_Repository repository;
+        private readonly RegimenFiscalRepository repository;
         public RegimenFiscalBusiness(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
-            repository = new Regimen_Fiscal_Repository(unitOfWork);
+            repository = new RegimenFiscalRepository(unitOfWork);
         }
         /// <summary>
         /// Este metodo se encarga de consultar todos los regimenes fiscales

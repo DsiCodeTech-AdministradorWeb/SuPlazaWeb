@@ -13,12 +13,12 @@ namespace DsiCodetech.Administrador.Business
     public class MetodoPagoBusiness: IMetodoPagoBusiness
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly Metodo_Pago_Repository repository;
+        private readonly MetodoPagoRepository repository;
 
         public MetodoPagoBusiness(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
-            repository = new Metodo_Pago_Repository(unitOfWork);
+            repository = new MetodoPagoRepository(unitOfWork);
         }
         /// <summary>
         /// Este metodo se encarga de consultar todos  metodos de pago

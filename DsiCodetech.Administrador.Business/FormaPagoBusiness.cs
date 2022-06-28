@@ -11,13 +11,17 @@ namespace DsiCodetech.Administrador.Business
     public class FormaPagoBusiness : IFormaPagoBusiness
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly Forma_Pago_Repository repository;
+        private readonly FormaPagoRepository repository;
         public FormaPagoBusiness(IUnitOfWork _unitOfWork)
         {
             //unidad de trabajo
             unitOfWork = _unitOfWork;
+<<<<<<< HEAD
             //entidad de conexion con la base de datos.
             repository = new Forma_Pago_Repository(unitOfWork);
+=======
+            repository = new FormaPagoRepository(unitOfWork);
+>>>>>>> b8458b654b09ac8a181a56e6d66768174cfafa85
         }
         /// <summary>
         /// este metodo se encarga de consultar todas las formas de pago

@@ -6,15 +6,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using DsiCodetech.Administrador.Repository.PosAdmin;
+
 namespace DsiCodetech.Administrador.Repository.Infraestructure
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly Db_cfdi_facturas_entidades _dbContext;
+        private readonly Dc_PosAdminEntities _dbContext;
         
         public UnitOfWork()
         {
-           _dbContext = new Db_cfdi_facturas_entidades();
+           _dbContext = new Dc_PosAdminEntities();
         }
 
         public DbContext Db

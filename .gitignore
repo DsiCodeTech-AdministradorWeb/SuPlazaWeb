@@ -1,0 +1,54 @@
+DsiCodetech.Administrador.Business/bin
+DsiCodetech.Administrador.Business/obj
+
+DsiCodetech.Administrador.Domain/bin
+DsiCodetech.Administrador.Domain/obj
+
+DsiCodetech.Administrador.Repository/bin
+DsiCodetech.Administrador.Repository/obj
+
+DsiCodetech.Administrador.Web/bin
+DsiCodetech.Administrador.Web/obj
+
+DsiCodetech.Administrador.Web/.vs
+DsiCodetech.Administrador.Web/.vs/*
+
+DsiCodetech.Administrador.Web.Test/bin
+DsiCodetech.Administrador.Web.Test/obj
+
+
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+
+# Visual Studio Code
+.vscode
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Visual Studio 2015
+.vs/
+.vs/SuPlazaWeb/v17
+.vs/*
+
