@@ -26,7 +26,7 @@ namespace DsiCodetech.Administrador.Business
         public List<FormaPagoDM> GetAllFormasDePago()
         {
             List<FormaPagoDM> formasDePago = null;
-
+            ///consulta base de datos  que regresan una lista de entidades del tipo formaPagoDM
             formasDePago = repository.GetAll().Select(p => new FormaPagoDM
             {
                 Id = p.id,
