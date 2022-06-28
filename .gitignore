@@ -49,3 +49,6 @@ msbuild.wrn
 
 # Visual Studio 2015
 .vs/
+.vs/SuPlazaWeb/v17
+.vs/*
+
