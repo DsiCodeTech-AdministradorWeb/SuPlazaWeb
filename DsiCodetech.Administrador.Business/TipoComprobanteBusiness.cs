@@ -14,12 +14,12 @@ namespace DsiCodetech.Administrador.Business
     public class TipoComprobanteBusiness : ITipoComprobanteBusiness
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly Tipo_Comprobante_Repository repository;
+        private readonly TipoComprobanteRepository repository;
 
         public TipoComprobanteBusiness(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
-            repository = new Tipo_Comprobante_Repository(unitOfWork);
+            repository = new TipoComprobanteRepository(unitOfWork);
         }
         /// <summary>
         /// Este metodo se encarga de consultar todos los tipos de comprobantes

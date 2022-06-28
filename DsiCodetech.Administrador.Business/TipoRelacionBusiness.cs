@@ -13,11 +13,11 @@ namespace DsiCodetech.Administrador.Business
     public class TipoRelacionBusiness: ITipoRelacionBusiness
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly Tipo_Relacion_Repository repository;
+        private readonly TipoRelacionRepository repository;
         public TipoRelacionBusiness(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
-            repository = new Tipo_Relacion_Repository(unitOfWork);
+            repository = new TipoRelacionRepository(unitOfWork);
         }
 
         /// <summary>

@@ -53,103 +53,352 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clave_producto_serv.cs">
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Clave_Producto_Serv_Repository.cs" />
-    <Compile Include="cliente.cs">
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
-    </Compile>
+    <Compile Include="ClaveProductoServRepository.cs" />
     <Compile Include="ClienteRepository.cs" />
-    <Compile Include="Db_General_Facturacion.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Db_General_Facturacion.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Db_General_Facturacion.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Db_General_Facturacion.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Db_General_Facturacion.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="exportacion.cs">
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Expotarcion_Repository.cs" />
-    <Compile Include="forma_pago.cs">
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Forma_Pago_Repository.cs" />
+    <Compile Include="ExpotarcionRepository.cs" />
+    <Compile Include="FormaPagoRepository.cs" />
     <Compile Include="Infraestructure\BaseRepository.cs" />
     <Compile Include="Infraestructure\Contract\IBaseRepository.cs" />
     <Compile Include="Infraestructure\Contract\IUnitOfWork.cs" />
     <Compile Include="Infraestructure\UnitOfWork.cs" />
-    <Compile Include="mes.cs">
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
+    <Compile Include="MesRepository.cs" />
+    <Compile Include="MetodoPagoRepository.cs" />
+    <Compile Include="MonedaRepository.cs" />
+    <Compile Include="PaisRepository.cs" />
+    <Compile Include="PeriodicidadRepository.cs" />
+    <Compile Include="PosAdmin\articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
     </Compile>
-    <Compile Include="Mes_Repository.cs" />
-    <Compile Include="metodo_pago.cs">
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
+    <Compile Include="PosAdmin\clasificacion.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
     </Compile>
-    <Compile Include="Metodo_Pago_Repository.cs" />
-    <Compile Include="moneda.cs">
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
+    <Compile Include="PosAdmin\clave_producto_serv.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
     </Compile>
-    <Compile Include="Moneda_Repository.cs" />
-    <Compile Include="pais.cs">
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
+    <Compile Include="PosAdmin\cliente.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
     </Compile>
-    <Compile Include="Pais_Repository.cs" />
-    <Compile Include="periodicidad.cs">
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
+    <Compile Include="PosAdmin\colector_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
     </Compile>
-    <Compile Include="Periodicidad_Repository.cs" />
+    <Compile Include="PosAdmin\colector_compra.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\colector_inventario_fisico.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\colector_orden.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\colector_orden_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\colector_proveedor.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\colector_unidad_medida.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\colector_usuario.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\colector_usuario_permiso.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\compra.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\compra_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\control_errores.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\ctrl_errores.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\Dc_PosAdmin.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dc_PosAdmin.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\Dc_PosAdmin.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\Dc_PosAdmin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dc_PosAdmin.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\direccion.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\direccion_proveedor.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\empleado.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\empresa.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\entidad.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\entrada.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\entrada_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\estadistica.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\estatus.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\exportacion.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\factura.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\factura_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\factura_venta.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\forma_pago.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\generacion_codigos.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\inventario_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\inventario_captura.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\inventario_fisico.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\inventario_fisico_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\kit_articulos.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\Logs.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\mes.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\metodo_pago.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\moneda.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\movimiento_almacen.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\municipio.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\oferta.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\oferta_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\orden.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\orden_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\pais.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\pedido.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\pedido_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\periodicidad.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\permiso.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\pos.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\pos_admin_settings.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\pos_control.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\precio_temporal.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\productos_sin_iva.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\promocion.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\promocion_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\proveedor.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\regimen_fiscal.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\salida.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\salida_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_corte_caja_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_exportToDAT_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_exportToXLS_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_pedido_anio_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_pedido_captura_pendiente_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_pedido_promedio_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_pedido_suspendido_promedio_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_pedido_suspendido_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_reporte_entrada_almacen_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_reporte_formato_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_reporte_inventario_actual_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\sp_reporte_inventario_fisico_Result.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\tipo_comprobante.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\tipo_relacion.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\unidad_medida.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\uso_cfdi.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\usuario.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\usuario_permiso.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\venta.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\venta_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\venta_cancelada.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\venta_cancelada_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\venta_devolucion.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\venta_devolucion_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\vw_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\vw_articulos_principales.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\vw_cajas.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\vw_clasificacion.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\vw_items.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\vw_oferta_articulo.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PosAdmin\vw_offers.cs">
+      <DependentUpon>Dc_PosAdmin.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="regimen_fiscal.cs">
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Regimen_Fiscal_Repository.cs" />
-    <Compile Include="tipo_comprobante.cs">
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tipo_Comprobante_Repository.cs" />
-    <Compile Include="tipo_relacion.cs">
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tipo_Relacion_Repository.cs" />
-    <Compile Include="uso_cfdi.cs">
-      <DependentUpon>Db_General_Facturacion.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Uso_Cfdi_Repository.cs" />
+    <Compile Include="RegimenFiscalRepository.cs" />
+    <Compile Include="TipoComprobanteRepository.cs" />
+    <Compile Include="TipoRelacionRepository.cs" />
+    <Compile Include="UsoCfdiRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="Db_General_Facturacion.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Db_General_Facturacion.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Db_General_Facturacion.edmx.diagram">
-      <DependentUpon>Db_General_Facturacion.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <EntityDeploy Include="PosAdmin\Dc_PosAdmin.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Dc_PosAdmin.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PosAdmin\Dc_PosAdmin.edmx.diagram">
+      <DependentUpon>Dc_PosAdmin.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Db_General_Facturacion.Context.tt">
+    <Content Include="PosAdmin\Dc_PosAdmin.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Db_General_Facturacion.edmx</DependentUpon>
-      <LastGenOutput>Db_General_Facturacion.Context.cs</LastGenOutput>
+      <DependentUpon>Dc_PosAdmin.edmx</DependentUpon>
+      <LastGenOutput>Dc_PosAdmin.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Db_General_Facturacion.tt">
+    <Content Include="PosAdmin\Dc_PosAdmin.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Db_General_Facturacion.edmx</DependentUpon>
-      <LastGenOutput>Db_General_Facturacion.cs</LastGenOutput>
+      <DependentUpon>Dc_PosAdmin.edmx</DependentUpon>
+      <LastGenOutput>Dc_PosAdmin.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

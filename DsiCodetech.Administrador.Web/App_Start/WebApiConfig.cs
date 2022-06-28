@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json.Serialization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Formatting;
-using System.Net.Http.Headers;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Web.Http.Cors;
+using System.Web.Http.ExceptionHandling;
+
+using System.Net.Http.Headers;
+
+using Newtonsoft.Json.Serialization;
+
+using DsiCodetech.Administrador.Web.Handler.ExceptionHandler;
 
 namespace DsiCodetech.Administrador.Web
 {
@@ -28,9 +29,14 @@ namespace DsiCodetech.Administrador.Web
 
             );
 
-            JsonMediaTypeFormatter jsonFormatter = config.Formatters.JsonFormatter;
-            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
+            config.Filters.Add(new SuPlazaExceptionFilterAttribute());
+            config.Services.Replace(typeof(IExceptionHandler), new SuPlazaExceptionHandler());
+
+            /* Eliminar formatos XML para las respuestas */
+            config.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
+
+            /* Json por defecto en las respuestas */
+            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/json"));
         }
     }
 }

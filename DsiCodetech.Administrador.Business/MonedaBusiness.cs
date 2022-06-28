@@ -13,11 +13,11 @@ namespace DsiCodetech.Administrador.Business
     public class MonedaBusiness: IMonedaBusiness
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly Moneda_Repository repository;
+        private readonly MonedaRepository repository;
         public MonedaBusiness(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
-            repository = new Moneda_Repository(unitOfWork);
+            repository = new MonedaRepository(unitOfWork);
         }
 
         /// <summary>

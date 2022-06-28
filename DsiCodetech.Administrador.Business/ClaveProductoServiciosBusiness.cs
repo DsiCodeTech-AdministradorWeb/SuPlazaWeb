@@ -13,11 +13,11 @@ namespace DsiCodetech.Administrador.Business
     public class ClaveProductoServiciosBusiness: IClaveProductoServiciosBusiness
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly Clave_Producto_Serv_Repository repository;
+        private readonly ClaveProductoServRepository repository;
         public ClaveProductoServiciosBusiness(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
-            repository = new Clave_Producto_Serv_Repository(unitOfWork);
+            repository = new ClaveProductoServRepository(unitOfWork);
         }
 
         /// <summary>

@@ -13,11 +13,11 @@ namespace DsiCodetech.Administrador.Business
     public class PeriocidadBusiness: IPeriocidadBusiness
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly Periodicidad_Repository repository;
+        private readonly PeriodicidadRepository repository;
         public PeriocidadBusiness(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
-            repository = new Periodicidad_Repository(unitOfWork);
+            repository = new PeriodicidadRepository(unitOfWork);
         }
 
         /// <summary>

@@ -1,7 +1,7 @@
 ﻿using DsiCodetech.Administrador.Business.Interface;
 using DsiCodetech.Administrador.Domain;
 using DsiCodetech.Administrador.Repository;
-using DsiCodetech.Administrador.Repository.Infraestructure;
+using DsiCodetech.Administrador.Repository.PosAdmin;
 using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
 using System;
 using System.Collections.Generic;

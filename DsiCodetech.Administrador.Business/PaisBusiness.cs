@@ -13,11 +13,11 @@ namespace DsiCodetech.Administrador.Business
     public class PaisBusiness: IPaisBusiness
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly Pais_Repository repository;
+        private readonly PaisRepository repository;
         public PaisBusiness(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
-            repository = new Pais_Repository(unitOfWork);
+            repository = new PaisRepository(unitOfWork);
         }
 
         /// <summary>

@@ -15,7 +15,17 @@
       "ProjectGuid": "e37e0e09-0746-42da-957f-522ff7cc461f",
       "DisplayName": "DsiCodetech.Administrador.Business",
       "ColorIndex": 2
+    },
+    "e4c5de7c-77ad-4ccf-bc41-ee4a49e095f1": {
+      "ProjectGuid": "e4c5de7c-77ad-4ccf-bc41-ee4a49e095f1",
+      "DisplayName": "DsiCodetech.Administrador.Domain",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

@@ -192,6 +192,7 @@
     <Compile Include="Dto\ClientesDto.cs" />
     <Compile Include="Dto\ExportacionDto.cs" />
     <Compile Include="Dto\FormaPagoDto.cs" />
+    <Compile Include="Dto\HttpResponseOnError.cs" />
     <Compile Include="Dto\MesDto.cs" />
     <Compile Include="Dto\MetodoPagoDto.cs" />
     <Compile Include="Dto\PeriodicidadDto.cs" />
@@ -201,6 +202,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handler\ExceptionHandler\SuPlazaExceptionFilterAttribute.cs" />
+    <Compile Include="Handler\ExceptionHandler\SuPlazaExceptionHandler.cs" />
     <Compile Include="Infraestructure\AutomaperWebProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Utilerias.Designer.cs">
@@ -254,6 +257,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Handler\SecurityHandler\" />
     <Folder Include="Helpers\" />
     <Folder Include="Models\" />
   </ItemGroup>

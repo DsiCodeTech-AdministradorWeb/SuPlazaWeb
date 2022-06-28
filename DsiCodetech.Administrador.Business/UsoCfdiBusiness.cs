@@ -13,11 +13,11 @@ namespace DsiCodetech.Administrador.Business
     public class UsoCfdiBusiness: IUsoCfdiBusiness
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly Uso_Cfdi_Repository repository;
+        private readonly UsoCfdiRepository repository;
         public UsoCfdiBusiness(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
-            repository = new Uso_Cfdi_Repository(unitOfWork);
+            repository = new UsoCfdiRepository(unitOfWork);
         }
 
         /// <summary>

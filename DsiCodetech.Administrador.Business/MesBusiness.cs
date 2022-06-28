@@ -13,11 +13,11 @@ namespace DsiCodetech.Administrador.Business
     public class MesBusiness : IMesBusiness
     {
         private readonly IUnitOfWork unitOfWork;
-        private readonly Mes_Repository repository;
+        private readonly MesRepository repository;
         public MesBusiness(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
-            repository = new Mes_Repository(unitOfWork);
+            repository = new MesRepository(unitOfWork);
         }
 
         /// <summary>

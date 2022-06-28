@@ -9,13 +9,15 @@ using System.Web.Http.Cors;
 
 using System.Web.Http.Description;
 
+using DsiCodetech.Administrador.Web.Handler.ExceptionHandler;
+
 namespace DsiCodetech.Administrador.Web.Controllers
 {
+    [SuPlazaExceptionFilter]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix(prefix: "api/facturacion")]
     public class FacturacionController : ApiController
     {
-        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
         private static readonly Logger loggerdb = LogManager.GetLogger("databaseLogger");
 
         private readonly ITipoComprobanteBusiness tipoComprobanteBusiness;
@@ -53,9 +55,8 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Error en la peticion dentro de: RegimenFiscal, en la Acción : GetExportacion");
                 loggerdb.Error(ex);
-                return BadRequest(Utilerias.BAD_REQUEST);
+                throw;
             }
         }
 
@@ -70,9 +71,8 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Error en la peticion dentro de: RegimenFiscal, en la Acción : GetTipoComprobante");
                 loggerdb.Error(ex);
-                return BadRequest(Utilerias.BAD_REQUEST);
+                throw;
             }
         }
 
@@ -87,9 +87,8 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Error en la peticion dentro de: RegimenFiscal, en la Acción : GetUsoCfdi");
                 loggerdb.Error(ex);
-                return BadRequest(Utilerias.BAD_REQUEST);
+                throw;
 
             }
         }
@@ -105,9 +104,8 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Error en la peticion dentro de: Facturacion, en la Acción : GetFormasDePago");
                 loggerdb.Error(ex);
-                return BadRequest(Utilerias.BAD_REQUEST);
+                throw;
             }
         }
 
@@ -122,9 +120,8 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Error en la peticion dentro de: Facturacion, en la Acción : GetFormasDePago");
                 loggerdb.Error(ex);
-                return BadRequest(Utilerias.BAD_REQUEST);
+                throw;
             }
         }
 
@@ -139,9 +136,8 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Error en la peticion dentro de: Facturacion, en la Acción : GetRegimenFiscal");
                 loggerdb.Error(ex);
-                return BadRequest(Utilerias.BAD_REQUEST);
+                throw;
             }
         }
 
@@ -156,9 +152,8 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Error en la peticion dentro de: Facturacion, en la Acción : GetMes");
                 loggerdb.Error(ex);
-                return BadRequest(Utilerias.BAD_REQUEST);
+                throw;
             }
         }
 
@@ -173,10 +168,18 @@ namespace DsiCodetech.Administrador.Web.Controllers
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Error en la peticion dentro de: Facturacion, en la Acción : GetPeriodicidad");
                 loggerdb.Error(ex);
-                return BadRequest(Utilerias.BAD_REQUEST);
+                throw;
             }
+        }
+
+
+        [ResponseType(typeof(string))]
+        [Route("pruebas")]
+        [HttpGet]
+        public IHttpActionResult Get()
+        {
+            throw new NullReferenceException("Mensaje de prueba");
         }
 
 
