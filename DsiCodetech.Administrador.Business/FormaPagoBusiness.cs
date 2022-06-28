@@ -41,6 +41,7 @@ namespace DsiCodetech.Administrador.Business
                 Rfc_Ordenante = p.rfc_ordenante,
                 Tipo_Pago = p.tipo_pago
             }).ToList();
+            ///se retorno la entidad en forma de coleccion
             return formasDePago;
         }
 
