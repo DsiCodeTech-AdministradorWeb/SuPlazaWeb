@@ -18,6 +18,7 @@ namespace DsiCodetech.Administrador.Repository.PosAdmin
         public entidad()
         {
             this.municipio = new HashSet<municipio>();
+            this.direccion = new HashSet<direccion>();
         }
     
         public short id_entidad { get; set; }
@@ -25,5 +26,7 @@ namespace DsiCodetech.Administrador.Repository.PosAdmin
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<municipio> municipio { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<direccion> direccion { get; set; }
     }
 }

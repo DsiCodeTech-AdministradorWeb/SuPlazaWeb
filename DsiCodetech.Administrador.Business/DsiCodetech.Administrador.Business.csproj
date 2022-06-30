@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <LangVersion>9</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,10 +44,12 @@
   <ItemGroup>
     <Compile Include="ClaveProductoServiciosBusiness.cs" />
     <Compile Include="ClienteBusiness.cs" />
+    <Compile Include="DireccionBusiness.cs" />
     <Compile Include="ExportacionBusiness.cs" />
     <Compile Include="FormaPagoBusiness.cs" />
     <Compile Include="Interface\IClaveProductoServiciosBusiness.cs" />
     <Compile Include="Interface\IClienteBusiness.cs" />
+    <Compile Include="Interface\IDireccionBusiness.cs" />
     <Compile Include="Interface\IExportacionBusiness.cs" />
     <Compile Include="Interface\IFormaPagoBusiness.cs" />
     <Compile Include="Interface\IMesBusiness.cs" />

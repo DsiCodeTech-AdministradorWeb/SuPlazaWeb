@@ -1402,6 +1402,18 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_direccion_entidad">
+          <End Role="entidad" Type="Self.entidad" Multiplicity="1" />
+          <End Role="direccion" Type="Self.direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="entidad">
+              <PropertyRef Name="id_entidad" />
+            </Principal>
+            <Dependent Role="direccion">
+              <PropertyRef Name="id_entidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_direccion_municipio">
           <End Role="municipio" Type="Self.municipio" Multiplicity="1" />
           <End Role="direccion" Type="Self.direccion" Multiplicity="*" />
@@ -2441,6 +2453,10 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
             <End Role="cliente" EntitySet="cliente" />
             <End Role="direccion" EntitySet="direccion" />
           </AssociationSet>
+          <AssociationSet Name="FK_direccion_entidad" Association="Self.FK_direccion_entidad">
+            <End Role="entidad" EntitySet="entidad" />
+            <End Role="direccion" EntitySet="direccion" />
+          </AssociationSet>
           <AssociationSet Name="FK_direccion_municipio" Association="Self.FK_direccion_municipio">
             <End Role="municipio" EntitySet="municipio" />
             <End Role="direccion" EntitySet="direccion" />
@@ -2724,7 +2740,7 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
           <Property Name="e_mail" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
           <Property Name="e_mail2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="factura" Relationship="Self.fk_cliente_factura" FromRole="cliente" ToRole="factura" />
-          <NavigationProperty Name="direccion" Relationship="Self.FK_direccion_cliente" FromRole="cliente" ToRole="direccion" />
+          <NavigationProperty Name="direccion" Relationship="pos_adminModel.FK_direccion_cliente" FromRole="cliente" ToRole="direccion" />
         </EntityType>
         <EntityType Name="compra">
           <Key>
@@ -2784,22 +2800,6 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
           <Property Name="fecha_log" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityType Name="direccion">
-          <Key>
-            <PropertyRef Name="id_direccion" />
-          </Key>
-          <Property Name="id_direccion" Type="Guid" Nullable="false" />
-          <Property Name="id_cliente" Type="Guid" Nullable="false" />
-          <Property Name="id_municipio" Type="Int16" Nullable="false" />
-          <Property Name="id_entidad" Type="Int16" Nullable="false" />
-          <Property Name="codigo_postal" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="colonia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="calle" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
-          <Property Name="no_interior" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="no_exterior" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="cliente" Relationship="Self.FK_direccion_cliente" FromRole="direccion" ToRole="cliente" />
-          <NavigationProperty Name="municipio" Relationship="Self.FK_direccion_municipio" FromRole="direccion" ToRole="municipio" />
-        </EntityType>
         <EntityType Name="direccion_proveedor">
           <Key>
             <PropertyRef Name="id_proveedor" />
@@ -2856,6 +2856,7 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
           <Property Name="id_entidad" Type="Int16" Nullable="false" />
           <Property Name="nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="municipio" Relationship="Self.fk_entidad_municipio" FromRole="entidad" ToRole="municipio" />
+          <NavigationProperty Name="direccion" Relationship="pos_adminModel.FK_direccion_entidad" FromRole="entidad" ToRole="direccion" />
         </EntityType>
         <EntityType Name="entrada">
           <Key>
@@ -3059,9 +3060,9 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
           <Property Name="id_entidad" Type="Int16" Nullable="false" />
           <Property Name="id_municipio" Type="Int16" Nullable="false" />
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="direccion" Relationship="Self.FK_direccion_municipio" FromRole="municipio" ToRole="direccion" />
           <NavigationProperty Name="direccion_proveedor" Relationship="Self.fk_municipio_direccion" FromRole="municipio" ToRole="direccion_proveedor" />
           <NavigationProperty Name="entidad" Relationship="Self.fk_entidad_municipio" FromRole="municipio" ToRole="entidad" />
+          <NavigationProperty Name="direccion" Relationship="pos_adminModel.FK_direccion_municipio" FromRole="municipio" ToRole="direccion" />
         </EntityType>
         <EntityType Name="oferta">
           <Key>
@@ -4046,18 +4047,6 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_direccion_cliente">
-          <End Role="cliente" Type="Self.cliente" Multiplicity="1" />
-          <End Role="direccion" Type="Self.direccion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="cliente">
-              <PropertyRef Name="id_cliente" />
-            </Principal>
-            <Dependent Role="direccion">
-              <PropertyRef Name="id_cliente" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="fk_compra_articulo">
           <End Role="compra" Type="Self.compra" Multiplicity="1" />
           <End Role="compra_articulo" Type="Self.compra_articulo" Multiplicity="*" />
@@ -4091,20 +4080,6 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
             </Principal>
             <Dependent Role="compra">
               <PropertyRef Name="id_proveedor" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_direccion_municipio">
-          <End Role="municipio" Type="Self.municipio" Multiplicity="1" />
-          <End Role="direccion" Type="Self.direccion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="municipio">
-              <PropertyRef Name="id_municipio" />
-              <PropertyRef Name="id_entidad" />
-            </Principal>
-            <Dependent Role="direccion">
-              <PropertyRef Name="id_municipio" />
-              <PropertyRef Name="id_entidad" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4632,7 +4607,6 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
           <EntitySet Name="compra_articulo" EntityType="Self.compra_articulo" />
           <EntitySet Name="control_errores" EntityType="Self.control_errores" />
           <EntitySet Name="ctrl_errores" EntityType="Self.ctrl_errores" />
-          <EntitySet Name="direccion" EntityType="Self.direccion" />
           <EntitySet Name="direccion_proveedor" EntityType="Self.direccion_proveedor" />
           <EntitySet Name="empleado" EntityType="Self.empleado" />
           <EntitySet Name="empresa" EntityType="Self.empresa" />
@@ -4790,10 +4764,6 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
             <End Role="cliente" EntitySet="cliente" />
             <End Role="factura" EntitySet="factura" />
           </AssociationSet>
-          <AssociationSet Name="FK_direccion_cliente" Association="Self.FK_direccion_cliente">
-            <End Role="cliente" EntitySet="cliente" />
-            <End Role="direccion" EntitySet="direccion" />
-          </AssociationSet>
           <AssociationSet Name="fk_compra_articulo" Association="Self.fk_compra_articulo">
             <End Role="compra" EntitySet="compra" />
             <End Role="compra_articulo" EntitySet="compra_articulo" />
@@ -4805,10 +4775,6 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
           <AssociationSet Name="fk_proveedor_compra" Association="Self.fk_proveedor_compra">
             <End Role="proveedor" EntitySet="proveedor" />
             <End Role="compra" EntitySet="compra" />
-          </AssociationSet>
-          <AssociationSet Name="FK_direccion_municipio" Association="Self.FK_direccion_municipio">
-            <End Role="municipio" EntitySet="municipio" />
-            <End Role="direccion" EntitySet="direccion" />
           </AssociationSet>
           <AssociationSet Name="fk_municipio_direccion" Association="Self.fk_municipio_direccion">
             <End Role="municipio" EntitySet="municipio" />
@@ -5078,6 +5044,19 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
           <EntitySet Name="tipo_relacion" EntityType="pos_adminModel.tipo_relacion" />
           <EntitySet Name="uso_cfdi" EntityType="pos_adminModel.uso_cfdi" />
           <EntitySet Name="Logs" EntityType="pos_adminModel.Logs" />
+          <EntitySet Name="direccion" EntityType="pos_adminModel.direccion" />
+          <AssociationSet Name="FK_direccion_cliente" Association="pos_adminModel.FK_direccion_cliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="direccion" EntitySet="direccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_direccion_entidad" Association="pos_adminModel.FK_direccion_entidad">
+            <End Role="entidad" EntitySet="entidad" />
+            <End Role="direccion" EntitySet="direccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_direccion_municipio" Association="pos_adminModel.FK_direccion_municipio">
+            <End Role="municipio" EntitySet="municipio" />
+            <End Role="direccion" EntitySet="direccion" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="sp_corte_caja_Result">
           <Property Type="Int32" Name="id_pos" Nullable="false" />
@@ -5418,6 +5397,61 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
           <Property Name="ErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="InnerErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="direccion">
+          <Key>
+            <PropertyRef Name="id_direccion" />
+          </Key>
+          <Property Name="id_direccion" Type="Guid" Nullable="false" />
+          <Property Name="id_cliente" Type="Guid" Nullable="false" />
+          <Property Name="id_municipio" Type="Int16" Nullable="false" />
+          <Property Name="id_entidad" Type="Int16" Nullable="false" />
+          <Property Name="codigo_postal" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="colonia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="calle" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="no_interior" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="no_exterior" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="cliente" Relationship="pos_adminModel.FK_direccion_cliente" FromRole="direccion" ToRole="cliente" />
+          <NavigationProperty Name="entidad" Relationship="pos_adminModel.FK_direccion_entidad" FromRole="direccion" ToRole="entidad" />
+          <NavigationProperty Name="municipio" Relationship="pos_adminModel.FK_direccion_municipio" FromRole="direccion" ToRole="municipio" />
+        </EntityType>
+        <Association Name="FK_direccion_cliente">
+          <End Type="pos_adminModel.cliente" Role="cliente" Multiplicity="1" />
+          <End Type="pos_adminModel.direccion" Role="direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="id_cliente" />
+            </Principal>
+            <Dependent Role="direccion">
+              <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_direccion_entidad">
+          <End Type="pos_adminModel.entidad" Role="entidad" Multiplicity="1" />
+          <End Type="pos_adminModel.direccion" Role="direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="entidad">
+              <PropertyRef Name="id_entidad" />
+            </Principal>
+            <Dependent Role="direccion">
+              <PropertyRef Name="id_entidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_direccion_municipio">
+          <End Type="pos_adminModel.municipio" Role="municipio" Multiplicity="1" />
+          <End Type="pos_adminModel.direccion" Role="direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="municipio">
+              <PropertyRef Name="id_municipio" />
+              <PropertyRef Name="id_entidad" />
+            </Principal>
+            <Dependent Role="direccion">
+              <PropertyRef Name="id_municipio" />
+              <PropertyRef Name="id_entidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -5531,21 +5565,6 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
                 <ScalarProperty Name="id_error" ColumnName="id_error" />
                 <ScalarProperty Name="fecha_log" ColumnName="fecha_log" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="direccion">
-            <EntityTypeMapping TypeName="pos_adminModel.direccion">
-              <MappingFragment StoreEntitySet="direccion">
-                <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
-                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
-                <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
-                <ScalarProperty Name="id_entidad" ColumnName="id_entidad" />
-                <ScalarProperty Name="codigo_postal" ColumnName="codigo_postal" />
-                <ScalarProperty Name="colonia" ColumnName="colonia" />
-                <ScalarProperty Name="calle" ColumnName="calle" />
-                <ScalarProperty Name="no_interior" ColumnName="no_interior" />
-                <ScalarProperty Name="no_exterior" ColumnName="no_exterior" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -6767,6 +6786,21 @@ advertencia 6002: La tabla o vista 'pos_admin.dbo.vw_offers' no tiene definida n
                 <ScalarProperty Name="EventLevel" ColumnName="EventLevel" />
                 <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="direccion">
+            <EntityTypeMapping TypeName="pos_adminModel.direccion">
+              <MappingFragment StoreEntitySet="direccion">
+                <ScalarProperty Name="no_exterior" ColumnName="no_exterior" />
+                <ScalarProperty Name="no_interior" ColumnName="no_interior" />
+                <ScalarProperty Name="calle" ColumnName="calle" />
+                <ScalarProperty Name="colonia" ColumnName="colonia" />
+                <ScalarProperty Name="codigo_postal" ColumnName="codigo_postal" />
+                <ScalarProperty Name="id_entidad" ColumnName="id_entidad" />
+                <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
+                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+                <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

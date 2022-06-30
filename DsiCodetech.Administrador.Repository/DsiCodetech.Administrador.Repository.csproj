@@ -15,6 +15,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <LangVersion>9</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,15 +56,20 @@
   <ItemGroup>
     <Compile Include="ClaveProductoServRepository.cs" />
     <Compile Include="ClienteRepository.cs" />
+    <Compile Include="DireccionRepository.cs" />
+    <Compile Include="EntidadRepository.cs" />
     <Compile Include="ExpotarcionRepository.cs" />
+    <Compile Include="FacturacionRepository.cs" />
     <Compile Include="FormaPagoRepository.cs" />
     <Compile Include="Infraestructure\BaseRepository.cs" />
+    <Compile Include="Infraestructure\Contract\IPagingAndSortingRepository.cs" />
     <Compile Include="Infraestructure\Contract\IBaseRepository.cs" />
     <Compile Include="Infraestructure\Contract\IUnitOfWork.cs" />
     <Compile Include="Infraestructure\UnitOfWork.cs" />
     <Compile Include="MesRepository.cs" />
     <Compile Include="MetodoPagoRepository.cs" />
     <Compile Include="MonedaRepository.cs" />
+    <Compile Include="MunicipioRepository.cs" />
     <Compile Include="PaisRepository.cs" />
     <Compile Include="PeriodicidadRepository.cs" />
     <Compile Include="PosAdmin\articulo.cs">

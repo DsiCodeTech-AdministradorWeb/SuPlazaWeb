@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <LangVersion>9</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,8 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\DsiCodetech.Administrador.Web\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Text.Json, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,11 +48,19 @@
   <ItemGroup>
     <Compile Include="ClaveProductoServicioDM.cs" />
     <Compile Include="ClienteDM.cs" />
+    <Compile Include="DireccionDM.cs" />
+    <Compile Include="EntidadDM.cs" />
     <Compile Include="ExportacionDM.cs" />
+    <Compile Include="Filter\Page\PageResponse.cs" />
+    <Compile Include="Filter\Query\ClienteQuery.cs" />
+    <Compile Include="Filter\Page\PageRequest.cs" />
+    <Compile Include="Filter\Sort\Direction.cs" />
+    <Compile Include="Filter\Sort\Sorting.cs" />
     <Compile Include="FormaPagoDM.cs" />
     <Compile Include="MesDM.cs" />
     <Compile Include="MetodoPagoDM.cs" />
     <Compile Include="MonedaDM.cs" />
+    <Compile Include="MunicipioDM.cs" />
     <Compile Include="PaisDM.cs" />
     <Compile Include="PeriocidadDM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,6 +68,9 @@
     <Compile Include="TipoComprobanteDM.cs" />
     <Compile Include="TipoRelacionDM.cs" />
     <Compile Include="UsoCfdiDM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

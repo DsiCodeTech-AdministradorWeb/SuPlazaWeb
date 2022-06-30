@@ -1,0 +1,80 @@
+[ERROR] 17:19:02.171:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.GetClientePorId (Line #0)
+- System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+ 
+[ERROR] 17:19:04.844:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:19:04.844:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Clientes
+ 
+[ERROR] 17:19:04.854:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:19:04.854:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Clientes
+ 
+[ERROR] 17:20:02.001:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.GetClientePorId (Line #0)
+- System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+ 
+[ERROR] 17:20:03.531:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:20:03.531:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Clientes
+ 
+[ERROR] 17:20:03.531:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:20:03.531:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Clientes
+ 
+[ERROR] 19:15:08.026:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.UpdateClient (Line #0)
+- Error en la peticion dentro de: Clientes, en la Acción : Agregar
+ 
+[ERROR] 19:15:08.078:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.UpdateClient (Line #0)
+- System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ 
+[ERROR] 19:40:11.806:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.UpdateClient (Line #0)
+- Error en la peticion dentro de: Clientes, en la Acción : Agregar
+ 
+[ERROR] 19:40:11.852:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.UpdateClient (Line #0)
+- System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ 
+[ERROR] 19:46:39.063:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.UpdateClient (Line #0)
+- Error en la peticion dentro de: Clientes, en la Acción : Agregar
+ 
+[ERROR] 19:46:39.110:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.UpdateClient (Line #0)
+- System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ 
+[ERROR] 19:48:17.344:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.UpdateClient (Line #0)
+- Error en la peticion dentro de: Clientes, en la Acción : Agregar
+ 
+[ERROR] 19:48:17.389:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.UpdateClient (Line #0)
+- System.Data.Entity.Infrastructure.DbUpdateConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+ 
+[ERROR] 19:49:44.394:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.UpdateClient (Line #0)
+- Error en la peticion dentro de: Clientes, en la Acción : Agregar
+ 
+[ERROR] 19:49:44.395:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.UpdateClient (Line #0)
+- System.InvalidOperationException: Attaching an entity of type 'DsiCodetech.Administrador.Repository.PosAdmin.direccion' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+ 
