@@ -17,8 +17,8 @@ namespace DsiCodetech.Administrador.Repository.PosAdmin
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public municipio()
         {
-            this.direccion = new HashSet<direccion>();
             this.direccion_proveedor = new HashSet<direccion_proveedor>();
+            this.direccion = new HashSet<direccion>();
         }
     
         public short id_entidad { get; set; }
@@ -26,9 +26,9 @@ namespace DsiCodetech.Administrador.Repository.PosAdmin
         public string nombre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<direccion> direccion { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<direccion_proveedor> direccion_proveedor { get; set; }
         public virtual entidad entidad { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<direccion> direccion { get; set; }
     }
 }

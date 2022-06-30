@@ -25,6 +25,7 @@ namespace DsiCodetech.Administrador.Repository.PosAdmin
         public string no_exterior { get; set; }
     
         public virtual cliente cliente { get; set; }
+        public virtual entidad entidad { get; set; }
         public virtual municipio municipio { get; set; }
     }
 }

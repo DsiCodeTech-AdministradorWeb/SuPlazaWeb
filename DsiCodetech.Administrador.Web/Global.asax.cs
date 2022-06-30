@@ -25,7 +25,10 @@ namespace DsiCodetech.Administrador.Web
                 .Formatters
                 .JsonFormatter
                 .SerializerSettings
-                .ContractResolver = new JsonLowerCaseResolver();
+                .ContractResolver = new JsonLowerCaseResolver()
+                {
+                    NamingStrategy = new SnakeCaseNamingStrategy()
+                };
         }
     }
 

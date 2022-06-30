@@ -1,9 +1,9 @@
 ﻿using DsiCodetech.Administrador.Domain;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using DsiCodetech.Administrador.Domain.Filter.Query;
+using DsiCodetech.Administrador.Domain.Filter.Page;
 
 namespace DsiCodetech.Administrador.Business.Interface
 {
@@ -27,6 +27,21 @@ namespace DsiCodetech.Administrador.Business.Interface
         /// </summary>
         /// <param name="cliente">la entidad cliente</param>
         /// <returns>regresa un valor boolean</returns>
-        bool Insert(ClienteDM cliente);
+        ClienteDM Insert(ClienteDM cliente);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cliente"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        ClienteDM UpdateCliente(ClienteDM cliente, Guid id);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        PageResponse<ClienteDM> GetClientePaging(ClienteQuery query);
     }
 }

@@ -43,6 +43,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
             tipoComprobanteBusiness = _tipoComprobanteBusiness;
         }
 
+        #region Cátalogo de facturas
 
         [ResponseType(typeof(List<ExportacionDto>))]
         [Route(template: "exportaciones")]
@@ -172,16 +173,14 @@ namespace DsiCodetech.Administrador.Web.Controllers
                 throw;
             }
         }
+        #endregion
 
 
-        [ResponseType(typeof(string))]
-        [Route("pruebas")]
-        [HttpGet]
-        public IHttpActionResult Get()
-        {
-            throw new NullReferenceException("Mensaje de prueba");
-        }
+        #region Facturación
 
+
+
+        #endregion
 
     }
 }

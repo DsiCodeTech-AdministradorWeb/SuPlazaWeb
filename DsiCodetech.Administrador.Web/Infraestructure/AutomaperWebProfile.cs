@@ -1,9 +1,7 @@
 ﻿using DsiCodetech.Administrador.Domain;
 using DsiCodetech.Administrador.Web.Dto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+
+using DsiCodetech.Administrador.Web.Dto.Filter;
 
 namespace DsiCodetech.Administrador.Web.Infraestructure
 {
@@ -11,8 +9,6 @@ namespace DsiCodetech.Administrador.Web.Infraestructure
     {
         public AutomaperWebProfile()
         {
-            CreateMap<ClientesDto, ClienteDM>().ReverseMap();
-
             /* Módulo del SAT para la facturación */
             CreateMap<PeriocidadDM, PeriodicidadDto>().ReverseMap();
             CreateMap<MesDto, MesDM>().ReverseMap();
@@ -22,6 +18,17 @@ namespace DsiCodetech.Administrador.Web.Infraestructure
             CreateMap<FormaPagoDto, FormaPagoDM>().ReverseMap();
             CreateMap<MetodoPagoDM, MetodoPagoDto>().ReverseMap();
             CreateMap<TipoComprobanteDM, TipoComprobanteDto>().ReverseMap();
+
+            /* Módulo del Cliente */
+            CreateMap<ClienteDM, ClienteFilterDto>().ReverseMap();
+
+            CreateMap<ClienteDM, ClienteDto>()
+                .ForMember(x => x.Direccion, x => x.MapFrom(d => d.Direccion ))
+                .ReverseMap();
+
+            /* Módulo direcciones */
+            CreateMap<MunicipioDM, MunicipioDto>().ReverseMap();
+            CreateMap<EntidadDM, EntidadDto>().ReverseMap();
         }
 
         public static void Run()

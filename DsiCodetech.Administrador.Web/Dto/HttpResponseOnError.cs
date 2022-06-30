@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace DsiCodetech.Administrador.Web.Dto
 {
     public class HttpResponseOnError
     {
-        [JsonPropertyName("id")]
+        [JsonProperty(propertyName: "id")]
         public string Id { get; set; }
 
-        [JsonPropertyName("message")]
+        [JsonProperty(propertyName: "message")]
         public string Description { get; set; }
     }
 }

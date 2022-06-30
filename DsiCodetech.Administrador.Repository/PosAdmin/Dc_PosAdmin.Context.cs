@@ -34,7 +34,6 @@ namespace DsiCodetech.Administrador.Repository.PosAdmin
         public virtual DbSet<compra_articulo> compra_articulo { get; set; }
         public virtual DbSet<control_errores> control_errores { get; set; }
         public virtual DbSet<ctrl_errores> ctrl_errores { get; set; }
-        public virtual DbSet<direccion> direccion { get; set; }
         public virtual DbSet<direccion_proveedor> direccion_proveedor { get; set; }
         public virtual DbSet<empleado> empleado { get; set; }
         public virtual DbSet<empresa> empresa { get; set; }
@@ -109,6 +108,7 @@ namespace DsiCodetech.Administrador.Repository.PosAdmin
         public virtual DbSet<tipo_relacion> tipo_relacion { get; set; }
         public virtual DbSet<uso_cfdi> uso_cfdi { get; set; }
         public virtual DbSet<Logs> Logs { get; set; }
+        public virtual DbSet<direccion> direccion { get; set; }
     
         public virtual int reset_estadistica(Nullable<short> anio)
         {

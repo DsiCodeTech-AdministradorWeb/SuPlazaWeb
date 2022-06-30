@@ -99,9 +99,22 @@ namespace DsiCodetech.Administrador.Repository.Infraestructure
             return dbSet.Where(whereCondition).Count();
         }
 
+        public int Count()
+        {
+            return dbSet.Count();
+        }
+
         public IEnumerable<T> GetPagedRecords(Expression<Func<T, bool>> whereCondition, Expression<Func<T, string>> orderBy, int pageNo, int pageSize)
         {
             return (dbSet.Where(whereCondition).OrderBy(orderBy).Skip((pageNo - 1) * pageSize).Take(pageSize)).AsEnumerable();
+        }
+
+        public IEnumerable<T> GetPagedRecordsSort(Expression<Func<T, bool>> whereCondition, Expression<Func<T, string>> orderBy, int pageNo, int pageSize, string direction)
+        {
+            if ("ASC".Equals(direction))
+                return (dbSet.Where(whereCondition).OrderBy(orderBy).Skip((pageNo - 1) * pageSize).Take(pageSize)).AsEnumerable();
+            else
+                return (dbSet.Where(whereCondition).OrderByDescending(orderBy).Skip((pageNo - 1) * pageSize).Take(pageSize)).AsEnumerable();
         }
 
         public IEnumerable<T> ExecWithStoreProcedure(string query, params object[] parameters)
