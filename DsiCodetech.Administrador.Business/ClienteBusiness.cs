@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
+using DsiCodetech.Administrador.Domain;
 using DsiCodetech.Administrador.Domain.Filter.Query;
 using DsiCodetech.Administrador.Domain.Filter.Page;
+using DsiCodetech.Administrador.Domain.Exception;
 using DsiCodetech.Administrador.Business.Interface;
-using DsiCodetech.Administrador.Domain;
 using DsiCodetech.Administrador.Repository;
 using DsiCodetech.Administrador.Repository.PosAdmin;
 using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
@@ -51,7 +52,6 @@ namespace DsiCodetech.Administrador.Business
         /// <returns>la entidad del tipo clienteDM</returns>
         public ClienteDM GetClienteById(string id)
         {
-
             var clienteModel = repository.SingleOrDefaultInclude(c => c.id_cliente.Equals(Guid.Parse(id)), "direccion");
             ClienteDM cliente = new ClienteDM
             {
@@ -89,6 +89,12 @@ namespace DsiCodetech.Administrador.Business
         /// <returns>regresa un valor boolean</returns>
         public ClienteDM Insert(ClienteDM cliente)
         {
+          
+            if (this.repository.SingleOrDefault(c => c.rfc.Equals(cliente.Rfc)) != null)
+            {
+                throw new BusinessException("El RFC que intenta agregar ya existe.");
+            }
+
             Guid idClient = Guid.NewGuid();
             Guid idDireccion = Guid.NewGuid();
 
@@ -147,8 +153,10 @@ namespace DsiCodetech.Administrador.Business
 
         public PageResponse<ClienteDM> GetClientePaging(ClienteQuery query)
         {
+            var whereFunc = PredicateBuilder.False<cliente>();
             Expression<Func<cliente, string>> orderByFunc = null;
             IEnumerable<cliente> result = null;
+            bool isWhere = false;
             int count = 0;
 
             switch (query.page.sort.Name)
@@ -167,13 +175,29 @@ namespace DsiCodetech.Administrador.Business
                     break;
             }
 
+            if (!String.IsNullOrEmpty(query.Rfc))
+                whereFunc = whereFunc.Or(c => c.rfc.StartsWith(query.Rfc));
+
+            if (!String.IsNullOrEmpty(query.RazonSocial))
+                whereFunc = whereFunc.Or(c => c.razon_social.StartsWith(query.RazonSocial));
+
+            if (!String.IsNullOrEmpty(query.RegimenFiscal))
+                whereFunc = whereFunc.Or(c => c.regimen_fiscal.StartsWith(query.RegimenFiscal));
+
+            if (!String.IsNullOrEmpty(query.Rfc) || !String.IsNullOrEmpty(query.RazonSocial) || !String.IsNullOrEmpty(query.RegimenFiscal))
+                isWhere = true;
+
             switch (query.page.sort.Direction)
             {
                 case Domain.Filter.Sort.Direction.Ascending:
-                    result = repository.GetPaging(orderByFunc, query.page.pageNumber, query.page.pageSize);
+                    result = isWhere ?
+                        repository.GetPaging(whereFunc, orderByFunc, query.page.pageNumber, query.page.pageSize) :
+                        repository.GetPaging(orderByFunc, query.page.pageNumber, query.page.pageSize);
                     break;
                 case Domain.Filter.Sort.Direction.Descending:
-                    result = repository.GetPagingDescending(orderByFunc, query.page.pageNumber, query.page.pageSize);
+                    result = isWhere ?
+                        repository.GetPagingDescending(whereFunc, orderByFunc, query.page.pageNumber, query.page.pageSize) :
+                        repository.GetPagingDescending(orderByFunc, query.page.pageNumber, query.page.pageSize);
                     break;
             }
 
@@ -191,13 +215,12 @@ namespace DsiCodetech.Administrador.Business
                         Email2 = cliente.e_mail2
                     }).ToList();
 
-                count = repository.Count();
+                count = isWhere ? repository.Count(whereFunc) :
+                    repository.Count();
 
                 return new PageResponse<ClienteDM>(clientes, count, query.page.pageNumber, query.page.pageSize);
             }
-
-
-            return null;
+            return new PageResponse<ClienteDM>(new List<ClienteDM>(), count, query.page.pageNumber, query.page.pageSize); ;
         }
 
         public ClienteDM UpdateCliente(ClienteDM cliente, Guid id)
@@ -239,6 +262,28 @@ namespace DsiCodetech.Administrador.Business
             this.repository.Update(clTemp);
 
             return cliente;
+        }
+    }
+
+    public static class PredicateBuilder
+    {
+        public static Expression<Func<T, bool>> True<T>() { return f => true; }
+        public static Expression<Func<T, bool>> False<T>() { return f => false; }
+
+        public static Expression<Func<T, bool>> Or<T>(this Expression<Func<T, bool>> expr1,
+                                                            Expression<Func<T, bool>> expr2)
+        {
+            var invokedExpr = Expression.Invoke(expr2, expr1.Parameters.Cast<Expression>());
+            return Expression.Lambda<Func<T, bool>>
+                  (Expression.OrElse(expr1.Body, invokedExpr), expr1.Parameters);
+        }
+
+        public static Expression<Func<T, bool>> And<T>(this Expression<Func<T, bool>> expr1,
+                                                             Expression<Func<T, bool>> expr2)
+        {
+            var invokedExpr = Expression.Invoke(expr2, expr1.Parameters.Cast<Expression>());
+            return Expression.Lambda<Func<T, bool>>
+                  (Expression.AndAlso(expr1.Body, invokedExpr), expr1.Parameters);
         }
     }
 }
