@@ -1,0 +1,200 @@
+[ERROR] 16:25:09.414:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.GetClientesFromQuery (Line #0)
+- System.NotSupportedException: The LINQ expression node type 'Invoke' is not supported in LINQ to Entities.
+ 
+[ERROR] 16:25:11.451:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 16:25:11.456:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 16:25:11.482:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 16:25:11.482:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 16:27:09.365:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.GetClientesFromQuery (Line #0)
+- System.NotSupportedException: The LINQ expression node type 'Invoke' is not supported in LINQ to Entities.
+ 
+[ERROR] 16:27:11.777:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 16:27:11.777:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 16:27:11.777:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 16:27:11.777:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 16:40:46.295:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.GetClientesFromQuery (Line #0)
+- System.NotSupportedException: The LINQ expression node type 'Invoke' is not supported in LINQ to Entities.
+ 
+[ERROR] 16:40:49.417:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 16:40:49.417:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 16:40:49.448:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 16:40:49.448:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 16:49:02.744:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.GetClientesFromQuery (Line #0)
+- System.NotSupportedException: The LINQ expression node type 'Invoke' is not supported in LINQ to Entities.
+ 
+[ERROR] 16:49:11.082:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 16:49:11.082:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 16:49:11.111:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 16:49:11.111:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 16:59:40.266:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.GetClientesFromQuery (Line #0)
+- System.NotSupportedException: The LINQ expression node type 'Invoke' is not supported in LINQ to Entities.
+ 
+[ERROR] 16:59:44.629:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 16:59:44.629:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 16:59:44.662:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 16:59:44.662:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 17:02:01.224:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.GetClientesFromQuery (Line #0)
+- System.NotSupportedException: The LINQ expression node type 'Invoke' is not supported in LINQ to Entities.
+ 
+[ERROR] 17:02:04.766:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:02:04.766:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 17:02:04.766:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:02:04.766:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 17:10:45.015:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.GetClientesFromQuery (Line #0)
+- System.NotSupportedException: The LINQ expression node type 'Invoke' is not supported in LINQ to Entities.
+ 
+[ERROR] 17:10:53.166:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:10:53.178:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 17:10:53.202:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:10:53.202:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 17:13:39.241:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.GetClientesFromQuery (Line #0)
+- System.NotSupportedException: The LINQ expression node type 'Invoke' is not supported in LINQ to Entities.
+ 
+[ERROR] 17:14:02.443:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:14:02.443:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 17:14:02.472:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:14:02.472:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 17:15:02.513:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.GetClientesFromQuery (Line #0)
+- System.NotSupportedException: The LINQ expression node type 'Invoke' is not supported in LINQ to Entities.
+ 
+[ERROR] 17:15:06.460:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:15:06.460:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 17:15:06.460:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:15:06.460:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 17:19:40.316:
+- DsiCodetech.Administrador.Web.Controllers.ClientesController.GetClientesFromQuery (Line #0)
+- System.NotSupportedException: The LINQ expression node type 'Invoke' is not supported in LINQ to Entities.
+ 
+[ERROR] 17:20:00.851:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:20:00.851:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 
+[ERROR] 17:20:00.874:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:20:00.874:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientesFromQuery en el controller Clientes
+ 

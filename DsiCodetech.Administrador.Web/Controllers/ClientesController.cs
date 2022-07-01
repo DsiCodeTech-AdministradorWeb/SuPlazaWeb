@@ -82,7 +82,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
         }
 
         [ResponseType(typeof(PageResponse<ClienteFilterDto>))]
-        [Route("prueba")]
+        [Route("clientes")]
         [HttpGet]
         public IHttpActionResult GetClientesFromQuery([FromUri] ClienteQuery query, int page_size, int page_number, string name)
         {
@@ -93,8 +93,8 @@ namespace DsiCodetech.Administrador.Web.Controllers
                 query.page.pageNumber = page_number;
 
                 query.page.sort = new();
-                query.page.sort.Name = "rfc";
-                query.page.sort.Direction = Direction.Ascending;
+                query.page.sort.Name = name.Split(',')[0];
+                query.page.sort.Direction = name.Split(',')[1] == "asc" ? Direction.Ascending : Direction.Descending;
                 return Ok(AutoMapper.Mapper.Map<PageResponse<ClienteFilterDto>>(clientesBusiness.GetClientePaging(query)));
             }
             catch (Exception ex)

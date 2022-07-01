@@ -50,6 +50,7 @@
     <Compile Include="ClienteDM.cs" />
     <Compile Include="DireccionDM.cs" />
     <Compile Include="EntidadDM.cs" />
+    <Compile Include="Exception\BusinessException.cs" />
     <Compile Include="ExportacionDM.cs" />
     <Compile Include="Filter\Page\PageResponse.cs" />
     <Compile Include="Filter\Query\ClienteQuery.cs" />

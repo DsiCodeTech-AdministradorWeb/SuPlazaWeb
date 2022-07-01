@@ -94,11 +94,6 @@ namespace DsiCodetech.Administrador.Repository.Infraestructure
             return dbSet.Any(whereCondition);
         }
 
-        public int Count(Expression<Func<T, bool>> whereCondition)
-        {
-            return dbSet.Where(whereCondition).Count();
-        }
-
         public int Count()
         {
             return dbSet.Count();
