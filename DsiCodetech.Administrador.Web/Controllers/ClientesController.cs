@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
@@ -15,7 +14,6 @@ using DsiCodetech.Administrador.Web.Resources;
 
 using DsiCodetech.Administrador.Domain.Filter.Page;
 using DsiCodetech.Administrador.Domain.Filter.Query;
-using DsiCodetech.Administrador.Domain.Filter.Sort;
 
 namespace DsiCodetech.Administrador.Web.Controllers
 {
@@ -24,8 +22,9 @@ namespace DsiCodetech.Administrador.Web.Controllers
     [RoutePrefix("api/clientes")]
     public class ClientesController : ApiController
     {
-        private readonly IClienteBusiness clientesBusiness;
         private static readonly Logger loggerdb = LogManager.GetLogger("databaseLogger");
+
+        private readonly IClienteBusiness clientesBusiness;
 
         public ClientesController(IClienteBusiness _clientesBusiness)
         {
@@ -36,11 +35,28 @@ namespace DsiCodetech.Administrador.Web.Controllers
         [Route("getClientById/{id_cliente}")]
         [HttpGet]
         [ResponseType(typeof(ClienteDto))]
-        public IHttpActionResult GetClientePorId(string id_cliente)
+        public IHttpActionResult GetClientePorId(Guid id_cliente)
         {
             try
             {
                 return Ok(AutoMapper.Mapper.Map<ClienteDto>(clientesBusiness.GetClienteById(id_cliente)));
+            }
+            catch (Exception ex)
+            {
+                loggerdb.Error(ex);
+                throw;
+            }
+        }
+
+        [ResponseType(typeof(PageResponse<ClienteFilterDto>))]
+        [Route("clientes")]
+        [HttpGet]
+        public IHttpActionResult GetClientesFromQuery([FromUri] ClienteQuery query, int page_size, int page_number, string sort)
+        {
+            try
+            {
+                query.page = new(page_size, page_number, sort);
+                return Ok(AutoMapper.Mapper.Map<PageResponse<ClienteFilterDto>>(clientesBusiness.GetClientePaging(query)));
             }
             catch (Exception ex)
             {
@@ -70,9 +86,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
         {
             try
             {
-                var cliente = AutoMapper.Mapper.Map<ClienteDM>(customer);
-                var result = clientesBusiness.UpdateCliente(cliente, id);
-                return Ok(result);
+                return Ok(clientesBusiness.UpdateCliente(AutoMapper.Mapper.Map<ClienteDM>(customer), id));
             }
             catch (Exception ex)
             {
@@ -80,31 +94,5 @@ namespace DsiCodetech.Administrador.Web.Controllers
                 throw;
             }
         }
-
-        [ResponseType(typeof(PageResponse<ClienteFilterDto>))]
-        [Route("clientes")]
-        [HttpGet]
-        public IHttpActionResult GetClientesFromQuery([FromUri] ClienteQuery query, int page_size, int page_number, string name)
-        {
-            try
-            {
-                query.page = new();
-                query.page.pageSize = page_size;
-                query.page.pageNumber = page_number;
-
-                query.page.sort = new();
-                query.page.sort.Name = name.Split(',')[0];
-                query.page.sort.Direction = name.Split(',')[1] == "asc" ? Direction.Ascending : Direction.Descending;
-                return Ok(AutoMapper.Mapper.Map<PageResponse<ClienteFilterDto>>(clientesBusiness.GetClientePaging(query)));
-            }
-            catch (Exception ex)
-            {
-                loggerdb.Error(ex);
-                throw;
-            }
-
-        }
-
-
     }
 }

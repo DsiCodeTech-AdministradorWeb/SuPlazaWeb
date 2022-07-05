@@ -15,5 +15,13 @@ namespace DsiCodetech.Administrador.Domain.Filter.Sort
 
         [JsonProperty(PropertyName = "direction")]
         public Direction Direction { get; set; }
+
+        public Sorting() { }
+
+        public Sorting(string Name, Direction Direction)
+        {
+            this.Name = Name;
+            this.Direction = Direction;
+        }
     }
 }
