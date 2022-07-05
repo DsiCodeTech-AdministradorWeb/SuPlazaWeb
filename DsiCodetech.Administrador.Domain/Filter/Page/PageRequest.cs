@@ -19,5 +19,15 @@ namespace DsiCodetech.Administrador.Domain.Filter.Page
 
         [JsonProperty(PropertyName = "sort")]
         public Sorting sort { get; set; }
+
+        public PageRequest() { }
+
+
+        public PageRequest(int PageSize, int PageNumber, string Sort)
+        {
+            this.pageSize = PageSize;
+            this.pageNumber = PageNumber;
+            this.sort = new Sorting(Sort.Split(',')[0], Sort.Split(',')[1] == "asc" ? Direction.Ascending : Direction.Descending);
+        }
     }
 }

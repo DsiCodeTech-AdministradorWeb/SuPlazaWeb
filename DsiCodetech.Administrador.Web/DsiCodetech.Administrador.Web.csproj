@@ -59,6 +59,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FacturacionElectronica40">
+      <HintPath>..\..\..\..\..\..\telollevo\backend\FacturacionElectronica40\FacturacionElectronica40\bin\Debug\FacturacionElectronica40.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -89,6 +92,9 @@
     </Reference>
     <Reference Include="NLog.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>packages\NLog.Web.5.0.0\lib\net46\NLog.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="SW-sdk-45">
+      <HintPath>..\..\..\..\..\..\telollevo\backend\FacturacionElectronica40\FacturacionElectronica40\bin\Debug\SW-sdk-45.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -376,9 +382,12 @@
     <Compile Include="Controllers\RegimenFiscalController.cs" />
     <Compile Include="Dto\ClienteDto.cs" />
     <Compile Include="Dto\DireccionDto.cs" />
+    <Compile Include="Dto\EmpresaDto.cs" />
     <Compile Include="Dto\EntidadDto.cs" />
     <Compile Include="Dto\ExportacionDto.cs" />
+    <Compile Include="Dto\FacturaDto.cs" />
     <Compile Include="Dto\Filter\ClienteFilterDto.cs" />
+    <Compile Include="Dto\Filter\FacturaFilterDto.cs" />
     <Compile Include="Dto\FormaPagoDto.cs" />
     <Compile Include="Dto\HttpResponseOnError.cs" />
     <Compile Include="Dto\MesDto.cs" />
@@ -387,6 +396,7 @@
     <Compile Include="Dto\PeriodicidadDto.cs" />
     <Compile Include="Dto\RegimenFiscalDto.cs" />
     <Compile Include="Dto\TipoComprobanteDto.cs" />
+    <Compile Include="Dto\TipoRelacionDto.cs" />
     <Compile Include="Dto\UsoCfdiDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

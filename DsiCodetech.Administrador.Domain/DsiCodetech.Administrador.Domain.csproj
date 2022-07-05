@@ -32,8 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FacturacionElectronica40">
+      <HintPath>..\..\..\..\..\..\telollevo\backend\FacturacionElectronica40\FacturacionElectronica40\bin\Debug\FacturacionElectronica40.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\DsiCodetech.Administrador.Web\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SW-sdk-45">
+      <HintPath>..\..\..\..\..\..\telollevo\backend\FacturacionElectronica40\FacturacionElectronica40\bin\Debug\SW-sdk-45.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,12 +55,17 @@
     <Compile Include="ClaveProductoServicioDM.cs" />
     <Compile Include="ClienteDM.cs" />
     <Compile Include="DireccionDM.cs" />
+    <Compile Include="EmpresaDM.cs" />
     <Compile Include="EntidadDM.cs" />
     <Compile Include="Exception\BusinessException.cs" />
     <Compile Include="ExportacionDM.cs" />
+    <Compile Include="Extensions\PredicateBuilder.cs" />
+    <Compile Include="FacturaDM.cs" />
+    <Compile Include="Filter\Model\FacturaFilterDM.cs" />
     <Compile Include="Filter\Page\PageResponse.cs" />
     <Compile Include="Filter\Query\ClienteQuery.cs" />
     <Compile Include="Filter\Page\PageRequest.cs" />
+    <Compile Include="Filter\Query\FacturaQuery.cs" />
     <Compile Include="Filter\Sort\Direction.cs" />
     <Compile Include="Filter\Sort\Sorting.cs" />
     <Compile Include="FormaPagoDM.cs" />
@@ -73,5 +84,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,6 +9,12 @@ using System.Web.Http.Cors;
 
 using System.Web.Http.Description;
 
+using DsiCodetech.Administrador.Web.Dto;
+using DsiCodetech.Administrador.Web.Dto.Filter;
+
+using DsiCodetech.Administrador.Domain.Filter.Page;
+using DsiCodetech.Administrador.Domain.Filter.Query;
+
 using DsiCodetech.Administrador.Web.Handler.ExceptionHandler;
 
 namespace DsiCodetech.Administrador.Web.Controllers
@@ -20,6 +26,7 @@ namespace DsiCodetech.Administrador.Web.Controllers
     {
         private static readonly Logger loggerdb = LogManager.GetLogger("databaseLogger");
 
+        private readonly ITipoRelacionBusiness tipoRelacionBusiness;
         private readonly ITipoComprobanteBusiness tipoComprobanteBusiness;
         private readonly IExportacionBusiness exportacionBusiness;
         private readonly IPeriocidadBusiness periocidadBusiness;
@@ -29,9 +36,12 @@ namespace DsiCodetech.Administrador.Web.Controllers
         private readonly IUsoCfdiBusiness usoCfdiBusiness;
         private readonly IMesBusiness mesBusiness;
 
+        private readonly IFacturacionBusiness facturacionBusiness;
+
         public FacturacionController(IExportacionBusiness _exportacionBusiness, IFormaPagoBusiness _pagoBusiness, IMesBusiness _mesBusiness,
             IPeriocidadBusiness _periocidadBusiness, IRegimenFiscalBusiness _regimenFiscalBusiness, IUsoCfdiBusiness _usoCfdiBusiness,
-            IMetodoPagoBusiness _metodoPagoBusiness, ITipoComprobanteBusiness _tipoComprobanteBusiness)
+            IMetodoPagoBusiness _metodoPagoBusiness, ITipoComprobanteBusiness _tipoComprobanteBusiness, ITipoRelacionBusiness _tipoRelacionBusiness,
+            IFacturacionBusiness _facturacionBusiness)
         {
             exportacionBusiness = _exportacionBusiness;
             pagoBusiness = _pagoBusiness;
@@ -41,9 +51,28 @@ namespace DsiCodetech.Administrador.Web.Controllers
             usoCfdiBusiness = _usoCfdiBusiness;
             metodoPagoBusiness = _metodoPagoBusiness;
             tipoComprobanteBusiness = _tipoComprobanteBusiness;
+            tipoRelacionBusiness = _tipoRelacionBusiness;
+
+            facturacionBusiness = _facturacionBusiness;
         }
 
         #region Cátalogo de facturas
+
+        [ResponseType(typeof(List<TipoRelacionDto>))]
+        [Route(template: "tiporelacion")]
+        [HttpGet]
+        public IHttpActionResult GetTipoRelacion()
+        {
+            try
+            {
+                return Ok(AutoMapper.Mapper.Map<List<TipoRelacionDto>>(tipoRelacionBusiness.GetAllTipoRelaciones()));
+            }
+            catch (Exception ex)
+            {
+                loggerdb.Error(ex);
+                throw;
+            }
+        }
 
         [ResponseType(typeof(List<ExportacionDto>))]
         [Route(template: "exportaciones")]
@@ -178,7 +207,31 @@ namespace DsiCodetech.Administrador.Web.Controllers
 
         #region Facturación
 
+        [ResponseType(typeof(FacturaDto))]
+        [Route("GetFacturaByIdClient/{id}")]
+        [HttpGet]
+        public IHttpActionResult GetFacturaByIdClient(Guid id)
+        {
+            return Ok(AutoMapper.Mapper.Map<FacturaDto>(this.facturacionBusiness.GetFacturaByIdClient(id)));
+        }
 
+        [ResponseType(typeof(FacturaDto))]
+        [Route("Download/{id}")]
+        [HttpGet]
+        public IHttpActionResult GeneratePFD(Guid id) /* Id de la factura */
+        {
+            return Ok(AutoMapper.Mapper.Map<FacturaDto>(this.facturacionBusiness.GetFacturaByIdClient(id)));
+        }
+
+
+        [ResponseType(typeof(PageResponse<FacturaFilterDto>))]
+        [Route("facturas")]
+        [HttpGet]
+        public IHttpActionResult GetFacturaFromQuery([FromUri] FacturaQuery query, int page_size, int page_number, string sort)
+        {
+            query.page = new(page_size, page_number, sort);
+            return Ok(AutoMapper.Mapper.Map<PageResponse<FacturaFilterDto>>(this.facturacionBusiness.GetFacturaPaging(query)));
+        }
 
         #endregion
 
