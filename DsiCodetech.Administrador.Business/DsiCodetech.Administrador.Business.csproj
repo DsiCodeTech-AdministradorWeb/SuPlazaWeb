@@ -80,11 +80,21 @@
     <Compile Include="PeriocidadBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegimenFiscalBusiness.cs" />
+    <Compile Include="Resources\EntitiesResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntitiesResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="TipoComprobanteBusiness.cs" />
     <Compile Include="TipoRelacionBusiness.cs" />
     <Compile Include="UsoCfdiBusiness.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\EntitiesResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EntitiesResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DsiCodetech.Administrador.Domain\DsiCodetech.Administrador.Domain.csproj">
       <Project>{E4C5DE7C-77AD-4CCF-BC41-EE4A49E095F1}</Project>

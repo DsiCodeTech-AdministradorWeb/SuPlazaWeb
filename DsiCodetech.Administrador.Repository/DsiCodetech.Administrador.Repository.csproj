@@ -387,6 +387,7 @@
     <Compile Include="TipoComprobanteRepository.cs" />
     <Compile Include="TipoRelacionRepository.cs" />
     <Compile Include="UsoCfdiRepository.cs" />
+    <Compile Include="VentaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
