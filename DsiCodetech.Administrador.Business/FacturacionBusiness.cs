@@ -17,6 +17,7 @@ using DsiCodetech.Administrador.Repository.PosAdmin;
 using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
 
 using DSICodeTech.FacturacionElectronica40.Model;
+using DsiCodetech.Administrador.Business.Resources;
 
 namespace DsiCodetech.Administrador.Business
 {
@@ -26,13 +27,14 @@ namespace DsiCodetech.Administrador.Business
         private readonly IClienteBusiness clienteBusiness;
         private readonly IEmpresaBusiness empresaBusiness;
         private readonly FacturacionRepository facturacionRepository;
-
-        public FacturacionBusiness(IUnitOfWork _unitOfWork, IClienteBusiness _clienteBusiness, IEmpresaBusiness _empresaBusiness)
+        private readonly VentaRepository ventaRepository;
+        public FacturacionBusiness(IUnitOfWork _unitOfWork,VentaRepository _ventaRepository ,IClienteBusiness _clienteBusiness, IEmpresaBusiness _empresaBusiness)
         {
             this.unitOfWork = _unitOfWork;
             this.facturacionRepository = new(this.unitOfWork);
             this.clienteBusiness = _clienteBusiness;
             this.empresaBusiness = _empresaBusiness;
+            this.ventaRepository = _ventaRepository;
         }
 
         public FacturaDM GetFacturaByIdClient(Guid id)
@@ -124,5 +126,22 @@ namespace DsiCodetech.Administrador.Business
             }
             return new PageResponse<FacturaFilterDM>(new List<FacturaFilterDM>(), count, query.page.pageNumber, query.page.pageSize);
         }
+
+        /// <summary>
+        /// Este metodo se encarga de consultar una factura por el identificador de venta
+        /// </summary>
+        /// <param name="id_venta">el identificador de la venta</param>
+        /// <returns>una entidad del tipo FacturaDM</returns>
+        public FacturaDM getFacturaByIdVenta(Guid id_venta)
+        {
+            var result =ventaRepository.
+                SingleOrDefaultForIncludes(p => p.id_venta.Equals(id_venta), 
+                EntitiesResources.Factura_Venta,EntitiesResources.Factura,EntitiesResources.Factura_Articulo, 
+                EntitiesResources.Cliente );
+            return null;
+        }
+
+
+
     }
 }
