@@ -32,6 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FacturacionElectronica40, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\telollevo\backend\FacturacionElectronica40\FacturacionElectronica40\bin\Debug\FacturacionElectronica40.dll</HintPath>
+    </Reference>
+    <Reference Include="SW-sdk-45, Version=0.0.14.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\telollevo\backend\FacturacionElectronica40\FacturacionElectronica40\bin\Debug\SW-sdk-45.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,12 +53,16 @@
     <Compile Include="ClaveProductoServiciosBusiness.cs" />
     <Compile Include="ClienteBusiness.cs" />
     <Compile Include="DireccionBusiness.cs" />
+    <Compile Include="EmpresaBusiness.cs" />
     <Compile Include="ExportacionBusiness.cs" />
+    <Compile Include="FacturacionBusiness.cs" />
     <Compile Include="FormaPagoBusiness.cs" />
     <Compile Include="Interface\IClaveProductoServiciosBusiness.cs" />
     <Compile Include="Interface\IClienteBusiness.cs" />
     <Compile Include="Interface\IDireccionBusiness.cs" />
+    <Compile Include="Interface\IEmpresaBusiness.cs" />
     <Compile Include="Interface\IExportacionBusiness.cs" />
+    <Compile Include="Interface\IFacturacionBusiness.cs" />
     <Compile Include="Interface\IFormaPagoBusiness.cs" />
     <Compile Include="Interface\IMesBusiness.cs" />
     <Compile Include="Interface\IMetodoPagoBusiness.cs" />

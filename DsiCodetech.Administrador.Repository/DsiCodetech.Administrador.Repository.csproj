@@ -63,6 +63,7 @@
     <Compile Include="ClaveProductoServRepository.cs" />
     <Compile Include="ClienteRepository.cs" />
     <Compile Include="DireccionRepository.cs" />
+    <Compile Include="EmpresaRepository.cs" />
     <Compile Include="EntidadRepository.cs" />
     <Compile Include="ExpotarcionRepository.cs" />
     <Compile Include="FacturacionRepository.cs" />
