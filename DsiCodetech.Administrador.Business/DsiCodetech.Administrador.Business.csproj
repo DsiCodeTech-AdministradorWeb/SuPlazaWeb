@@ -73,6 +73,7 @@
     <Compile Include="Interface\ITipoComprobanteBusiness.cs" />
     <Compile Include="Interface\ITipoRelacionBusiness.cs" />
     <Compile Include="Interface\IUsoCfdiBusiness.cs" />
+    <Compile Include="Interface\IVentaBusiness.cs" />
     <Compile Include="MesBusiness.cs" />
     <Compile Include="MetodoPagoBusiness.cs" />
     <Compile Include="MonedaBusiness.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="TipoComprobanteBusiness.cs" />
     <Compile Include="TipoRelacionBusiness.cs" />
     <Compile Include="UsoCfdiBusiness.cs" />
+    <Compile Include="VentaBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\EntitiesResources.resx">

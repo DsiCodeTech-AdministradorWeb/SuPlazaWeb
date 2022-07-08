@@ -593,25 +593,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="venta">
-      <EntityTypeMapping TypeName="pos_adminModel.venta">
-        <MappingFragment StoreEntitySet="venta">
-          <ScalarProperty Name="id_pos" ColumnName="id_pos" />
-          <ScalarProperty Name="id_venta" ColumnName="id_venta" />
-          <ScalarProperty Name="vendedor" ColumnName="vendedor" />
-          <ScalarProperty Name="folio" ColumnName="folio" />
-          <ScalarProperty Name="fecha_venta" ColumnName="fecha_venta" />
-          <ScalarProperty Name="total_vendido" ColumnName="total_vendido" />
-          <ScalarProperty Name="pago_efectivo" ColumnName="pago_efectivo" />
-          <ScalarProperty Name="pago_cheque" ColumnName="pago_cheque" />
-          <ScalarProperty Name="pago_vales" ColumnName="pago_vales" />
-          <ScalarProperty Name="pago_tc" ColumnName="pago_tc" />
-          <ScalarProperty Name="supervisor" ColumnName="supervisor" />
-          <ScalarProperty Name="upload" ColumnName="upload" />
-          <ScalarProperty Name="num_registros" ColumnName="num_registros" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="venta_articulo">
       <EntityTypeMapping TypeName="pos_adminModel.venta_articulo">
         <MappingFragment StoreEntitySet="venta_articulo">
@@ -1344,6 +1325,25 @@
           <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
           <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
           <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="venta">
+      <EntityTypeMapping TypeName="pos_adminModel.venta">
+        <MappingFragment StoreEntitySet="venta">
+          <ScalarProperty Name="num_registros" ColumnName="num_registros" />
+          <ScalarProperty Name="upload" ColumnName="upload" />
+          <ScalarProperty Name="supervisor" ColumnName="supervisor" />
+          <ScalarProperty Name="pago_tc" ColumnName="pago_tc" />
+          <ScalarProperty Name="pago_vales" ColumnName="pago_vales" />
+          <ScalarProperty Name="pago_cheque" ColumnName="pago_cheque" />
+          <ScalarProperty Name="pago_efectivo" ColumnName="pago_efectivo" />
+          <ScalarProperty Name="total_vendido" ColumnName="total_vendido" />
+          <ScalarProperty Name="fecha_venta" ColumnName="fecha_venta" />
+          <ScalarProperty Name="folio" ColumnName="folio" />
+          <ScalarProperty Name="vendedor" ColumnName="vendedor" />
+          <ScalarProperty Name="id_venta" ColumnName="id_venta" />
+          <ScalarProperty Name="id_pos" ColumnName="id_pos" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

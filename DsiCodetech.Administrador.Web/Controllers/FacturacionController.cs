@@ -1,7 +1,4 @@
-﻿using DsiCodetech.Administrador.Business.Interface;
-using DsiCodetech.Administrador.Web.Dto;
-using DsiCodetech.Administrador.Web.Resources;
-using NLog;
+﻿using NLog;
 using System;
 using System.Collections.Generic;
 using System.Web.Http;
@@ -12,6 +9,9 @@ using System.Web.Http.Description;
 using DsiCodetech.Administrador.Web.Dto;
 using DsiCodetech.Administrador.Web.Dto.Filter;
 
+using DsiCodetech.Administrador.Business.Interface;
+
+using DsiCodetech.Administrador.Domain;
 using DsiCodetech.Administrador.Domain.Filter.Page;
 using DsiCodetech.Administrador.Domain.Filter.Query;
 
@@ -212,25 +212,48 @@ namespace DsiCodetech.Administrador.Web.Controllers
         [HttpGet]
         public IHttpActionResult GetFacturaByIdClient(Guid id)
         {
-            return Ok(AutoMapper.Mapper.Map<FacturaDto>(this.facturacionBusiness.GetFacturaByIdClient(id)));
+            try
+            {
+                return Ok(AutoMapper.Mapper.Map<FacturaDto>(this.facturacionBusiness.GetFacturaByIdClient(id)));
+            }
+            catch (Exception ex)
+            {
+                loggerdb.Error(ex);
+                throw;
+            }
         }
-
-        [ResponseType(typeof(FacturaDto))]
-        [Route("Download/{id}")]
-        [HttpGet]
-        public IHttpActionResult GeneratePFD(Guid id) /* Id de la factura */
-        {
-            return Ok(AutoMapper.Mapper.Map<FacturaDto>(this.facturacionBusiness.GetFacturaByIdClient(id)));
-        }
-
 
         [ResponseType(typeof(PageResponse<FacturaFilterDto>))]
         [Route("facturas")]
         [HttpGet]
         public IHttpActionResult GetFacturaFromQuery([FromUri] FacturaQuery query, int page_size, int page_number, string sort)
         {
-            query.page = new(page_size, page_number, sort);
-            return Ok(AutoMapper.Mapper.Map<PageResponse<FacturaFilterDto>>(this.facturacionBusiness.GetFacturaPaging(query)));
+            try
+            {
+                query.page = new(page_size, page_number, sort);
+                return Ok(AutoMapper.Mapper.Map<PageResponse<FacturaFilterDto>>(this.facturacionBusiness.GetFacturaPaging(query)));
+            }
+            catch (Exception ex)
+            {
+                loggerdb.Error(ex);
+                throw;
+            }
+        }
+
+        [ResponseType(typeof(FacturaDto))]
+        [Route("agregar/{id_cliente}")]
+        [HttpPost]
+        public IHttpActionResult AddFactura([FromBody] FacturaDto request, Guid id_cliente) /* Id de la factura */
+        {
+            try
+            {
+                return Ok(this.facturacionBusiness.Insert(AutoMapper.Mapper.Map<FacturaDM>(request), id_cliente));
+            }
+            catch (Exception ex)
+            {
+                loggerdb.Error(ex);
+                throw;
+            }
         }
 
         #endregion

@@ -44,3 +44,5 @@ C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Business\obj\De
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Business\obj\Debug\DsiCodetech.Administrador.Business.csproj.CopyComplete
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Business\obj\Debug\DsiCodetech.Administrador.Business.dll
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Business\obj\Debug\DsiCodetech.Administrador.Business.pdb
+C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Business\obj\Debug\DsiCodetech.Administrador.Business.Resources.EntitiesResources.resources
+C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Business\obj\Debug\DsiCodetech.Administrador.Business.csproj.GenerateResource.cache

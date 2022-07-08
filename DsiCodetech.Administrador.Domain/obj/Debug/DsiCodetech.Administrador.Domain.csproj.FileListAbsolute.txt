@@ -11,7 +11,6 @@ C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Domain\bin\D
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Domain\bin\Debug\System.Text.Encodings.Web.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Domain\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Domain\bin\Debug\System.Buffers.dll
-C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Domain\obj\Debug\DsiCodetech.Administrador.Domain.csproj.AssemblyReference.cache
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Domain\bin\Debug\FacturacionElectronica40.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Domain\bin\Debug\SW-sdk-45.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Domain\bin\Debug\FacturacionElectronica40.pdb
@@ -32,3 +31,4 @@ C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Domain\obj\Debu
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Domain\obj\Debug\DsiCodetech.Administrador.Domain.csproj.CopyComplete
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Domain\obj\Debug\DsiCodetech.Administrador.Domain.dll
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Domain\obj\Debug\DsiCodetech.Administrador.Domain.pdb
+C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Domain\obj\Debug\DsiCodetech.Administrador.Domain.csproj.AssemblyReference.cache

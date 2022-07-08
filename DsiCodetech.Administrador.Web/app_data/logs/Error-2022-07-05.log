@@ -1,0 +1,20 @@
+[ERROR] 12:38:56.405:
+- DsiCodetech.Administrador.Web.Controllers.VentaController.GetClientePorId (Line #0)
+- System.Data.SqlClient.SqlException: Se agotó el tiempo de espera de ejecución. El período de tiempo de espera transcurrió antes de la finalización de la operación o el servidor no responde.
+ 
+[ERROR] 12:39:14.340:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 12:39:14.340:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 
+[ERROR] 12:39:14.349:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 12:39:14.349:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 

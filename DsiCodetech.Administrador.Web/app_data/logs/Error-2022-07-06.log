@@ -1,0 +1,140 @@
+[ERROR] 17:12:35.810:
+- DsiCodetech.Administrador.Web.Controllers.VentaController.GetClientePorId (Line #0)
+- DsiCodetech.Administrador.Domain.Exception.BusinessException: El folio 240432 ya fue facturado.
+ 
+[ERROR] 17:12:39.881:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:12:39.881:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 
+[ERROR] 17:12:39.896:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:12:39.896:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 
+[ERROR] 17:13:20.649:
+- DsiCodetech.Administrador.Web.Controllers.VentaController.GetClientePorId (Line #0)
+- DsiCodetech.Administrador.Domain.Exception.BusinessException: El folio 240432 ya fue facturado.
+ 
+[ERROR] 17:13:23.042:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:13:23.042:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 
+[ERROR] 17:13:23.042:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:13:23.042:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 
+[ERROR] 17:14:30.345:
+- DsiCodetech.Administrador.Web.Controllers.VentaController.GetClientePorId (Line #0)
+- DsiCodetech.Administrador.Domain.Exception.BusinessException: El folio 240432 ya fue facturado.
+ 
+[ERROR] 17:14:31.809:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:14:31.809:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 
+[ERROR] 17:14:31.809:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:14:31.809:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 
+[ERROR] 17:14:55.718:
+- DsiCodetech.Administrador.Web.Controllers.VentaController.GetClientePorId (Line #0)
+- DsiCodetech.Administrador.Domain.Exception.BusinessException: El folio 240432 ya fue facturado.
+ 
+[ERROR] 17:15:12.120:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:15:12.120:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 
+[ERROR] 17:15:12.120:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:15:12.120:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 
+[ERROR] 17:18:20.081:
+- DsiCodetech.Administrador.Web.Controllers.VentaController.GetClientePorId (Line #0)
+- DsiCodetech.Administrador.Domain.Exception.BusinessException: El folio 240432 ya fue facturado.
+ 
+[ERROR] 17:18:21.900:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:18:21.900:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 
+[ERROR] 17:18:21.900:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:18:21.900:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 
+[ERROR] 17:23:27.388:
+- DsiCodetech.Administrador.Web.Controllers.FacturacionController.GetFacturaByIdClient (Line #0)
+- DsiCodetech.Administrador.Domain.Exception.BusinessException: El cliente que desea buscar no existe.
+ 
+[ERROR] 17:23:40.206:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:23:40.206:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetFacturaByIdClient en el controller Facturacion
+ 
+[ERROR] 17:23:40.206:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:23:40.206:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetFacturaByIdClient en el controller Facturacion
+ 
+[ERROR] 17:27:22.162:
+- DsiCodetech.Administrador.Web.Controllers.VentaController.GetClientePorId (Line #0)
+- DsiCodetech.Administrador.Domain.Exception.BusinessException: El folio 240432 ya fue facturado.
+ 
+[ERROR] 17:27:23.702:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:27:23.702:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 
+[ERROR] 17:27:23.702:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Se genero una excepción para el usuario 
+ 
+[ERROR] 17:27:23.702:
+- DsiCodetech.Administrador.Web.Handler.ExceptionHandler.SuPlazaExceptionFilterAttribute.OnException (Line #0)
+- Error generado en GetClientePorId en el controller Venta
+ 

@@ -10,7 +10,6 @@ using DsiCodetech.Administrador.Domain;
 using DsiCodetech.Administrador.Web.Dto;
 using DsiCodetech.Administrador.Web.Dto.Filter;
 using DsiCodetech.Administrador.Web.Handler.ExceptionHandler;
-using DsiCodetech.Administrador.Web.Resources;
 
 using DsiCodetech.Administrador.Domain.Filter.Page;
 using DsiCodetech.Administrador.Domain.Filter.Query;

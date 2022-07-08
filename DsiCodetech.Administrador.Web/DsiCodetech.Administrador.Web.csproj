@@ -380,6 +380,7 @@
     <Compile Include="Controllers\FacturacionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegimenFiscalController.cs" />
+    <Compile Include="Controllers\VentaController.cs" />
     <Compile Include="Dto\ClienteDto.cs" />
     <Compile Include="Dto\DireccionDto.cs" />
     <Compile Include="Dto\EmpresaDto.cs" />
@@ -398,6 +399,7 @@
     <Compile Include="Dto\TipoComprobanteDto.cs" />
     <Compile Include="Dto\TipoRelacionDto.cs" />
     <Compile Include="Dto\UsoCfdiDto.cs" />
+    <Compile Include="Dto\VentaDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -106,7 +106,6 @@ C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Newt
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\NLog.xml
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\NLog.Web.xml
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Buffers.xml
-C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Memory.xml
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Net.Http.Formatting.xml
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Numerics.Vectors.xml
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Runtime.CompilerServices.Unsafe.xml
@@ -143,9 +142,7 @@ C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\obj\Debu
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\obj\Debug\DsiCodetech.Administrador.Web.pdb
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.CodeAnalysis.dll
-C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.CodeAnalysis.Razor.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.Net.Http.Headers.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.Win32.Registry.dll
@@ -161,9 +158,6 @@ C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Syst
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Text.Encoding.CodePages.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.CodeAnalysis.pdb
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.CodeAnalysis.xml
-C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.CodeAnalysis.CSharp.pdb
-C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.CodeAnalysis.CSharp.xml
-C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.CodeAnalysis.Razor.xml
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Microsoft.Net.Http.Headers.xml
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\Newtonsoft.Json.Bson.xml
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web\bin\System.Collections.Immutable.xml

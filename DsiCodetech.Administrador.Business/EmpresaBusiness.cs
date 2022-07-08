@@ -29,14 +29,15 @@ namespace DsiCodetech.Administrador.Business
         {
             var item = this.empresaRepository.GetAll().SingleOrDefault();
 
-            if (item == null)
-                throw new BusinessException("No se encuentra la empresa registrada");
+            if (item is null)
+                throw new BusinessException("No se encuentra una empresa registrada.");
 
             return new EmpresaDM
             {
                 Rfc = item.rfc,
                 RazonSocial = item.razon_social,
-                Representante = item.representante
+                Representante = item.representante,
+                CodigoPostal = item.codigo_postal
             };
         }
     }

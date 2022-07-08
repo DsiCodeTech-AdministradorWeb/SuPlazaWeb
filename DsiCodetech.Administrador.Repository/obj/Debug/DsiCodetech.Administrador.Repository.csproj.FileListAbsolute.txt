@@ -13,7 +13,6 @@ C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Repository\b
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Repository\bin\Debug\LinqKit.Core.xml
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Repository\bin\Debug\LinqKit.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Repository\bin\Debug\LinqKit.xml
-C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Repository\obj\Debug\DsiCodetech.Administrador.Repository.csproj.AssemblyReference.cache
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Repository\bin\Debug\DsiCodetech.Administrador.Repository.dll.config
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Repository\bin\Debug\DsiCodetech.Administrador.Repository.dll
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Repository\bin\Debug\DsiCodetech.Administrador.Repository.pdb
@@ -30,3 +29,4 @@ C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Repository\obj\
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Repository\obj\Debug\DsiCodetech.Administrador.Repository.csproj.CopyComplete
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Repository\obj\Debug\DsiCodetech.Administrador.Repository.dll
 C:\Users\erikg\source\repos\SuPlazaWeb\DsiCodetech.Administrador.Repository\obj\Debug\DsiCodetech.Administrador.Repository.pdb
+C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Repository\obj\Debug\DsiCodetech.Administrador.Repository.csproj.AssemblyReference.cache
