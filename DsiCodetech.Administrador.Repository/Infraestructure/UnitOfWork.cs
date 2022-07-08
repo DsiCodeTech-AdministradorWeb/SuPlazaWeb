@@ -13,10 +13,11 @@ namespace DsiCodetech.Administrador.Repository.Infraestructure
     public class UnitOfWork : IUnitOfWork
     {
         private readonly Dc_PosAdminEntities _dbContext;
-        
+
         public UnitOfWork()
         {
-           _dbContext = new Dc_PosAdminEntities();
+            _dbContext = new Dc_PosAdminEntities();
+            _dbContext.Database.Log = Console.Write;
         }
 
         public DbContext Db

@@ -300,7 +300,7 @@
     <Property Name="id_factura" Type="Int64" Nullable="false" />
     <Property Name="fecha_registro" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="factura" Relationship="Self.fk_factura_venta" FromRole="factura_venta" ToRole="factura" />
-    <NavigationProperty Name="venta" Relationship="Self.fk_venta_factura" FromRole="factura_venta" ToRole="venta" />
+    <NavigationProperty Name="venta" Relationship="pos_adminModel.fk_venta_factura" FromRole="factura_venta" ToRole="venta" />
   </EntityType>
   <EntityType Name="generacion_codigos">
     <Key>
@@ -662,14 +662,14 @@
     <NavigationProperty Name="pos_control" Relationship="Self.usuario_pos_control" FromRole="usuario" ToRole="pos_control" />
     <NavigationProperty Name="salida" Relationship="Self.fk_usuario_salida" FromRole="usuario" ToRole="salida" />
     <NavigationProperty Name="venta_articulo" Relationship="Self.fk_usuario_cambia_precio" FromRole="usuario" ToRole="venta_articulo" />
-    <NavigationProperty Name="venta" Relationship="Self.fk_usuario_cancelacion" FromRole="usuario" ToRole="venta" />
     <NavigationProperty Name="venta_devolucion" Relationship="Self.fk_usuario_devolucion_supervisor" FromRole="usuario" ToRole="venta_devolucion" />
     <NavigationProperty Name="venta_devolucion1" Relationship="Self.fk_usuario_devolucion_vendedor" FromRole="usuario" ToRole="venta_devolucion" />
     <NavigationProperty Name="usuario_permiso" Relationship="Self.fk_usuario_permiso" FromRole="usuario" ToRole="usuario_permiso" />
-    <NavigationProperty Name="venta1" Relationship="Self.fk_usuario_venta" FromRole="usuario" ToRole="venta" />
     <NavigationProperty Name="venta_cancelada_articulo" Relationship="Self.fk_venta_cancelada_articulo_usuario" FromRole="usuario" ToRole="venta_cancelada_articulo" />
     <NavigationProperty Name="venta_cancelada" Relationship="Self.fk_venta_cancelada_supervisor" FromRole="usuario" ToRole="venta_cancelada" />
     <NavigationProperty Name="venta_cancelada1" Relationship="Self.fk_venta_cancelada_vendedor" FromRole="usuario" ToRole="venta_cancelada" />
+    <NavigationProperty Name="venta" Relationship="pos_adminModel.fk_usuario_cancelacion" FromRole="usuario" ToRole="venta" />
+    <NavigationProperty Name="venta1" Relationship="pos_adminModel.fk_usuario_venta" FromRole="usuario" ToRole="venta" />
   </EntityType>
   <EntityType Name="usuario_permiso">
     <Key>
@@ -682,30 +682,6 @@
     <Property Name="fecha_registro" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="permiso" Relationship="Self.fk_permiso_usuario" FromRole="usuario_permiso" ToRole="permiso" />
     <NavigationProperty Name="usuario" Relationship="Self.fk_usuario_permiso" FromRole="usuario_permiso" ToRole="usuario" />
-  </EntityType>
-  <EntityType Name="venta">
-    <Key>
-      <PropertyRef Name="id_pos" />
-      <PropertyRef Name="id_venta" />
-    </Key>
-    <Property Name="id_pos" Type="Int32" Nullable="false" />
-    <Property Name="id_venta" Type="Guid" Nullable="false" />
-    <Property Name="vendedor" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="folio" Type="Int64" Nullable="false" />
-    <Property Name="fecha_venta" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="total_vendido" Type="Decimal" Precision="19" Scale="3" Nullable="false" />
-    <Property Name="pago_efectivo" Type="Decimal" Precision="19" Scale="2" Nullable="false" />
-    <Property Name="pago_cheque" Type="Decimal" Precision="19" Scale="3" Nullable="false" />
-    <Property Name="pago_vales" Type="Decimal" Precision="19" Scale="2" Nullable="false" />
-    <Property Name="pago_tc" Type="Decimal" Precision="19" Scale="2" Nullable="false" />
-    <Property Name="supervisor" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-    <Property Name="upload" Type="Boolean" Nullable="false" />
-    <Property Name="num_registros" Type="Int16" Nullable="false" />
-    <NavigationProperty Name="factura_venta" Relationship="Self.fk_venta_factura" FromRole="venta" ToRole="factura_venta" />
-    <NavigationProperty Name="usuario" Relationship="Self.fk_usuario_cancelacion" FromRole="venta" ToRole="usuario" />
-    <NavigationProperty Name="usuario1" Relationship="Self.fk_usuario_venta" FromRole="venta" ToRole="usuario" />
-    <NavigationProperty Name="venta_articulo" Relationship="Self.fk_venta_articulo" FromRole="venta" ToRole="venta_articulo" />
-    <NavigationProperty Name="venta_devolucion" Relationship="Self.fk_venta_devolucion" FromRole="venta" ToRole="venta_devolucion" />
   </EntityType>
   <EntityType Name="venta_articulo">
     <Key>
@@ -732,7 +708,7 @@
     <NavigationProperty Name="articulo" Relationship="Self.fk_articulo_venta" FromRole="venta_articulo" ToRole="articulo" />
     <NavigationProperty Name="promocion" Relationship="Self.fk_promocion_venta_articulo" FromRole="venta_articulo" ToRole="promocion" />
     <NavigationProperty Name="usuario" Relationship="Self.fk_usuario_cambia_precio" FromRole="venta_articulo" ToRole="usuario" />
-    <NavigationProperty Name="venta" Relationship="Self.fk_venta_articulo" FromRole="venta_articulo" ToRole="venta" />
+    <NavigationProperty Name="venta" Relationship="pos_adminModel.fk_venta_articulo" FromRole="venta_articulo" ToRole="venta" />
   </EntityType>
   <EntityType Name="venta_cancelada">
     <Key>
@@ -791,8 +767,8 @@
     <Property Name="upload" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="usuario" Relationship="Self.fk_usuario_devolucion_supervisor" FromRole="venta_devolucion" ToRole="usuario" />
     <NavigationProperty Name="usuario1" Relationship="Self.fk_usuario_devolucion_vendedor" FromRole="venta_devolucion" ToRole="usuario" />
-    <NavigationProperty Name="venta" Relationship="Self.fk_venta_devolucion" FromRole="venta_devolucion" ToRole="venta" />
     <NavigationProperty Name="venta_devolucion_articulo" Relationship="Self.fk_venta_devolucion_articulo" FromRole="venta_devolucion" ToRole="venta_devolucion_articulo" />
+    <NavigationProperty Name="venta" Relationship="pos_adminModel.fk_venta_devolucion" FromRole="venta_devolucion" ToRole="venta" />
   </EntityType>
   <EntityType Name="venta_devolucion_articulo">
     <Key>
@@ -1555,20 +1531,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_venta_factura">
-    <End Role="venta" Type="Self.venta" Multiplicity="1" />
-    <End Role="factura_venta" Type="Self.factura_venta" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="venta">
-        <PropertyRef Name="id_venta" />
-        <PropertyRef Name="id_pos" />
-      </Principal>
-      <Dependent Role="factura_venta">
-        <PropertyRef Name="id_venta" />
-        <PropertyRef Name="id_pos" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="fk_inventario_captura">
     <End Role="inventario_fisico" Type="Self.inventario_fisico" Multiplicity="1" />
     <End Role="inventario_captura" Type="Self.inventario_captura" Multiplicity="*" />
@@ -1785,18 +1747,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_usuario_cancelacion">
-    <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
-    <End Role="venta" Type="Self.venta" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="usuario">
-        <PropertyRef Name="user_name" />
-      </Principal>
-      <Dependent Role="venta">
-        <PropertyRef Name="supervisor" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="fk_usuario_devolucion_supervisor">
     <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
     <End Role="venta_devolucion" Type="Self.venta_devolucion" Multiplicity="*" />
@@ -1833,18 +1783,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_usuario_venta">
-    <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
-    <End Role="venta" Type="Self.venta" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="usuario">
-        <PropertyRef Name="user_name" />
-      </Principal>
-      <Dependent Role="venta">
-        <PropertyRef Name="vendedor" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="fk_venta_cancelada_articulo_usuario">
     <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
     <End Role="venta_cancelada_articulo" Type="Self.venta_cancelada_articulo" Multiplicity="*" />
@@ -1878,34 +1816,6 @@
       </Principal>
       <Dependent Role="venta_cancelada">
         <PropertyRef Name="vendedor" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_venta_articulo">
-    <End Role="venta" Type="Self.venta" Multiplicity="1" />
-    <End Role="venta_articulo" Type="Self.venta_articulo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="venta">
-        <PropertyRef Name="id_venta" />
-        <PropertyRef Name="id_pos" />
-      </Principal>
-      <Dependent Role="venta_articulo">
-        <PropertyRef Name="id_venta" />
-        <PropertyRef Name="id_pos" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_venta_devolucion">
-    <End Role="venta" Type="Self.venta" Multiplicity="1" />
-    <End Role="venta_devolucion" Type="Self.venta_devolucion" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="venta">
-        <PropertyRef Name="id_venta" />
-        <PropertyRef Name="id_pos" />
-      </Principal>
-      <Dependent Role="venta_devolucion">
-        <PropertyRef Name="id_venta" />
-        <PropertyRef Name="id_pos" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1983,7 +1893,6 @@
     <EntitySet Name="unidad_medida" EntityType="Self.unidad_medida" />
     <EntitySet Name="usuario" EntityType="Self.usuario" />
     <EntitySet Name="usuario_permiso" EntityType="Self.usuario_permiso" />
-    <EntitySet Name="venta" EntityType="Self.venta" />
     <EntitySet Name="venta_articulo" EntityType="Self.venta_articulo" />
     <EntitySet Name="venta_cancelada" EntityType="Self.venta_cancelada" />
     <EntitySet Name="venta_cancelada_articulo" EntityType="Self.venta_cancelada_articulo" />
@@ -2158,10 +2067,6 @@
       <End Role="unidad_medida" EntitySet="unidad_medida" />
       <End Role="factura_articulo" EntitySet="factura_articulo" />
     </AssociationSet>
-    <AssociationSet Name="fk_venta_factura" Association="Self.fk_venta_factura">
-      <End Role="venta" EntitySet="venta" />
-      <End Role="factura_venta" EntitySet="factura_venta" />
-    </AssociationSet>
     <AssociationSet Name="fk_inventario_captura" Association="Self.fk_inventario_captura">
       <End Role="inventario_fisico" EntitySet="inventario_fisico" />
       <End Role="inventario_captura" EntitySet="inventario_captura" />
@@ -2234,10 +2139,6 @@
       <End Role="usuario" EntitySet="usuario" />
       <End Role="venta_articulo" EntitySet="venta_articulo" />
     </AssociationSet>
-    <AssociationSet Name="fk_usuario_cancelacion" Association="Self.fk_usuario_cancelacion">
-      <End Role="usuario" EntitySet="usuario" />
-      <End Role="venta" EntitySet="venta" />
-    </AssociationSet>
     <AssociationSet Name="fk_usuario_devolucion_supervisor" Association="Self.fk_usuario_devolucion_supervisor">
       <End Role="usuario" EntitySet="usuario" />
       <End Role="venta_devolucion" EntitySet="venta_devolucion" />
@@ -2250,10 +2151,6 @@
       <End Role="usuario" EntitySet="usuario" />
       <End Role="usuario_permiso" EntitySet="usuario_permiso" />
     </AssociationSet>
-    <AssociationSet Name="fk_usuario_venta" Association="Self.fk_usuario_venta">
-      <End Role="usuario" EntitySet="usuario" />
-      <End Role="venta" EntitySet="venta" />
-    </AssociationSet>
     <AssociationSet Name="fk_venta_cancelada_articulo_usuario" Association="Self.fk_venta_cancelada_articulo_usuario">
       <End Role="usuario" EntitySet="usuario" />
       <End Role="venta_cancelada_articulo" EntitySet="venta_cancelada_articulo" />
@@ -2265,14 +2162,6 @@
     <AssociationSet Name="fk_venta_cancelada_vendedor" Association="Self.fk_venta_cancelada_vendedor">
       <End Role="usuario" EntitySet="usuario" />
       <End Role="venta_cancelada" EntitySet="venta_cancelada" />
-    </AssociationSet>
-    <AssociationSet Name="fk_venta_articulo" Association="Self.fk_venta_articulo">
-      <End Role="venta" EntitySet="venta" />
-      <End Role="venta_articulo" EntitySet="venta_articulo" />
-    </AssociationSet>
-    <AssociationSet Name="fk_venta_devolucion" Association="Self.fk_venta_devolucion">
-      <End Role="venta" EntitySet="venta" />
-      <End Role="venta_devolucion" EntitySet="venta_devolucion" />
     </AssociationSet>
     <AssociationSet Name="fk_venta_cancelada_articulo" Association="Self.fk_venta_cancelada_articulo">
       <End Role="venta_cancelada" EntitySet="venta_cancelada" />
@@ -2394,6 +2283,27 @@
     <AssociationSet Name="FK_direccion_municipio" Association="pos_adminModel.FK_direccion_municipio">
       <End Role="municipio" EntitySet="municipio" />
       <End Role="direccion" EntitySet="direccion" />
+    </AssociationSet>
+    <EntitySet Name="venta" EntityType="pos_adminModel.venta" />
+    <AssociationSet Name="fk_venta_factura" Association="pos_adminModel.fk_venta_factura">
+      <End Role="venta" EntitySet="venta" />
+      <End Role="factura_venta" EntitySet="factura_venta" />
+    </AssociationSet>
+    <AssociationSet Name="fk_usuario_cancelacion" Association="pos_adminModel.fk_usuario_cancelacion">
+      <End Role="usuario" EntitySet="usuario" />
+      <End Role="venta" EntitySet="venta" />
+    </AssociationSet>
+    <AssociationSet Name="fk_usuario_venta" Association="pos_adminModel.fk_usuario_venta">
+      <End Role="usuario" EntitySet="usuario" />
+      <End Role="venta" EntitySet="venta" />
+    </AssociationSet>
+    <AssociationSet Name="fk_venta_articulo" Association="pos_adminModel.fk_venta_articulo">
+      <End Role="venta" EntitySet="venta" />
+      <End Role="venta_articulo" EntitySet="venta_articulo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_venta_devolucion" Association="pos_adminModel.fk_venta_devolucion">
+      <End Role="venta" EntitySet="venta" />
+      <End Role="venta_devolucion" EntitySet="venta_devolucion" />
     </AssociationSet>
   </EntityContainer>
   <ComplexType Name="sp_corte_caja_Result">
@@ -2787,6 +2697,96 @@
       <Dependent Role="direccion">
         <PropertyRef Name="id_municipio" />
         <PropertyRef Name="id_entidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="venta">
+    <Key>
+      <PropertyRef Name="id_pos" />
+      <PropertyRef Name="id_venta" />
+    </Key>
+    <Property Name="id_pos" Type="Int32" Nullable="false" />
+    <Property Name="id_venta" Type="Guid" Nullable="false" />
+    <Property Name="vendedor" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="folio" Type="Int64" Nullable="false" />
+    <Property Name="fecha_venta" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="total_vendido" Type="Decimal" Nullable="false" Precision="19" Scale="3" />
+    <Property Name="pago_efectivo" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="pago_cheque" Type="Decimal" Nullable="false" Precision="19" Scale="3" />
+    <Property Name="pago_vales" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="pago_tc" Type="Decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="supervisor" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="upload" Type="Boolean" Nullable="false" />
+    <Property Name="num_registros" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="factura_venta" Relationship="pos_adminModel.fk_venta_factura" FromRole="venta" ToRole="factura_venta" />
+    <NavigationProperty Name="usuario" Relationship="pos_adminModel.fk_usuario_cancelacion" FromRole="venta" ToRole="usuario" />
+    <NavigationProperty Name="usuario1" Relationship="pos_adminModel.fk_usuario_venta" FromRole="venta" ToRole="usuario" />
+    <NavigationProperty Name="venta_articulo" Relationship="pos_adminModel.fk_venta_articulo" FromRole="venta" ToRole="venta_articulo" />
+    <NavigationProperty Name="venta_devolucion" Relationship="pos_adminModel.fk_venta_devolucion" FromRole="venta" ToRole="venta_devolucion" />
+  </EntityType>
+  <Association Name="fk_venta_factura">
+    <End Type="pos_adminModel.venta" Role="venta" Multiplicity="1" />
+    <End Type="pos_adminModel.factura_venta" Role="factura_venta" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="venta">
+        <PropertyRef Name="id_venta" />
+        <PropertyRef Name="id_pos" />
+      </Principal>
+      <Dependent Role="factura_venta">
+        <PropertyRef Name="id_venta" />
+        <PropertyRef Name="id_pos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_usuario_cancelacion">
+    <End Type="pos_adminModel.usuario" Role="usuario" Multiplicity="0..1" />
+    <End Type="pos_adminModel.venta" Role="venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuario">
+        <PropertyRef Name="user_name" />
+      </Principal>
+      <Dependent Role="venta">
+        <PropertyRef Name="supervisor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_usuario_venta">
+    <End Type="pos_adminModel.usuario" Role="usuario" Multiplicity="1" />
+    <End Type="pos_adminModel.venta" Role="venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuario">
+        <PropertyRef Name="user_name" />
+      </Principal>
+      <Dependent Role="venta">
+        <PropertyRef Name="vendedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_venta_articulo">
+    <End Type="pos_adminModel.venta" Role="venta" Multiplicity="1" />
+    <End Type="pos_adminModel.venta_articulo" Role="venta_articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="venta">
+        <PropertyRef Name="id_venta" />
+        <PropertyRef Name="id_pos" />
+      </Principal>
+      <Dependent Role="venta_articulo">
+        <PropertyRef Name="id_venta" />
+        <PropertyRef Name="id_pos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_venta_devolucion">
+    <End Type="pos_adminModel.venta" Role="venta" Multiplicity="1" />
+    <End Type="pos_adminModel.venta_devolucion" Role="venta_devolucion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="venta">
+        <PropertyRef Name="id_venta" />
+        <PropertyRef Name="id_pos" />
+      </Principal>
+      <Dependent Role="venta_devolucion">
+        <PropertyRef Name="id_venta" />
+        <PropertyRef Name="id_pos" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

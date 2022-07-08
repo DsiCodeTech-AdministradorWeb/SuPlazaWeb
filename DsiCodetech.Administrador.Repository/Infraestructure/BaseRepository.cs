@@ -24,8 +24,7 @@ namespace DsiCodetech.Administrador.Repository.Infraestructure
 
         public T SingleOrDefault(Expression<Func<T, bool>> where)
         {
-            var dbResult = dbSet.Where(where.Compile()).FirstOrDefault();
-            return dbResult;
+          return dbSet.FirstOrDefault(where);
         }
         public IEnumerable<T> GetAll()
         {
@@ -33,7 +32,7 @@ namespace DsiCodetech.Administrador.Repository.Infraestructure
         }
         public IEnumerable<T> GetAll(Expression<Func<T, bool>> where)
         {
-            return dbSet.Where(where.Compile()).AsEnumerable();
+            return dbSet.Where(where).AsEnumerable();
         }
 
         public virtual T Insert(T entity)
@@ -124,13 +123,12 @@ namespace DsiCodetech.Administrador.Repository.Infraestructure
 
         public T SingleOrDefaultInclude(Expression<Func<T, bool>> where, string entity)
         {
-            var dbResult = dbSet.Include(entity).Where(where.Compile()).FirstOrDefault();
+            var dbResult = dbSet.Include(entity).FirstOrDefault(where);
             return dbResult;
         }
         public T SingleOrDefaultIncludes(Expression<Func<T, bool>> where, string entity1, string entity2)
         {
-            var dbResult = dbSet.Include(entity1).Include(entity2).Where(where.Compile()).FirstOrDefault();
-            return dbResult;
+            return dbSet.Include(entity1).Include(entity2).FirstOrDefault(where);
         }
         /// <summary>
         /// Este metodo se encarga d econsultar una instancia de entidad , incluyendo sus elementos relacionados
@@ -143,8 +141,7 @@ namespace DsiCodetech.Administrador.Repository.Infraestructure
         /// <returns></returns>
         public T SingleOrDefaultForIncludes(Expression<Func<T, bool>> where, string entity1, string entity2, string entity3, string entity4)
         {
-            var dbResult = dbSet.Include(entity1).Include(entity2).Include(entity3).Include(entity4).Where(where.Compile()).FirstOrDefault();
-            return dbResult;
+            return dbSet.Include(entity1).Include(entity2).Include(entity3).Include(entity4).FirstOrDefault(where);
         }
 
         /// <summary>
@@ -155,7 +152,7 @@ namespace DsiCodetech.Administrador.Repository.Infraestructure
         /// <returns>la coleccion de entidades como resultado</returns>
         public IEnumerable<T> GetIncludeAll(Expression<Func<T, bool>> where, string entity)
         {
-            return dbSet.Include(entity).Where(where.Compile()).AsEnumerable();
+            return dbSet.Include(entity).Where(where).AsEnumerable();
         }
         /// <summary>
         /// Este metodo se encarga de consultar todos los elementos de una entidad incluyendo sus relaciones especificas
@@ -167,12 +164,12 @@ namespace DsiCodetech.Administrador.Repository.Infraestructure
         /// <returns>la coleccion de entidades como resultado</returns>
         public IEnumerable<T> GetIncludeForAll(Expression<Func<T, bool>> where, string entity, string entity2, string entity3)
         {
-            return dbSet.Include(entity).Include(entity2).Include(entity3).Where(where.Compile()).AsEnumerable();
+            return dbSet.Include(entity).Include(entity2).Include(entity3).Where(where).AsEnumerable();
         }
 
         public IEnumerable<T> GetIncludeForTwo(Expression<Func<T, bool>> where, string entity, string entity2)
         {
-            return dbSet.Include(entity).Include(entity2).Where(where.Compile()).AsEnumerable();
+            return dbSet.Include(entity).Include(entity2).Where(where).AsEnumerable();
         }
     }
 }

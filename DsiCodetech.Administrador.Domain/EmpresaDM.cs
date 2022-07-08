@@ -13,5 +13,7 @@ namespace DsiCodetech.Administrador.Domain
         public string RazonSocial { get; set; }
 
         public string Representante { get; set; }
+
+        public string CodigoPostal { get; set; }
     }
 }

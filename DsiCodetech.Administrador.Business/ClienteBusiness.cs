@@ -40,7 +40,7 @@ namespace DsiCodetech.Administrador.Business
             var clienteModel = repository.SingleOrDefaultInclude(c => c.id_cliente.Equals(id), "direccion");
 
             if (clienteModel == null)
-                throw new BusinessException("El cliente que desea buscar no existe.");
+                throw new BusinessException("El cliente no existe.");
 
             ClienteDM cliente = new ClienteDM
             {

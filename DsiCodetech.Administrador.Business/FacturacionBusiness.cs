@@ -17,6 +17,8 @@ using DsiCodetech.Administrador.Repository.PosAdmin;
 using DsiCodetech.Administrador.Repository.Infraestructure.Contract;
 
 using DSICodeTech.FacturacionElectronica40.Model;
+using DSICodeTech.FacturacionElectronica40.Invoice;
+
 using DsiCodetech.Administrador.Business.Resources;
 
 namespace DsiCodetech.Administrador.Business
@@ -26,15 +28,18 @@ namespace DsiCodetech.Administrador.Business
         private readonly IUnitOfWork unitOfWork;
         private readonly IClienteBusiness clienteBusiness;
         private readonly IEmpresaBusiness empresaBusiness;
+        private readonly IVentaBusiness ventaBusiness;
         private readonly FacturacionRepository facturacionRepository;
         private readonly VentaRepository ventaRepository;
-        public FacturacionBusiness(IUnitOfWork _unitOfWork,VentaRepository _ventaRepository ,IClienteBusiness _clienteBusiness, IEmpresaBusiness _empresaBusiness)
+        public FacturacionBusiness(IUnitOfWork _unitOfWork, VentaRepository _ventaRepository, IClienteBusiness _clienteBusiness, IEmpresaBusiness _empresaBusiness, IVentaBusiness _ventaBusiness)
         {
             this.unitOfWork = _unitOfWork;
             this.facturacionRepository = new(this.unitOfWork);
+            this.ventaRepository = _ventaRepository;
+
             this.clienteBusiness = _clienteBusiness;
             this.empresaBusiness = _empresaBusiness;
-            this.ventaRepository = _ventaRepository;
+            this.ventaBusiness = _ventaBusiness;
         }
 
         public FacturaDM GetFacturaByIdClient(Guid id)
@@ -134,14 +139,134 @@ namespace DsiCodetech.Administrador.Business
         /// <returns>una entidad del tipo FacturaDM</returns>
         public FacturaDM getFacturaByIdVenta(Guid id_venta)
         {
-            var result =ventaRepository.
-                SingleOrDefaultForIncludes(p => p.id_venta.Equals(id_venta), 
-                EntitiesResources.Factura_Venta,EntitiesResources.Factura,EntitiesResources.Factura_Articulo, 
-                EntitiesResources.Cliente );
+            var result = ventaRepository.
+                SingleOrDefaultForIncludes(p => p.id_venta.Equals(id_venta),
+                EntitiesResources.Factura_Venta, EntitiesResources.Factura, EntitiesResources.Factura_Articulo,
+                EntitiesResources.Cliente);
             return null;
         }
 
+        public FacturaDM Insert(FacturaDM factura, Guid id_client)
+        {
+            bool hasError = false;
+            ClienteDM cliente = this.clienteBusiness.GetClienteById(id_client); /*  */
+            EmpresaDM empresa = this.empresaBusiness.GetEmpresa();
+
+            if (cliente.Direccion is null)
+                throw new BusinessException("El campo código postal es obligatorio para la nueva facturación CFDI 4.0");
 
 
+            if (factura.Conceptos is null || !factura.Conceptos.Any())
+                throw new BusinessException("No hay conceptos asociados que facturar, agregue al menos un concepto.");
+
+
+            Comprobante comprobante = new();
+            comprobante.Version = "4.0";
+            comprobante.Moneda = "MXN";
+            comprobante.FormaPago = factura.FormaPago;
+            comprobante.MetodoPago = factura.MetodoPago;
+            comprobante.TipoDeComprobante = factura.TipoComprobante;
+            comprobante.Exportacion = factura.Exportacion;
+            comprobante.LugarExpedicion = empresa.CodigoPostal;
+            comprobante.Fecha = DateTime.Now.ToString("AAAA-MM-DDThh:mm:ss");
+
+            /* Emisor */
+            comprobante.Emisor = new()
+            {
+                Rfc = empresa.Rfc,
+                Nombre = empresa.RazonSocial,
+                RegimenFiscal = empresa.Representante
+            };
+
+            /* Receptor */
+            comprobante.Receptor = new()
+            {
+                Rfc = cliente.Rfc,
+                Nombre = cliente.RazonSocial,
+                DomicilioFiscalReceptor = cliente.Direccion.CodigoPostal,
+                RegimenFiscalReceptor = cliente.RegimenFiscal,
+                UsoCFDI = factura.UsoCfdi
+            };
+
+            if (factura.ComprobanteCfdiRelacionados != null || factura.ComprobanteCfdiRelacionados.Any())
+                comprobante.CfdiRelacionados = factura.ComprobanteCfdiRelacionados.ToArray();
+
+            foreach (var item in factura.Conceptos)
+            {
+                try
+                {
+                    int idx = 0;
+                    VentaDM ventaDM = this.ventaBusiness.GetVentaIfNotExistInvoice(item.Ticket, item.IdPos);
+
+                    comprobante.Folio = item.Ticket.ToString();
+
+
+                    venta venta = this.ventaRepository.SingleOrDefaultInclude(v => v.id_pos.Equals(ventaDM.Id) && v.id_venta.Equals(ventaDM.IdVenta), "venta_articulo");
+
+                    decimal subTotalGlobal = default;
+                    decimal descuentoGlobal = default;
+
+                    foreach (venta_articulo va in venta.venta_articulo)
+                    {
+                        decimal subTotal = (va.precio_vta / (1.0m + va.iva)) * va.cantidad;
+                        decimal descuento = subTotal * va.porcent_desc;
+
+                        subTotalGlobal += subTotal;
+                        descuentoGlobal += descuento;
+
+                        articulo articulo = new articulo();
+
+                        comprobante.Conceptos[idx++] = new()
+                        {
+                            ClaveProdServ = articulo.cve_producto,
+                            ClaveUnidad = articulo.unidad_medida.cve_sat,
+                            Descripcion = articulo.descripcion,
+
+                            Importe = subTotal,
+                            Descuento = descuento,
+                            ValorUnitario = subTotal / va.cantidad,
+
+                            NoIdentificacion = va.no_articulo.ToString(),
+
+                            Impuestos = new()
+                            {
+                                Traslados = new ComprobanteConceptoImpuestosTraslado[]
+                                {
+                                    new ComprobanteConceptoImpuestosTraslado { }
+                                }
+                            }
+
+                        };
+
+                    }
+
+                    comprobante.Total = Round(ventaDM.TotalVendido);
+                    comprobante.Descuento = Round(descuentoGlobal);
+                    comprobante.SubTotal = Round(subTotalGlobal);
+
+                }
+                catch (Exception)
+                {
+                    hasError = true;
+                    continue;
+                }
+
+                InvoiceService invoiceService = new InvoiceService();
+
+                invoiceService.GenerateTaxReceipt(comprobante);
+            }
+
+
+
+            if (hasError)
+                throw new BusinessException("");
+
+            throw new NotImplementedException();
+        }
+
+        private decimal Round(decimal value)
+        {
+            return Math.Ceiling(decimal.Parse(value.ToString("F3")) * 100.0m) / 100.0m;
+        }
     }
 }

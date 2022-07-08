@@ -72,7 +72,6 @@ namespace DsiCodetech.Administrador.Repository.PosAdmin
         public virtual DbSet<unidad_medida> unidad_medida { get; set; }
         public virtual DbSet<usuario> usuario { get; set; }
         public virtual DbSet<usuario_permiso> usuario_permiso { get; set; }
-        public virtual DbSet<venta> venta { get; set; }
         public virtual DbSet<venta_articulo> venta_articulo { get; set; }
         public virtual DbSet<venta_cancelada> venta_cancelada { get; set; }
         public virtual DbSet<venta_cancelada_articulo> venta_cancelada_articulo { get; set; }
@@ -109,6 +108,7 @@ namespace DsiCodetech.Administrador.Repository.PosAdmin
         public virtual DbSet<uso_cfdi> uso_cfdi { get; set; }
         public virtual DbSet<Logs> Logs { get; set; }
         public virtual DbSet<direccion> direccion { get; set; }
+        public virtual DbSet<venta> venta { get; set; }
     
         public virtual int reset_estadistica(Nullable<short> anio)
         {

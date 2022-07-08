@@ -41,12 +41,22 @@ namespace DsiCodetech.Administrador.Web.Dto
         [JsonProperty(propertyName: "cfdi_relacionados")]
         public ComprobanteCfdiRelacionados ComprobanteCfdiRelacionados { get; set; }
 
+        [JsonProperty(propertyName: "impuestos")]
+        public ComprobanteImpuestos ComprobanteImpuestos { get; set; }
+
         [JsonProperty(propertyName: "conceptos")]
         public ConceptoDto Conceptos { get; set; }
     }
 
     public class ConceptoDto {
-        
-        public string ticket { get; set; }
+
+        [JsonProperty(propertyName: "ticket")]
+        public string Ticket { get; set; }
+
+        [JsonProperty(propertyName: "id_pos")]
+        public int IdPos { get; set; }
+
+        [JsonProperty(propertyName: "impuestos")]
+        public ComprobanteConceptoImpuestos Impuestos { get; set; }
     }
 }

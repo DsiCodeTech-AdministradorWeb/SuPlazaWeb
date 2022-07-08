@@ -39,6 +39,9 @@ namespace DsiCodetech.Administrador.Web.Infraestructure
             /* Módulo direcciones */
             CreateMap<MunicipioDM, MunicipioDto>().ReverseMap();
             CreateMap<EntidadDM, EntidadDto>().ReverseMap();
+
+            /* Módulo venta */
+            CreateMap<VentaDM, VentaDto>().ReverseMap();
         }
 
         public static void Run()

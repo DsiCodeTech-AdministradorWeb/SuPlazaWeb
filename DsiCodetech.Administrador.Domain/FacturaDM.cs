@@ -28,14 +28,18 @@ namespace DsiCodetech.Administrador.Domain
 
         public ComprobanteInformacionGlobal ComprobanteInformacionGlobal { get; set; }
 
-        public ComprobanteCfdiRelacionados ComprobanteCfdiRelacionados { get; set; }
+        public List<ComprobanteCfdiRelacionados> ComprobanteCfdiRelacionados { get; set; }
 
-        public ConceptoDM Conceptos { get; set; }
+        public List<ConceptoDM> Conceptos { get; set; }
     }
 
     public class ConceptoDM
     {
-        public string ticket { get; set; }
+        public int Ticket { get; set; }
+
+        public int IdPos { get; set; }
+
+        public ComprobanteConceptoImpuestos Impuestos { get; set; }
     }
 
 }

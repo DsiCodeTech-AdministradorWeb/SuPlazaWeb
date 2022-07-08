@@ -15,6 +15,8 @@ namespace DsiCodetech.Administrador.Business.Interface
     {
         FacturaDM GetFacturaByIdClient(Guid id);
 
+        FacturaDM Insert(FacturaDM factura, Guid id_client);
+
         PageResponse<FacturaFilterDM> GetFacturaPaging(FacturaQuery query);
     }
 }

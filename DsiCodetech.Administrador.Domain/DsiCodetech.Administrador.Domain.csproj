@@ -80,6 +80,7 @@
     <Compile Include="TipoComprobanteDM.cs" />
     <Compile Include="TipoRelacionDM.cs" />
     <Compile Include="UsoCfdiDM.cs" />
+    <Compile Include="VentaDM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

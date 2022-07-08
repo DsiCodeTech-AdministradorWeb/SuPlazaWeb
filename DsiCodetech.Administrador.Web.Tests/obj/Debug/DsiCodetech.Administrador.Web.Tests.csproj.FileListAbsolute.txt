@@ -93,7 +93,6 @@ C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web.Tests\bi
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\System.Text.Json.xml
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\System.Memory.xml
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\System.Text.Encodings.Web.xml
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Jonathan\source\repos\suPlazaWeb\DsiCodetech.Administrador.Web.Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
