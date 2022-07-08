@@ -9,13 +9,14 @@ using System.Web.Http.Cors;
 
 using System.Web.Http.Description;
 
-using DsiCodetech.Administrador.Web.Dto;
+//using DsiCodetech.Administrador.Web.Dto;
 using DsiCodetech.Administrador.Web.Dto.Filter;
 
 using DsiCodetech.Administrador.Domain.Filter.Page;
 using DsiCodetech.Administrador.Domain.Filter.Query;
 
 using DsiCodetech.Administrador.Web.Handler.ExceptionHandler;
+using DsiCodetech.Administrador.Domain;
 
 namespace DsiCodetech.Administrador.Web.Controllers
 {
@@ -222,6 +223,17 @@ namespace DsiCodetech.Administrador.Web.Controllers
         {
             return Ok(AutoMapper.Mapper.Map<FacturaDto>(this.facturacionBusiness.GetFacturaByIdClient(id)));
         }
+
+
+        [ResponseType(typeof(FacturaDM))]
+        [Route("downloads/{id}")]
+        [HttpGet]
+        public IHttpActionResult GenerateQueryPDF(int id) /* Id de la factura */
+        {
+            
+            return Ok(this.facturacionBusiness.getFacturaByIdFactura(id));
+        }
+
 
 
         [ResponseType(typeof(PageResponse<FacturaFilterDto>))]

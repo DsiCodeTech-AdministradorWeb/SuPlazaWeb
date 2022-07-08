@@ -138,9 +138,9 @@ namespace DsiCodetech.Administrador.Business
         /// </summary>
         /// <param name="id_venta">el identificador de la venta</param>
         /// <returns>una entidad del tipo FacturaDM</returns>
-        public FacturaDM getFacturaByIdFactura(Guid id_factura)
+        public FacturaDM getFacturaByIdFactura(int id_factura)
         {
-            var result = this.facturacionRepository.SingleOrDefaultInclude(p => p.id_factura.Equals(id_factura),
+            var result = this.facturacionRepository.SingleOrDefaultInclude(p => p.id_factura == id_factura,
                 EntitiesResources.Factura_Articulo);
             return new FacturaDM
             {

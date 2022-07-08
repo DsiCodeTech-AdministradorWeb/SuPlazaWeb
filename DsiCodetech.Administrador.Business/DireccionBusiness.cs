@@ -52,6 +52,8 @@ namespace DsiCodetech.Administrador.Business
         public DireccionDM GetDireccionByClienteId(Guid id_cliente)
         {
             var direccion= this.direccionRepository.SingleOrDefault(p => p.id_cliente == id_cliente);
+            ///se necesita validar desde sistema que la direccion sea forzosa si no genera un error
+            
             return new DireccionDM{ 
               Calle = direccion.calle,
               CodigoPostal= direccion.codigo_postal,
