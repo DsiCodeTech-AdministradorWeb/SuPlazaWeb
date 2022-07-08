@@ -55,6 +55,7 @@
     <Compile Include="DireccionBusiness.cs" />
     <Compile Include="EmpresaBusiness.cs" />
     <Compile Include="ExportacionBusiness.cs" />
+    <Compile Include="FacturaArticuloBusiness.cs" />
     <Compile Include="FacturacionBusiness.cs" />
     <Compile Include="FormaPagoBusiness.cs" />
     <Compile Include="Interface\IClaveProductoServiciosBusiness.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Interface\IDireccionBusiness.cs" />
     <Compile Include="Interface\IEmpresaBusiness.cs" />
     <Compile Include="Interface\IExportacionBusiness.cs" />
+    <Compile Include="Interface\IFacturaArticuloBusiness.cs" />
     <Compile Include="Interface\IFacturacionBusiness.cs" />
     <Compile Include="Interface\IFormaPagoBusiness.cs" />
     <Compile Include="Interface\IMesBusiness.cs" />

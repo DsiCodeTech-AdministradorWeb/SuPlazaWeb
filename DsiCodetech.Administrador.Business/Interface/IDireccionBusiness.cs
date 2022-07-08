@@ -13,5 +13,11 @@ namespace DsiCodetech.Administrador.Business.Interface
         List<EntidadDM> GetAllEntidades();
 
         List<MunicipioDM> GetAllMunicipios(short id);
+        /// <summary>
+        /// Este metodo se encarga de consultar la direccion de un cliente por identificador
+        /// </summary>
+        /// <param name="id_cliente">el identificador del cliente</param>
+        /// <returns>retorna una entidad del tipo direccionDM</returns>
+        DireccionDM GetDireccionByClienteId(Guid id_cliente);
     }
 }

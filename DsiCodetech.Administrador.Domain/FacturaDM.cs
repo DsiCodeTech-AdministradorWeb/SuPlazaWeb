@@ -31,6 +31,9 @@ namespace DsiCodetech.Administrador.Domain
         public ComprobanteCfdiRelacionados ComprobanteCfdiRelacionados { get; set; }
 
         public ConceptoDM Conceptos { get; set; }
+
+        public List<FacturaArticuloDM> FacturaArticulos { get; set; }    
+
     }
 
     public class ConceptoDM

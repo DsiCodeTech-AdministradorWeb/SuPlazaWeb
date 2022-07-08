@@ -60,7 +60,9 @@
     <Compile Include="Exception\BusinessException.cs" />
     <Compile Include="ExportacionDM.cs" />
     <Compile Include="Extensions\PredicateBuilder.cs" />
+    <Compile Include="FacturaArticuloDM.cs" />
     <Compile Include="FacturaDM.cs" />
+    <Compile Include="FacturaVentaDM.cs" />
     <Compile Include="Filter\Model\FacturaFilterDM.cs" />
     <Compile Include="Filter\Page\PageResponse.cs" />
     <Compile Include="Filter\Query\ClienteQuery.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="TipoComprobanteDM.cs" />
     <Compile Include="TipoRelacionDM.cs" />
     <Compile Include="UsoCfdiDM.cs" />
+    <Compile Include="VentaDM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

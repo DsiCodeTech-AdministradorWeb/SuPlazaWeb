@@ -17,5 +17,8 @@ namespace DsiCodetech.Administrador.Domain
         public string Calle { get; set; }
         public string NoInterior { get; set; }
         public string NoExterior { get; set; }
+
+        public MunicipioDM MunicipioDM { get; set; }
+        public EntidadDM EntidadDM { get; set; }
     }
 }

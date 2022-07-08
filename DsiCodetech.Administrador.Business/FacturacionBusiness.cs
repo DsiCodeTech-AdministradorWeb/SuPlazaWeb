@@ -28,13 +28,16 @@ namespace DsiCodetech.Administrador.Business
         private readonly IEmpresaBusiness empresaBusiness;
         private readonly FacturacionRepository facturacionRepository;
         private readonly VentaRepository ventaRepository;
-        public FacturacionBusiness(IUnitOfWork _unitOfWork,VentaRepository _ventaRepository ,IClienteBusiness _clienteBusiness, IEmpresaBusiness _empresaBusiness)
+        private readonly DireccionBusiness direccionBusiness;
+        public FacturacionBusiness(IUnitOfWork _unitOfWork,VentaRepository _ventaRepository ,
+            IClienteBusiness _clienteBusiness, IEmpresaBusiness _empresaBusiness,DireccionBusiness _direccionBusiness)
         {
             this.unitOfWork = _unitOfWork;
             this.facturacionRepository = new(this.unitOfWork);
             this.clienteBusiness = _clienteBusiness;
             this.empresaBusiness = _empresaBusiness;
             this.ventaRepository = _ventaRepository;
+            this.direccionBusiness = _direccionBusiness;
         }
 
         public FacturaDM GetFacturaByIdClient(Guid id)
@@ -132,13 +135,32 @@ namespace DsiCodetech.Administrador.Business
         /// </summary>
         /// <param name="id_venta">el identificador de la venta</param>
         /// <returns>una entidad del tipo FacturaDM</returns>
-        public FacturaDM getFacturaByIdVenta(Guid id_venta)
+        public FacturaDM getFacturaByIdFactura(Guid id_factura)
         {
-            var result =ventaRepository.
-                SingleOrDefaultForIncludes(p => p.id_venta.Equals(id_venta), 
-                EntitiesResources.Factura_Venta,EntitiesResources.Factura,EntitiesResources.Factura_Articulo, 
-                EntitiesResources.Cliente );
-            return null;
+            var result = this.facturacionRepository.SingleOrDefaultInclude(p => p.id_factura.Equals(id_factura),
+                EntitiesResources.Factura_Articulo);
+            return new FacturaDM
+            {
+                Id = result.id_factura == 0 ? string.Empty : result.id_factura.ToString(),
+                Receptor = new ClienteDM {
+                    Contacto= result.cliente.contacto,
+                    Email = result.cliente.e_mail,
+                    Email2 = result.cliente.e_mail2,
+                    IdCliente = result.cliente.id_cliente,
+                    RazonSocial = result.cliente.razon_social,
+                    RegimenFiscal = result.cliente.regimen_fiscal,
+                    Rfc = result.cliente.rfc,
+                    Direccion = direccionBusiness.GetDireccionByClienteId(result.cliente.id_cliente),
+                },
+                UsoCfdi = result.uso_cfdi,
+                FormaPago = result.forma_pago,
+                MetodoPago = result.metodo_pago,
+                TipoComprobante = result.tipo_comprobante,
+                Exportacion = result.exportaciones,
+                Emisor=this.empresaBusiness.GetEmpresa(),
+             
+        };
+
         }
 
 

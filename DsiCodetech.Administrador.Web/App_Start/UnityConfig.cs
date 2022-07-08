@@ -34,7 +34,7 @@ namespace DsiCodetech.Administrador.Web
             container.RegisterType<IDireccionBusiness, DireccionBusiness>();
 
             container.RegisterType<IFacturacionBusiness, FacturacionBusiness>();
-
+            container.RegisterType<IFacturaArticuloBusiness, FacturaArticuloBusiness>();
             // e.g. container.RegisterType<ITestService, TestService>();
             DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);

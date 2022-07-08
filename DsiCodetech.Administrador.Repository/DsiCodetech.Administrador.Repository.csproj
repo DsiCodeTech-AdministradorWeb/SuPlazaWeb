@@ -66,6 +66,7 @@
     <Compile Include="EmpresaRepository.cs" />
     <Compile Include="EntidadRepository.cs" />
     <Compile Include="ExpotarcionRepository.cs" />
+    <Compile Include="FacturaArticuloRepository.cs" />
     <Compile Include="FacturacionRepository.cs" />
     <Compile Include="FormaPagoRepository.cs" />
     <Compile Include="Infraestructure\BaseRepository.cs" />
