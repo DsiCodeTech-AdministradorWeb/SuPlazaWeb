@@ -29,8 +29,10 @@ namespace DsiCodetech.Administrador.Business
         private readonly FacturacionRepository facturacionRepository;
         private readonly VentaRepository ventaRepository;
         private readonly DireccionBusiness direccionBusiness;
+        private readonly IFacturaArticuloBusiness facturaArticuloBusiness;
         public FacturacionBusiness(IUnitOfWork _unitOfWork,VentaRepository _ventaRepository ,
-            IClienteBusiness _clienteBusiness, IEmpresaBusiness _empresaBusiness,DireccionBusiness _direccionBusiness)
+            IClienteBusiness _clienteBusiness, IEmpresaBusiness _empresaBusiness,DireccionBusiness _direccionBusiness,
+            IFacturaArticuloBusiness _facturaArticuloBusiness)
         {
             this.unitOfWork = _unitOfWork;
             this.facturacionRepository = new(this.unitOfWork);
@@ -38,6 +40,7 @@ namespace DsiCodetech.Administrador.Business
             this.empresaBusiness = _empresaBusiness;
             this.ventaRepository = _ventaRepository;
             this.direccionBusiness = _direccionBusiness;
+            this.facturaArticuloBusiness = _facturaArticuloBusiness;
         }
 
         public FacturaDM GetFacturaByIdClient(Guid id)
@@ -142,8 +145,9 @@ namespace DsiCodetech.Administrador.Business
             return new FacturaDM
             {
                 Id = result.id_factura == 0 ? string.Empty : result.id_factura.ToString(),
-                Receptor = new ClienteDM {
-                    Contacto= result.cliente.contacto,
+                Receptor = new ClienteDM
+                {
+                    Contacto = result.cliente.contacto,
                     Email = result.cliente.e_mail,
                     Email2 = result.cliente.e_mail2,
                     IdCliente = result.cliente.id_cliente,
@@ -157,9 +161,9 @@ namespace DsiCodetech.Administrador.Business
                 MetodoPago = result.metodo_pago,
                 TipoComprobante = result.tipo_comprobante,
                 Exportacion = result.exportaciones,
-                Emisor=this.empresaBusiness.GetEmpresa(),
-             
-        };
+                Emisor = this.empresaBusiness.GetEmpresa(),
+                FacturaArticulos = this.facturaArticuloBusiness.GetFacturaArticuloByIdFactura(id_factura.ToString())
+            };
 
         }
 
